@@ -5,7 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?=$PAGE_TITLE?><?=PAGE_TITLE?></title>
-	<link rel="icon" href="<?=ICONS?>/Logo-Grey.png">
+	<link rel="icon" href="/Logo-Grey.png">
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="/dist/css/app.css">
