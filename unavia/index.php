@@ -13,7 +13,6 @@
 	<div class="row align-center">
 		<div class="small-12 medium-10 column text-center">
 			<h1 class="no-margin"><span class="hover-secondary">Hello!</span> Welcome to my online&nbsp;<span class="hover-primary">portfolio</span></h1>
-			<a href="/deadpage.php">Dead Page</a>
 		</div>
 	</div>
 </div>
