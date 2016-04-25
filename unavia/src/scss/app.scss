@@ -78,3 +78,73 @@ body
 {
 	color: $secondary-color;
 }
+
+
+
+/******************************************************************************/
+.error-page {
+	height: 100%;
+}
+
+
+/******************************************************************************/
+// Console Code Classes
+.console {
+	position: relative;
+	overflow: hidden;
+	color: white;
+	background-color: $medium-dark-grey;
+	border: 1px solid $dark-grey;
+	border-radius: 0.3rem;
+
+	nav {
+		padding: 0.5rem;
+		background-color: $dark-grey;
+
+		a {
+			display: inline-block;
+			width: 1.25rem;
+			height: 1.25rem;
+			padding: 0.25rem;
+			color: black !important;
+			line-height: 0.75rem;
+			text-align: center;
+			background-color: white;
+			border-radius: 1000px;
+
+			&:first-of-type {
+				background-color: rgb(225, 69, 0);
+
+				&:hover {
+					background-color: rgb(255, 75, 50);
+				}
+			}
+
+			&:nth-of-type(2) {
+				background-color: rgb(200, 200, 200);
+
+				&:hover {
+					background-color: rgb(235, 235, 235);
+				}
+			}
+		}
+
+		span {
+			margin-left: 1rem;
+			font-weight: bold;
+		}
+	}
+
+	div {
+		padding: 0.75rem;
+		font-family: "Courier New", Courier, monospace;
+
+		.console-error {
+			color: rgb(255, 65, 65);
+		}
+
+		.console-prompt {
+			color: goldenrod;
+		}
+	}
+}
