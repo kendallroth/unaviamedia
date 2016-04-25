@@ -1,4 +1,4 @@
-<?php require_once("/usr/share/nginx/constants.php"); ?>
+<?php require_once("/var/www/constants.php"); ?>
 <?php $PAGE_TITLE = "About Me"; ?>
 <?php require_once(HEADER_FRAGMENT); ?>
 
@@ -49,7 +49,7 @@
 					<dt>Looking further down the road, where do you see yourself in two years?</dt>
 					<dd>Graduated from the Computer Programmer/Analyst program at Conestoga College, and employed at a reputable organization where I can continue to expand my programming knowledge while helping to analyze and solve business problems effectively within a development team.</dd>
 				</dl>
-			</div>				
+			</div>
 		</div>
 	</div>
 </div>

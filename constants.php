@@ -9,7 +9,7 @@ define("INCLUDES", HTML_ROOT . "/includes");
 
 define("STYLES", "/dist/css");
 define("SCRIPTS", "/dist/js");
-define("IMAGES", "/dist/img");
+define("IMAGES", "/dist/images");
 define("ICONS", "/dist/icons");
 
 define("HEADER_FRAGMENT", INCLUDES . "/header.php");
@@ -22,6 +22,7 @@ define("PAGE_TITLE", "&ensp;|&ensp;UnaviaMedia");
 
 // Links
 define("HOME_URL", "/index.php");
+define("ABOUT_URL", "/about.php");
 
 
 // Dynamic Page Title
