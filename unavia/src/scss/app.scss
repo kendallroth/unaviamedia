@@ -2,11 +2,13 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+@import 'variables';
+@import 'utilities';
+//@import 'motion-ui';
 
 @include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
+// @include foundation-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -44,7 +46,35 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+
+@import 'header';
+@import 'footer';
+@import 'index';
+@import 'about';
+
+
+body, p, h1, h2, h3, h4, h5, div, span
+{
+	font-family: 'Varela Round', sans-serif;
+}
+
+body
+{
+	color: $dark-grey;
+	background-color: $light-grey;
+}
+
+.hover-primary:hover
+{
+	color: $primary-color;
+}
+
+.hover-secondary:hover
+{
+	color: $secondary-color;
+}

@@ -1,0 +1,204 @@
+.description-index p
+{
+	margin: 0;
+	font-size: 125%;
+}
+
+.index-development h5
+{
+	margin-top: 0.75rem;
+}
+
+.update-callout
+{
+	margin-bottom: 3rem;
+	border-radius: 5px;
+}
+
+.description-roadmap
+{
+	h4
+	{
+		text-decoration: underline;
+	}
+
+	ul
+	{
+		list-style: none;
+
+		i
+		{
+			margin-right: 0.75rem;
+			font-size: 1.25rem;
+			vertical-align: middle;
+
+			&.fi-check
+			{
+				color: $secondary-color;
+			}
+
+			&.fi-clock
+			{
+				color: $primary-color;
+			}
+
+			&.fi-x
+			{
+				color: $quanternary-color;
+			}
+		}
+	}
+}
+
+.development-types > div
+{
+	img
+	{
+		border: 4px solid $secondary-color;
+		border-radius: 5px;
+
+		&:hover
+		{
+			border: 4px solid $primary-color;
+		}
+	}
+}
+
+.index-skills h2
+{
+	margin-bottom: 1rem;
+}
+
+.skills-container
+{
+	margin-bottom: 2rem;
+	color: $dark-grey;
+
+	.skill-card
+	{
+		margin-top: 1rem;
+		padding: 0 1rem;
+
+		h5
+		{
+			margin-bottom: 0;
+		}
+
+		.progress
+		{
+			margin-bottom: 0.25rem;
+			border-radius: 1000px;
+
+			.progress-meter
+			{
+				background-color: $secondary-color;
+				border-radius: 1000px;				
+			}
+		}
+
+		//Change progress meter color when skill block is hovered over
+		&:hover .progress-meter
+		{
+			transition: all 0.25s linear;
+			background-color: $tertiary-color;
+		}
+	}
+}
+	
+.index-stats
+{
+	text-align: center;
+
+	h3
+	{
+		margin: 0;
+		font-size: 3rem;
+	}
+
+	h5
+	{
+		margin: 0;
+	}
+}
+
+.quick-contact
+{
+	h3
+	{
+		margin-bottom: 1.5rem;
+	}	
+
+	a
+	{
+		color: whitesmoke;
+
+		&:hover
+		{
+			text-decoration: underline;
+		}
+
+		&.button-contact
+		{
+			display: inline-block;
+			padding: 1rem 2rem;
+			color: $light-grey;
+			border: 2px solid $light-grey;
+			border-radius: 10px;
+
+			&:hover
+			{
+				background-color: rgba($light-grey, 0.25);
+				border-color: rgba($light-grey, 0.5);
+			}
+		}
+	}
+}
+
+@include breakpoint(small only)
+{
+	.development-types > div:not(:last-of-type)
+	{
+		margin-bottom: 2rem;
+	}
+
+	.skills-container
+	{
+		hr
+		{
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		background-color: $light-grey;
+		padding: 1rem 0;
+		border-radius: 25px;
+	}
+
+	.stat
+	{
+		margin-bottom: 1rem;
+	}
+}
+
+@include breakpoint(medium)
+{
+	.skills-container
+	{
+		h3
+		{
+			color: $light-grey;
+		}
+
+		hr
+		{
+			display: none;
+		}
+
+		.skill-card
+		{
+			padding: 1.5rem;
+			background-color: $light-grey;
+			border-radius: 10px;
+		}			
+	}
+}

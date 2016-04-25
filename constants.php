@@ -10,7 +10,7 @@ define("INCLUDES", HTML_ROOT . "/includes");
 define("STYLES", "/dist/css");
 define("SCRIPTS", "/dist/js");
 define("IMAGES", "/dist/img");
-define("ICONS", IMAGES . "/icons");
+define("ICONS", "/dist/icons");
 
 define("HEADER_FRAGMENT", INCLUDES . "/header.php");
 define("FOOTER_FRAGMENT", INCLUDES . "/footer.php");
