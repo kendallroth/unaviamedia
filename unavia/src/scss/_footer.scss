@@ -1,12 +1,12 @@
 .middle-footer
 {
 	.horizontal-menu li
-	{		
+	{
 		&:not(:last-of-type)
 		{
-			margin-right: 5px;
+			margin-right: 0.25rem;
 		}
-		
+
 		a
 		{
 			padding: 0 15px;
@@ -15,7 +15,7 @@
 
 			&:hover
 			{
-				color: $primary-color;
+				text-decoration: underline;
 			}
 		}
 	}
@@ -29,7 +29,7 @@
 	{
 		&:not(:first-of-type)
 		{
-			margin-left: 10px;
+			margin-left: 0.75rem;
 		}
 
 		img
@@ -72,5 +72,5 @@
 	.footer-vertical-flexbox
 	{
 		@include vertical-flexbox();
-	}	
+	}
 }

@@ -35,7 +35,7 @@
 			<!-- <div class="description-roadmap"> -->
 				<h2 class="text-center">Roadmap</h2>
 				<div class="row">
-					<div class="small-12 large-4 column text-center">
+					<div class="small-12 column text-center">
 						<h4>High Priority</h4>
 						<ul>
 							<li><i class="fi-check"></i>Site structure implemented</li>
@@ -44,7 +44,7 @@
 							<li><i class="fi-x"></i>Add content to About page</li>
 						</ul>
 					</div>
-					<div class="small-12 large-4 column text-center">
+					<div class="small-12 column text-center">
 						<h4>Medium Priority</h4>
 						<ul>
 							<li><i class="fi-x"></i>Move to Laravel for MVC</li>
@@ -57,7 +57,7 @@
 							<li><i class="fi-x"></i>Implement a staging area</li>
 						</ul>
 					</div>
-					<div class="small-12 large-4 column text-center">
+					<div class="small-12 column text-center">
 						<h4>Low Priority</h4>
 						<ul>
 							<li><i class="fi-check"></i>Add basic fun facts</li>
