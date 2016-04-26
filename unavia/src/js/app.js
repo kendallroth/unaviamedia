@@ -49,6 +49,17 @@ function scrollTop()
  */
 function toggleMenu() {
 	var btnMenu = $(".btn-menu").first();
-	btnMenu.attr("data-menu-toggle", btnMenu.attr("data-menu-toggle") === "true" ? "false" : "true");
-	$(".collapsible-menu").toggle();
+	var menu = $(".collapsible-menu");
+	//btnMenu.attr("data-menu-toggle", btnMenu.attr("data-menu-toggle") === "true" ? "false" : "true");
+	//$(".collapsible-menu").toggle();
+	var menuToggled = btnMenu.attr("data-menu-toggle");
+
+	if (menuToggled === "true") {
+		btnMenu.attr("data-menu-toggle", "false");
+		menu.slideUp();
+	}
+	else {
+		btnMenu.attr("data-menu-toggle", "true");
+		menu.slideDown();
+	}
 }
