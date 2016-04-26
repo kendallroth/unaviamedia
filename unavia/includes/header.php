@@ -15,22 +15,24 @@
 <body>
 	<header id="page-top" class="background-white">
 		<div class="row align-center">
-			<nav class="small-12 medium-10 column header-content clearfix">
-				<a href="<?=HOME_URL?>"><img src="<?=ICONS?>/Unavia-Logo-Grey.png" alt="UnaviaMedia Logo" /></a>
-				<ul class="horizontal-menu">
-					<li><a href="<?=HOME_URL?>">Home</a></li>
-					<!--<li><a href="<?=PROJECTS_URL?>">Projects</a></li>-->
-					<li><a href="<?=ABOUT_URL?>">About</a></li>
-				</ul>
-				<a href="#" class="menu-button"><img src="<?=ICONS?>/menu_button.svg" alt="Menu Button" /></a>
-				<div class="collapsible-menu">
+			<section class="small-12 medium-10 column header-content clearfix">
+				<nav class="header-bar">
+					<a href="<?=HOME_URL?>"><img src="<?=ICONS?>/Unavia-Logo-Grey.png" class="header-logo" alt="UnaviaMedia Logo" /></a>
+					<ul class="horizontal-menu">
+						<li><a href="<?=HOME_URL?>">Home</a></li>
+						<!--<li><a href="<?=PROJECTS_URL?>">Projects</a></li>-->
+						<li><a href="<?=ABOUT_URL?>">About</a></li>
+					</ul>
+					<a href="#" class="menu-button show-for-small-only"><img src="<?=ICONS?>/menu_button.svg" alt="Menu Button" /></a>
+				</nav>					
+				<nav class="collapsible-menu">
 					<ul>
 						<li></li>
 						<li></li>
 						<li></li>
 						<li></li>
 					</ul>
-				</div>
-			</nav>
+				</nav>
+			</section>
 		</div>
 	</header>

@@ -1,7 +1,7 @@
 	<footer>
 		<div class="container-medium background-medium-grey">
 			<div class="row align-center">
-				<div class="small-12 medium-10 column middle-footer">
+				<div class="small-12 medium-10 column footer-bar-top">
 					<ul class="horizontal-menu text-center medium-text-left">
 						<li><a href="<?=HOME_URL?>">Home</a></li>
 						<!--<li><a href="<?=PROJECTS_URL?>">Projects</a></li>-->
@@ -12,7 +12,7 @@
 		</div>
 		<div class="container-medium background-dark-grey">
 			<div class="row align-center">
-				<div class="small-12 medium-10 column bottom-footer clearfix">
+				<div class="small-12 medium-10 column footer-bar-bottom clearfix">
 					<div class="row footer-vertical-flexbox">
 						<nav class="small-12 medium-6 medium-push-6 column social-media-bar text-center medium-text-right">
 							<a href="//twitter.com/UnaviaMedia" target="_blank">
@@ -34,7 +34,7 @@
 		</div>
 
 		<!-- Quick link to top of page -->
-		<a href="#page-top" class="page-top-button"><img src="<?=ICONS?>/Page-Top.png"/></a>
+		<a href="#page-top" class="btn-page-top"><img src="<?=ICONS?>/Page-Top.png"/></a>
 	</footer>
 
 	<script src="/bower_components/jquery/dist/jquery.js"></script>

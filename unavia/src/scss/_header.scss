@@ -5,21 +5,28 @@ header {
 .header-content {
 	padding: 1rem;
 
-	img {
-		display: inline-block;
-		height: 45px;
+	.header-bar {
+		//Declare as a flexbox container
+		display: flex;
+		//Vertically middle-align elements
+		align-items: center;
+
+		.header-logo {
+			display: inline-block;
+			height: 45px;
+		}
 	}
 
 	.menu-button {
-		display: none;
-		// float: right;
+		//Auto margin to simulate "float right"
+		margin-left: auto;
 		padding: 0.5rem;
-		// background-color: red;
-		border: 1px solid lightgrey;
+		line-height: 0;
+		border: 1px solid $medium-light-grey;
 		border-radius: 0.25rem;
 
 		&:hover {
-			background-color: lightgrey;
+			background-color: $light-grey;
 		}
 
 		img {
