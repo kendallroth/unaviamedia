@@ -3,7 +3,7 @@ header {
 }
 
 .header-content {
-	padding: 1rem;
+	padding: 1.5rem;
 
 	.header-bar {
 		//Declare as a flexbox container
@@ -16,7 +16,15 @@ header {
 			height: 45px;
 		}
 
-		.menu-button {
+		.btn-menu[data-menu-toggle="false"] {
+			border: 1px solid red;
+		}
+
+		.btn-menu[data-menu-toggle="true"] {
+			border: 1px solid blue;
+		}
+
+		.btn-menu {
 			//Auto margin to simulate "float right"
 			margin-left: auto;
 			padding: 0.5rem;
@@ -36,7 +44,31 @@ header {
 	}
 
 	.collapsible-menu {
+		margin-top: 1.5rem;
 
+		ul {
+			margin: 0;
+			list-style-type: none;
+
+			li {
+				border-top: 1px solid $medium-light-grey;
+
+				a {
+					display: block;
+					padding: 0.5rem 0;
+					font-size: 110%;
+					color: $medium-dark-grey;
+
+					&:hover {
+						color: $primary-color;
+					}
+				}
+
+				&:last-of-type {
+					border-bottom: 1px solid $medium-light-grey;
+				}
+			}
+		}
 	}
 }
 

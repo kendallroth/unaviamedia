@@ -1,11 +1,26 @@
 $(document).foundation();
 
+$(document).ready(function(){
+	init();
+});
+
+/**
+ * Initialize event handling
+ */
+function init()
+{
+	$(".collapsible-menu").hide();
+	$('.btn-page-top').on('click', scrollTop);
+	$(".btn-menu").on("click", toggleMenu);
+}
+
+
 /* Show transparent overlay */
 function pageOverlay()
 {
-	$("#overlay").height($(window).height());
+	/*$("#overlay").height($(window).height());
 	$("#overlay").width($(window).width());
-	$("#overlay").show();
+	$("#overlay").show();*/
 }
 
 
@@ -30,15 +45,10 @@ function scrollTop()
 }
 
 /**
- * Initialize event handling
+ * Toggle the menu
  */
-function init()
-{
-	// alert($('.page-top-button').attr('class'));
-	$('.btn-page-top').on('click', scrollTop);
+function toggleMenu() {
+	var btnMenu = $(".btn-menu").first();
+	btnMenu.attr("data-menu-toggle", btnMenu.attr("data-menu-toggle") === "true" ? "false" : "true");
+	$(".collapsible-menu").toggle();
 }
-
-
-$(document).ready(function(){
-	init();
-});

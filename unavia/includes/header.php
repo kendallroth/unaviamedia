@@ -22,14 +22,14 @@
 						<li><a href="<?=HOME_URL?>">Home</a></li>
 						<li><a href="<?=ABOUT_URL?>">About</a></li>
 					</ul>
-					<a href="#" class="menu-button show-for-small-only"><img src="<?=ICONS?>/menu_button.svg" alt="Menu Button" /></a>
+					<a href="#" class="btn-menu show-for-small-only" data-menu-toggle="false"><img src="<?=ICONS?>/menu_button.svg" alt="Menu Button" /></a>
 				</nav>
-				<nav class="collapsible-menu hide">
+				<nav class="collapsible-menu">
 					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+						<li><a>Home</a></li>
+						<li><a>Education</a></li>
+						<li><a>Projects</a></li>
+						<li><a>About</a></li>
 					</ul>
 				</nav>
 			</section>
