@@ -35,7 +35,7 @@ function scrollTop()
 function init()
 {
 	// alert($('.page-top-button').attr('class'));
-	$('.page-top-button').on('click', scrollTop);
+	$('.btn-page-top').on('click', scrollTop);
 }
 
 
