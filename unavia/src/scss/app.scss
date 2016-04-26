@@ -83,9 +83,17 @@ body
 
 /******************************************************************************/
 .error-page {
-	height: 100%;
-}
+	background-image: url("/dist/images/dark_sharp_edges.png");
 
+	.error-page-overlay {
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.25);
+	}
+
+	section {
+		height: 100%;
+	}
+}
 
 /******************************************************************************/
 // Console Code Classes
@@ -93,13 +101,12 @@ body
 	position: relative;
 	overflow: hidden;
 	color: white;
-	background-color: $medium-dark-grey;
-	border: 1px solid $dark-grey;
-	border-radius: 0.3rem;
+	background-color: rgba(40, 5, 25, 0.75);
+	border-radius: 0.5rem;
 
 	nav {
 		padding: 0.5rem;
-		background-color: $dark-grey;
+		background-color: rgb(60, 60, 60);
 
 		a {
 			display: inline-block;
@@ -140,7 +147,7 @@ body
 		font-family: "Courier New", Courier, monospace;
 
 		.console-error {
-			color: rgb(255, 65, 65);
+			color: rgb(255, 50, 50);
 		}
 
 		.console-prompt {

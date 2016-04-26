@@ -12,27 +12,29 @@
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 </head>
 
-<body>
-	<section class="row align-center align-middle error-page collapse">
-		<div class="small-10 medium-6 column console">
-			<nav>
-				<a href="/" title="Home">&times;</a>
-				<a href="/" title="Home">&minus;</a>
-				<span>404 Page Not Found</span>
-			</nav>
-			<div>
-				Searching for page...<br />
-				&emsp;...current directory...<br>
-				&emsp;...parent directory...<br>
-				&emsp;...root directory...<br><br>
-				<span class="console-error">Error:</span><br>
-				<span class="console-error">&emsp;Code: 404</span><br>
-				<span class="console-error">&emsp;Message: Page not found</span><br><br>
-				It appears that the requested page was not found. Are you sure the address is correct?<br><br>
-				<span class="console-prompt">Close this window to return to the home page.</span>
+<body class="error-page">
+	<div class="error-page-overlay">
+		<section class="row align-center align-middle collapse">
+			<div class="small-10 medium-6 column console">
+				<nav>
+					<a href="/" title="Home">&times;</a>
+					<a href="/" title="Home">&minus;</a>
+					<span>404 Page Not Found</span>
+				</nav>
+				<div>
+					Searching for page...<br />
+					&emsp;...current directory...<br>
+					&emsp;...parent directory...<br>
+					&emsp;...root directory...<br><br>
+					<span class="console-error">Error:</span><br>
+					<span class="console-error">&emsp;Code: 404</span><br>
+					<span class="console-error">&emsp;Message: Page not found</span><br><br>
+					It appears that the requested page was not found. Are you sure the address is correct?<br><br>
+					<span class="console-prompt">Close this window to return to the home page.</span>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 
 	<script src="/bower_components/jquery/dist/jquery.js"></script>
 	<script src="/bower_components/what-input/what-input.js"></script>
