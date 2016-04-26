@@ -15,46 +15,28 @@ header {
 			display: inline-block;
 			height: 45px;
 		}
-	}
 
-	.menu-button {
-		//Auto margin to simulate "float right"
-		margin-left: auto;
-		padding: 0.5rem;
-		line-height: 0;
-		border: 1px solid $medium-light-grey;
-		border-radius: 0.25rem;
+		.menu-button {
+			//Auto margin to simulate "float right"
+			margin-left: auto;
+			padding: 0.5rem;
+			line-height: 0;
+			border: 1px solid $medium-light-grey;
+			border-radius: 0.25rem;
 
-		&:hover {
-			background-color: $light-grey;
-		}
+			&:hover {
+				background-color: $light-grey;
+			}
 
-		img {
-			width: 1.25rem;
-			height: 1.25rem;
+			img {
+				width: 1.25rem;
+				height: 1.25rem;
+			}
 		}
 	}
 
 	.collapsible-menu {
-		display: none;
-	}
 
-	.horizontal-menu {
-		display: none;
-		right: 0;
-
-		@include vertical-align(absolute);
-
-		li {
-			a {
-				color: $dark-grey;
-				font-weight: bold;
-
-				&:hover {
-					color: $primary-color;
-				}
-			}
-		}
 	}
 }
 
@@ -65,14 +47,22 @@ header {
 
 		.horizontal-menu {
 			display: inline-block;
+			//Auto margin to simulate "float right"
+			margin-left: auto;
 
 			li {
 				a {
-					padding: 5px 15px;
+					padding: 0.3rem 0.75rem;
+					color: $dark-grey;
+					font-weight: bold;
+
+					&:hover {
+						color: $primary-color;
+					}
 				}
 
 				&:not(:last-of-type) {
-					margin-right: 5px;
+					margin-right: 0.25px;
 				}
 			}
 		}

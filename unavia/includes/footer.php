@@ -13,7 +13,7 @@
 		<div class="container-medium background-dark-grey">
 			<div class="row align-center">
 				<div class="small-12 medium-10 column footer-bar-bottom clearfix">
-					<div class="row footer-vertical-flexbox">
+					<div class="row align-middle">
 						<nav class="small-12 medium-6 medium-push-6 column social-media-bar text-center medium-text-right">
 							<a href="//twitter.com/UnaviaMedia" target="_blank">
 								<img src="<?=ICONS?>/Twitter-Icon.png" class="round" width="30" />
