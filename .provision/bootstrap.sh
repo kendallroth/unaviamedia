@@ -51,17 +51,17 @@ sudo service nginx restart > /dev/null
 
 ##################################################
 # mysql
-echo "MySQL Setup"
+#echo "MySQL Setup"
 
-echo "Installing automation utilities"
-sudo apt-get install -y debconf-utils > /dev/null
+#echo "Installing automation utilities"
+#sudo apt-get install -y debconf-utils > /dev/null
 
-echo "Setting mysql setup variables"
-debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
-debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
+#echo "Setting mysql setup variables"
+#debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
+#debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
 
-echo "Installing mysql"
-sudo apt-get install -y mysql-server > /dev/null
+#echo "Installing mysql"
+#sudo apt-get install -y mysql-server > /dev/null
 
 
 ##################################################
