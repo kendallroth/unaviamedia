@@ -3,14 +3,14 @@
 #sudo bash
 
 echo "Updating repositores"
-sudo apt-get update -y > /dev/null
+sudo apt update -y > /dev/null
 
 ##################################################
 # nginx
 echo "Nginx Setup"
 
 echo "Installing nginx"
-sudo apt-get install -y nginx > /dev/null
+sudo apt install -y nginx > /dev/null
 sudo service nginx start
 
 echo "Configuring nginx"
@@ -35,15 +35,15 @@ ln -s /vagrant /var/www
 echo "PHP Setup"
 
 echo "Updating php repositories"
-sudo apt-get install -y python-software-properties build-essential > /dev/null
+sudo apt install -y python-software-properties build-essential > /dev/null
 sudo add-apt-repository ppa:ondrej/php5 > /dev/null
-sudo apt-get update > /dev/null
+sudo apt update > /dev/null
 
 echo "Installing php"
-sudo apt-get install -y php5-common php5-dev php5-cli php5-fpm > /dev/null
+sudo apt install -y php5-common php5-dev php5-cli php5-fpm > /dev/null
 
 echo "Installing php extensions"
-sudo apt-get install -y curl php5-curl php5-gd php5-mcrypt php5-mysql > /dev/null
+sudo apt install -y curl php5-curl php5-gd php5-mcrypt php5-mysql > /dev/null
 
 sudo sed -i s/\;cgi\.fix_pathinfo\s*\=\s*l/cgi.fix_pathinfo\=0/ /etc/php5/fpm/php.ini
 sudo service php5-fpm restart > /dev/null
@@ -54,14 +54,14 @@ sudo service nginx restart > /dev/null
 #echo "MySQL Setup"
 
 #echo "Installing automation utilities"
-#sudo apt-get install -y debconf-utils > /dev/null
+#sudo apt install -y debconf-utils > /dev/null
 
 #echo "Setting mysql setup variables"
 #debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
 #debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
 
 #echo "Installing mysql"
-#sudo apt-get install -y mysql-server > /dev/null
+#sudo apt install -y mysql-server > /dev/null
 
 
 ##################################################
@@ -69,7 +69,7 @@ sudo service nginx restart > /dev/null
 echo "Git Setup"
 
 echo "Installing git"
-sudo apt-get install -y git > /dev/null
+sudo apt install -y git > /dev/null
 
 ##################################################
 # nodejs
@@ -79,7 +79,7 @@ echo "Updating NodeJS repositories"
 sudo curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - > /dev/null
 
 echo "Installing nodejs"
-sudo apt-get install -y nodejs > /dev/null
+sudo apt install -y nodejs > /dev/null
 
 ##################################################
 # foundation
