@@ -1,0 +1,55 @@
+.footer-bar-top {
+	.horizontal-menu li {
+		&:not(:last-of-type) {
+			margin-right: 0.25rem;
+		}
+
+		a {
+			padding: 0 15px;
+			color: white;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.footer-bar-bottom {
+	position: relative;
+
+	.social-media-bar a {
+		margin-bottom: 1rem;
+
+		&:not(:first-of-type) {
+			margin-left: 0.75rem;
+		}
+
+		img {
+			background-color: $medium-light-grey;
+
+			&:hover {
+				background-color: $primary-color;
+			}
+		}
+	}
+}
+
+.btn-page-top {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background-color: $dark-grey;
+	border-top-left-radius: 1000px;
+	opacity: 0.3;
+
+	&:hover {
+		opacity: 0.75;
+	}
+}
+
+@include breakpoint(small only) {
+	.social-media-bar {
+		margin-bottom: 1rem;
+	}
+}
