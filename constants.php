@@ -5,7 +5,7 @@ ini_set('display_errors', 'On');
 
 define("HTML_ROOT", "/var/www/unavia");
 
-define("INCLUDES", HTML_ROOT . "/includes");
+define("INCLUDES", HTML_ROOT . "/include");
 
 define("STYLES", "/dist/css");
 define("SCRIPTS", "/dist/js");
