@@ -11,3 +11,6 @@
 </head>
 
 <body>
+	<header>
+		<img class="header-logo" src="/images/Logo-Grey.png" alt="Menu Button" />
+	</header>

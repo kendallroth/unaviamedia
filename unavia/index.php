@@ -11,7 +11,7 @@ require_once(HEADER_FRAGMENT);
 	<div class="row align-center align-middle">
 		<div class="small-10 column">
 			<h1>Hello</h1>
-			<p>Welcome to my portfolio site!</p>
+			<p>Welcome to my online portfolio!</p>
 		</div>
 	</div>
 </section>
