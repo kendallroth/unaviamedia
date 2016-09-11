@@ -1,0 +1,53 @@
+#media-query {
+	//large - 1024 +
+	//medium - 640 - 1023
+	//small - 0 - 639
+	position: fixed;
+	top: 5px;
+	left: 5px;
+}
+
+.header-bar {
+	padding: 1rem;
+
+	.menu {
+		li {
+			//Temporarily remove, only have one item on each side of the logo for now
+			// margin-right: 1rem;
+
+			&.menu-logo {
+				margin: 0 1.5rem;
+				padding: 0.3rem;
+				border: none !important;
+
+				a {
+					border: none !important;
+				}
+
+				img {
+					height: 2.75rem;
+					width: 2.75rem;
+					margin: 0;
+					opacity: 0.75;
+					border-radius: 1.25rem;
+
+					&:hover {
+						opacity: 0.9;
+					}
+				}
+			}
+		}
+
+		a {
+			margin: 0rem;
+			padding: 0rem;
+			color: black;
+			border-bottom: 1.5px solid transparent;
+
+			&:hover {
+				box-sizing: border-box;
+				border-color: black;
+			}
+		}
+	}
+}
