@@ -30,21 +30,21 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div id="summary-card" class="row align-center">
-		<div class="column small-12 medium-4 align-self-stretch">
+		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
 				<img src="http://placehold.it/150x150" />
 				<span class="summary-header">Analysis</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 		</div>
-		<div class="column small-12 medium-4 align-self-stretch">
+		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
 				<img src="http://placehold.it/150x150" />
 				<span class="summary-header">Design</span>
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			</div>
 		</div>
-		<div class="column small-12 medium-4 align-self-stretch">
+		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
 				<img src="http://placehold.it/150x150" />
 				<span class="summary-header">Development</span>
