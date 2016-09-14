@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
@@ -14,7 +17,7 @@
 	<section id="media-query">
 		<span class="show-for-small-only">small</span>
 		<span class="show-for-medium-only">medium</span>
-		<span class="show-for-large-only">large</span>
+		<span class="show-for-large">large</span>
 	</section>
 	<header>
 		<nav class="header-bar row">
