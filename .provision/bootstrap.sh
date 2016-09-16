@@ -86,5 +86,7 @@ sudo apt-get install -y nodejs > /dev/null
 echo "Foundation Setup"
 sudo npm install --global foundation-cli > /dev/null
 
+sudo npm install --global gulp > /dev/null
+
 echo "Node Packages Install"
 npm install
