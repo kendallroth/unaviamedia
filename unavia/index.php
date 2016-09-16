@@ -29,6 +29,11 @@ require_once(HEADER_FRAGMENT);
 			<h2>What I Do</h2>
 		</div>
 	</div>
+	<div class="row align-center">
+		<div class="column small-11 large-9">
+			<blockquote>I'm primarily passionate about responsive web design, focusing on clean and simple design. I strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
+		</div>
+	</div>
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
@@ -54,46 +59,52 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="introduction-wrapper" class="content-bar">
-	<div id="introduction-bar" class="row align-center">
-		<div class="column large-9">
-			<blockquote>I'm primarily passionate about responsive web design and development, focusing on clean and simple implementations. I strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
+<!-- TODO: Add project descriptions to slide up on hover and cover the image (also animate the bottom border colour) -->
+<section id="work-wrapper" class="content-wrapper">
+	<div class="row">
+		<div class="column text-center" >
+			<h2>Work</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column text-center">
+			<p>Here's what I've been up to recently:</p>
+		</div>
+	</div>
+	<div class="row align-center small-collapse medium-uncollapse">
+		<div class="column small-12 medium-4">
+			<div class="work-card">
+				<img src="http://placehold.it/300x200" />
+				<p>UnaviaMedia<span>2016</span></p>
+			</div>
+		</div>
+		<div class="column small-12 medium-4">
+			<div class="work-card">
+				<img src="http://placehold.it/300x200" />
+				<p>CaptainCPA<span>2015</span></p>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section id="skills-wrapper" class="content-wrapper">
-	<div id="skills-card" class="row">
-		<div class="column" >
-			Skills
+	<div class="row">
+		<div class="column text-center">
+			<h2>Skills</h2>
 		</div>
 	</div>
-</section>
-
-<section id="facts-wrapper" class="content-bar">
-	<div id="facts-bar" class="row align-center">
-		<div class="column text-center medium-2">
-			Fact about me
+	<div class="row align-center">
+		<div class="column small-11">
+			<div class="skill-card">
+				<p class="skill-header">Responsive Design</p>
+				<p class="skill-description show-for-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor eligendi, qui laborum deserunt praesentium iste sunt illo placeat quo nostrum? Tempora ad quae cupiditate quo quod voluptates architecto nisi?</p>
+			</div>
 		</div>
-		<div class="column text-center medium-2">
-			Fact about me
-		</div>
-		<div class="column text-center medium-2">
-			Fact about me
-		</div>
-	</div>
-</section>
-
-<section id="experience-wrapper" class="content-wrapper">
-	<div id="experience-card" class="row">
-		<div class="column small-12 medium-4 align-self-stretch">
-			Place
-		</div>
-		<div class="column small-12 medium-4 align-self-stretch">
-			Place
-		</div>
-		<div class="column small-12 medium-4 align-self-stretch">
-			Place
+		<div class="column small-11">
+			<div class="skill-card">
+				<p class="skill-header">Responsive Design</p>
+				<p class="skill-description show-for-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor eligendi, qui laborum deserunt praesentium iste sunt illo placeat quo nostrum? Tempora ad quae cupiditate quo quod voluptates architecto nisi?</p>
+			</div>
 		</div>
 	</div>
 </section>
