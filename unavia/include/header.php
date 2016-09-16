@@ -6,8 +6,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
@@ -24,7 +24,7 @@
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
 				<li><a href="/">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/Profile.jpeg" alt="UnaviaMedia" /></a></li>
+				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/Profile.jpeg" width="100" alt="UnaviaMedia" /></a></li>
 				<li><a href="">Contact</a></li>
 			</ul>
 		</nav>
