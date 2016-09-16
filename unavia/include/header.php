@@ -14,6 +14,7 @@
 </head>
 
 <body>
+	<!-- TODO: Development only, remove in production -->
 	<section id="media-query">
 		<span class="show-for-small-only">small</span>
 		<span class="show-for-medium-only">medium</span>
