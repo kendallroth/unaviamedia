@@ -1,0 +1,19 @@
+//Styling for the footer
+.footer-bar {
+	padding: 2rem 0;
+	color: white;
+	background-color: rgb(15, 15, 15);
+
+	//Social media icons bar
+	.social-media-bar {
+		margin-bottom: 1.25rem;
+
+		a:not(:last-of-type) {
+			margin-right: 0.6rem;
+		}
+
+		img {
+			border-radius: 1000px;
+		}
+	}
+}
