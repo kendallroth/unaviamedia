@@ -229,6 +229,7 @@ body {
 
 #contact-wrapper {
 	padding: 2.5rem;
+	background-color: rgb(60, 60, 60);
 
 	a {
 		display: inline-block;
@@ -239,7 +240,7 @@ body {
 
 		&:hover {
 			border-style: solid;
-			background-color: rgb(40, 40, 40);
+			background-color: rgb(50, 50, 50);
 			// border-width: 3px;
 		}
 	}

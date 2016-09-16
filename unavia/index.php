@@ -142,7 +142,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="contact-wrapper" class="content-bar">
+<section id="contact-wrapper">
 	<div id="contact-bar" class="row">
 		<div class="column text-center">
 			<a href="mailto:kroth@unaviamedia.ca">Contact Me</a>
