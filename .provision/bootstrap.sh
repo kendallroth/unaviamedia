@@ -89,4 +89,8 @@ sudo npm install --global foundation-cli > /dev/null
 sudo npm install --global gulp > /dev/null
 
 echo "Node Packages Install"
-npm install
+cd /var/www/unavia
+
+#Run bower and npm
+bower install > /dev/null
+sudo npm install > /dev/null
