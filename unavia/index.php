@@ -94,16 +94,49 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column small-11">
-			<div class="skill-card">
-				<p class="skill-header">Responsive Design</p>
-				<p class="skill-description show-for-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor eligendi, qui laborum deserunt praesentium iste sunt illo placeat quo nostrum? Tempora ad quae cupiditate quo quod voluptates architecto nisi?</p>
+		<div class="column small-10">
+			<div id="technologies-card" class="skill-card">
+				<h3>Technologies</h3>
+				<ul class="clearfix">
+					<li>
+						<span>HTML</span>
+						<div class="progress round"><span class="progress-meter" style="width: 90%"></span></div>
+					</li>
+					<li>
+						<span>CSS</span>
+						<div class="progress round"><span class="progress-meter" style="width: 70%"></span></div>
+					</li>
+					<li>
+						<span>JS</span>
+						<div class="progress round"><span class="progress-meter" style="width: 60%"></span></div>
+					</li>
+					<li>
+						<span>PHP</span>
+						<div class="progress round"><span class="progress-meter" style="width: 60%"></span></div>
+					</li>
+					<li>
+						<span>MySQL</span>
+						<div class="progress round"><span class="progress-meter" style="width: 75%"></span></div>
+					</li>
+					<li>
+						<span>C#</span>
+						<div class="progress round"><span class="progress-meter" style="width: 80%"></span></div>
+					</li>
+					<li>
+						<span>Git</span>
+						<div class="progress round"><span class="progress-meter" style="width: 65%"></span></div>
+					</li>
+				</ul>
 			</div>
 		</div>
-		<div class="column small-11">
-			<div class="skill-card">
-				<p class="skill-header">Responsive Design</p>
-				<p class="skill-description show-for-medium">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, dolor eligendi, qui laborum deserunt praesentium iste sunt illo placeat quo nostrum? Tempora ad quae cupiditate quo quod voluptates architecto nisi?</p>
+		<div class="column small-10">
+			<div id="analysis-card" class="skill-card">
+				<h3>Analysis &amp; Design</h3>
+				<ul>
+					<li>Prototyping</li>
+					<li>Object Oriented Programming</li>
+					<li>Development Cycle</li>
+				</ul>
 			</div>
 		</div>
 	</div>

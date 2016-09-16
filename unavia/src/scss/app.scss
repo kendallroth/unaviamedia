@@ -10,15 +10,15 @@
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
+//@include foundation-range-input;
 //@include foundation-accordion;
 //@include foundation-accordion-menu;
-//@include foundation-badge;
+@include foundation-badge;
 //@include foundation-breadcrumbs;
 //@include foundation-button-group;
 //@include foundation-callout;
 //@include foundation-close-button;
-//@include foundation-menu;
+@include foundation-menu;
 //@include foundation-menu-icon;
 //@include foundation-drilldown-menu;
 //@include foundation-dropdown;
@@ -169,9 +169,13 @@ body {
 //Job experience and projects
 #work-wrapper {
 	padding: 2.5rem 0 0 0;
-	background-color: rgba(255, 255, 255, 1);
+	background-color: rgb(255, 255, 255);
 
 	.work-card {
+		/*&:hover p {
+			border-bottom-color: rgb(27, 126, 207);
+		}*/
+
 		img {
 			width: 100%;
 		}
@@ -180,7 +184,7 @@ body {
 			margin: 0;
 			padding: 0.5rem;
 			font-weight: bold;
-			background-color: rgb(245, 245, 245);
+			background-color: rgb(255, 255, 255);
 			border-bottom: 5px solid rgb(81, 156, 217);
 		}
 
@@ -197,12 +201,28 @@ body {
 	padding: 2rem 0;
 
 	.skill-card {
-		margin-bottom: 1.5rem;
+		// margin-bottom: 1.5rem;
 		padding: 0.75rem;
 		background-color: rgba(255, 255, 255, 1);
+		border-bottom: 3px solid rgb(217, 67, 83);
 
-		p {
+		h3 {
+			font-weight: bold;
+		}
+
+		ul {
 			margin: 0;
+			list-style: none;
+		}
+	}
+
+	#technologies-card {
+		.progress {
+			border-radius: 1000px;
+
+			.progress-meter {
+				border-radius: 1000px;
+			}
 		}
 	}
 }
