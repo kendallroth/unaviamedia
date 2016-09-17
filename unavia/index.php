@@ -99,7 +99,9 @@ require_once(HEADER_FRAGMENT);
 				<h3>Technologies</h3>
 				<dl class="">
 					<dt>Front-End</dt>
-					<dd>HTML5, CSS3, JS</dd>
+					<dd>HTML5, CSS3, JS, jQuery</dd>
+					<dt>Back-End</dd>
+					<dd>PHP, ASP.NET, MySQL</dd>
 					<dt>Preprocessors</dt>
 					<dd>Gulp, SASS, Git</dd>
 				</dl>
