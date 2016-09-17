@@ -118,6 +118,7 @@ require_once(HEADER_FRAGMENT);
 				<h3>Analysis &amp; Design</h3>
 				<ul>
 					<li>Prototyping</li>
+					<li>Data Modeling</li>
 					<li>Object Oriented Programming</li>
 					<li>Development Cycle</li>
 				</ul>
