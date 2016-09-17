@@ -94,7 +94,7 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column small-10">
+		<div class="column small-10 medium-5">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
 				<dl class="">
@@ -113,7 +113,7 @@ require_once(HEADER_FRAGMENT);
 				</dl>
 			</div>
 		</div>
-		<div class="column small-10">
+		<div class="column small-10 medium-5">
 			<div id="analysis-card" class="skill-card">
 				<h3>Analysis &amp; Design</h3>
 				<ul>
