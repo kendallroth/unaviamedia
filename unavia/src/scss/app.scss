@@ -214,14 +214,16 @@ body {
 			margin: 0;
 			list-style: none;
 		}
-	}
 
-	#technologies-card {
-		.progress {
-			border-radius: 1000px;
+		dl {
+			margin: 0;
 
-			.progress-meter {
-				border-radius: 1000px;
+			dt {
+				margin: 0;
+			}
+
+			dd {
+				margin-bottom: 0.25rem;
 			}
 		}
 	}
