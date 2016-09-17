@@ -104,6 +104,12 @@ require_once(HEADER_FRAGMENT);
 					<dd>PHP, ASP.NET, MySQL</dd>
 					<dt>Preprocessors</dt>
 					<dd>Gulp, SASS, Git</dd>
+					<dt>Operating Systems</dt>
+					<dd>Linux, Windows</dd>
+					<dt>Environments</dt>
+					<dd>Vim, Visual Studio</dd>
+					<dt>Additional</dt>
+					<dd>Microsoft Office, Serif</dd>
 				</dl>
 			</div>
 		</div>
