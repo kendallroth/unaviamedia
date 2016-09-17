@@ -97,36 +97,6 @@ require_once(HEADER_FRAGMENT);
 		<div class="column small-10">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
-				<!-- <ul class="clearfix">
-					<li>
-						<span>HTML</span>
-						<div class="progress round"><span class="progress-meter" style="width: 90%"></span></div>
-					</li>
-					<li>
-						<span>CSS</span>
-						<div class="progress round"><span class="progress-meter" style="width: 70%"></span></div>
-					</li>
-					<li>
-						<span>JS</span>
-						<div class="progress round"><span class="progress-meter" style="width: 60%"></span></div>
-					</li>
-					<li>
-						<span>PHP</span>
-						<div class="progress round"><span class="progress-meter" style="width: 60%"></span></div>
-					</li>
-					<li>
-						<span>MySQL</span>
-						<div class="progress round"><span class="progress-meter" style="width: 75%"></span></div>
-					</li>
-					<li>
-						<span>C#</span>
-						<div class="progress round"><span class="progress-meter" style="width: 80%"></span></div>
-					</li>
-					<li>
-						<span>Git</span>
-						<div class="progress round"><span class="progress-meter" style="width: 65%"></span></div>
-					</li>
-				</ul> -->
 				<dl class="">
 					<dt>Front-End</dt>
 					<dd>HTML5, CSS3, JS</dd>
