@@ -37,21 +37,24 @@ require_once(HEADER_FRAGMENT);
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="http://placehold.it/150x150" />
+				<!-- <img src="http://placehold.it/150x150" /> -->
+				<img src="/filler.svg" width="150" height="150" style="background-color: rgb(100, 100, 100);" />
 				<span class="summary-header">Analysis</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="http://placehold.it/150x150" />
+				<!-- <img src="http://placehold.it/150x150" /> -->
+				<img src="/filler.svg" width="150" height="150" style="background-color: rgb(100, 100, 100);" />
 				<span class="summary-header">Design</span>
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="http://placehold.it/150x150" />
+				<!-- <img src="http://placehold.it/150x150" /> -->
+				<img src="/filler.svg" width="150" height="150" style="background-color: rgb(100, 100, 100);" />
 				<span class="summary-header">Development</span>
 				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
@@ -74,13 +77,15 @@ require_once(HEADER_FRAGMENT);
 	<div class="row align-center small-collapse medium-uncollapse">
 		<div class="column small-12 medium-4">
 			<div class="work-card">
-				<img src="http://placehold.it/300x200" />
+				<!-- <img src="http://placehold.it/300x200" /> -->
+				<img src="/filler.svg" width="300" height="200" style="background-color: rgb(100, 100, 100);" />
 				<p>UnaviaMedia<span>2016</span></p>
 			</div>
 		</div>
 		<div class="column small-12 medium-4">
 			<div class="work-card">
-				<img src="http://placehold.it/300x200" />
+				<!-- <img src="http://placehold.it/300x200" /> -->
+				<img src="/filler.svg" width="300" height="200" style="background-color: rgb(100, 100, 100);" />
 				<p>CaptainCPA<span>2015</span></p>
 			</div>
 		</div>
