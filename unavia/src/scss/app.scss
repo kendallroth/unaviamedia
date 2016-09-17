@@ -210,11 +210,7 @@ body {
 			font-weight: bold;
 		}
 
-		ul {
-			margin: 0;
-			list-style: none;
-		}
-
+		//Technologies section
 		dl {
 			margin: 0;
 
@@ -225,6 +221,12 @@ body {
 			dd {
 				margin-bottom: 0.25rem;
 			}
+		}
+
+		//Analysis section
+		ul {
+			margin: 0;
+			list-style: none;
 		}
 	}
 }
