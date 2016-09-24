@@ -92,6 +92,24 @@ body {
 
 #welcome-wrapper {
 	padding: 3rem;
+	color: white;
+
+	//Background image from http://sixrevisions.com/css/responsive-background-image/
+	background-image: url("/images/background_1.jpg");
+	height: 100vh;
+	width: 100%;
+	//Set the scaling axis at the center of the viewport
+	background-position: center center;
+	//Set the image to not repeat
+	background-repeat: no-repeat;
+	//Set the image to be fixed (and not move)
+	background-attachment: fixed;
+	//Scale background proportionally so it's width/height are equal/greater than width/height of element
+	background-size: cover;
+
+	#welcome-card {
+		height: 100%;
+	}
 }
 
 #portfolio-wrapper {

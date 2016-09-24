@@ -8,7 +8,7 @@ require_once(HEADER_FRAGMENT);
 ?>
 
 <section id="welcome-wrapper" class="content-wrapper">
-	<div id="welcome-card" class="row align-center">
+	<div id="welcome-card" class="row align-center align-middle">
 		<div class="column text-center large-8">
 			<h1>Hi, I'm Kendall Roth, a web developer currently studying at Conestoga College</h1>
 		</div>
