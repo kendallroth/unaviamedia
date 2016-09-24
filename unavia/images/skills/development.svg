@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="102.064" height="101.052">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-219.575,-751.813)">
+		<path id="dp_path002" fill="#ff7b00" fill-rule="evenodd" d="M 270.683,752.636 C 298.297,752.636 320.683,775 320.683,802.587 C 320.683,830.173 298.297,852.537 270.683,852.537 C 243.068,852.537 220.683,830.173 220.683,802.587 C 220.683,775 243.068,752.636 270.683,752.636 Z "/>
+		<path id="dp_path003" fill="#d86d2b" fill-rule="evenodd" d="M 236.159,817.029 L 271.793,852.635 C 296.983,852.084 317.581,832.924 320.361,808.371 L 303.312,791.376 Z "/>
+		<path id="dp_path004" fill="white" fill-rule="evenodd" d="M 246.949,792.947 C 254.94,792.947 261.417,799.417 261.417,807.4 C 261.417,815.383 254.94,821.853 246.949,821.853 C 238.959,821.853 232.481,815.383 232.481,807.4 C 232.481,799.417 238.959,792.947 246.949,792.947 Z "/>
+		<path id="dp_path005" fill="white" fill-rule="evenodd" d="M 291.3,786.723 C 301.009,786.723 308.881,794.587 308.881,804.288 C 308.881,813.989 301.009,821.853 291.3,821.853 C 281.591,821.853 273.719,813.989 273.719,804.288 C 273.719,794.587 281.591,786.723 291.3,786.723 Z "/>
+		<path id="dp_path006" fill="white" fill-rule="evenodd" d="M 267.967,775.351 C 279.575,775.351 288.985,784.752 288.985,796.349 C 288.985,807.947 279.575,817.348 267.967,817.348 C 256.359,817.348 246.948,807.947 246.948,796.349 C 246.948,784.752 256.359,775.351 267.967,775.351 Z "/>
+		<path id="dp_path007" fill="white" fill-rule="evenodd" d="M 246.949,797.975 L 291.301,797.975 L 291.301,821.855 L 246.949,821.855 Z "/>
+		<path id="dp_path008" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 260.025,795.376 L 251.345,804.721 L 260.024,814.191"/>
+		<path id="dp_path009" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 281.339,814.191 L 290.017,804.845 L 281.339,795.376"/>
+		<path id="dp_path010" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 275.263,795.359 L 266.101,814.208"/>
+	</g>
+</svg>

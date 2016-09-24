@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-48.064,69.092)">
+		<path id="dp_path002" fill="#e47c1b" fill-rule="evenodd" d="M 98,-69.3693 C 125.615,-69.3693 148,-47.0053 148,-19.4187 C 148,8.168 125.615,30.532 98,30.532 C 70.3853,30.532 48,8.168 48,-19.4187 C 48,-47.0053 70.3853,-69.3693 98,-69.3693 Z "/>
+		<path id="dp_path003" fill="#c8682c" fill-rule="evenodd" d="M 63.476,-4.976 L 99.1107,30.6293 C 124.3,30.0787 144.899,10.9187 147.679,-13.6347 L 130.629,-30.6293 Z "/>
+		<path id="dp_path004" fill="white" fill-rule="evenodd" d="M 74.2667,-29.0587 C 82.2573,-29.0587 88.7347,-22.588 88.7347,-14.6053 C 88.7347,-6.62267 82.2573,-0.152 74.2667,-0.152 C 66.276,-0.152 59.7987,-6.62267 59.7987,-14.6053 C 59.7987,-22.588 66.276,-29.0587 74.2667,-29.0587 Z "/>
+		<path id="dp_path005" fill="white" fill-rule="evenodd" d="M 118.617,-35.2827 C 128.327,-35.2827 136.199,-27.4187 136.199,-17.7173 C 136.199,-8.016 128.327,-0.152 118.617,-0.152 C 108.908,-0.152 101.036,-8.016 101.036,-17.7173 C 101.036,-27.4187 108.908,-35.2827 118.617,-35.2827 Z "/>
+		<path id="dp_path006" fill="white" fill-rule="evenodd" d="M 95.284,-46.6547 C 106.892,-46.6547 116.303,-37.2533 116.303,-25.656 C 116.303,-14.0587 106.892,-4.65733 95.284,-4.65733 C 83.676,-4.65733 74.2653,-14.0587 74.2653,-25.656 C 74.2653,-37.2533 83.676,-46.6547 95.284,-46.6547 Z "/>
+		<path id="dp_path007" fill="white" fill-rule="evenodd" d="M 74.2667,-24.0307 L 118.619,-24.0307 L 118.619,-0.150667 L 74.2667,-0.150667 Z "/>
+		<path id="dp_path008" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 87.3427,-26.6293 L 78.6627,-17.284 L 87.3413,-7.81467"/>
+		<path id="dp_path009" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 108.656,-7.81467 L 117.335,-17.16 L 108.656,-26.6293"/>
+		<path id="dp_path010" fill="none" fill-rule="evenodd" stroke="#ff7b00" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 102.58,-26.6467 L 93.4187,-7.79733"/>
+	</g>
+</svg>

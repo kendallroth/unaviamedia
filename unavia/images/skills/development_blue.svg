@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100">
+	<g id="dp_dp001" transform="matrix(1,0,0,1,-168.224,69.092)">
+		<path id="dp_path002" fill="#419cd1" fill-rule="evenodd" d="M 217.936,-69.3693 C 245.551,-69.3693 267.936,-47.0053 267.936,-19.4187 C 267.936,8.168 245.551,30.532 217.936,30.532 C 190.321,30.532 167.936,8.168 167.936,-19.4187 C 167.936,-47.0053 190.321,-69.3693 217.936,-69.3693 Z "/>
+		<path id="dp_path003" fill="#3d80a3" fill-rule="evenodd" d="M 183.412,-4.976 L 219.047,30.6293 C 244.236,30.0787 264.835,10.9187 267.615,-13.6347 L 250.565,-30.6293 Z "/>
+		<path id="dp_path004" fill="white" fill-rule="evenodd" d="M 194.203,-29.0587 C 202.193,-29.0587 208.671,-22.588 208.671,-14.6053 C 208.671,-6.62267 202.193,-0.152 194.203,-0.152 C 186.212,-0.152 179.735,-6.62267 179.735,-14.6053 C 179.735,-22.588 186.212,-29.0587 194.203,-29.0587 Z "/>
+		<path id="dp_path005" fill="white" fill-rule="evenodd" d="M 238.553,-35.2827 C 248.263,-35.2827 256.135,-27.4187 256.135,-17.7173 C 256.135,-8.016 248.263,-0.152 238.553,-0.152 C 228.844,-0.152 220.972,-8.016 220.972,-17.7173 C 220.972,-27.4187 228.844,-35.2827 238.553,-35.2827 Z "/>
+		<path id="dp_path006" fill="white" fill-rule="evenodd" d="M 215.22,-46.6547 C 226.828,-46.6547 236.239,-37.2533 236.239,-25.656 C 236.239,-14.0587 226.828,-4.65733 215.22,-4.65733 C 203.612,-4.65733 194.201,-14.0587 194.201,-25.656 C 194.201,-37.2533 203.612,-46.6547 215.22,-46.6547 Z "/>
+		<path id="dp_path007" fill="white" fill-rule="evenodd" d="M 194.203,-24.0307 L 238.555,-24.0307 L 238.555,-0.150667 L 194.203,-0.150667 Z "/>
+		<path id="dp_path008" fill="none" fill-rule="evenodd" stroke="#54b7dc" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 207.279,-26.6293 L 198.599,-17.284 L 207.277,-7.81467"/>
+		<path id="dp_path009" fill="none" fill-rule="evenodd" stroke="#54b7dc" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 228.592,-7.81467 L 237.271,-17.16 L 228.592,-26.6293"/>
+		<path id="dp_path010" fill="none" fill-rule="evenodd" stroke="#54b7dc" stroke-width="3.33333" stroke-linejoin="round" stroke-linecap="round" d="M 222.516,-26.6467 L 213.355,-7.79733"/>
+	</g>
+</svg>
