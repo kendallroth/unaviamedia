@@ -37,21 +37,24 @@ require_once(HEADER_FRAGMENT);
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="/images/150x150.png" />
+				<!-- <img src="/images/150x150.png" /> -->
+				<img src="/images/analysis.svg" />
 				<span class="summary-header">Analysis</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="/images/150x150.png" />
+				<!-- <img src="/images/150x150.png" /> -->
+				<img src="/images/design.svg" />
 				<span class="summary-header">Design</span>
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block">
-				<img src="/images/150x150.png" />
+				<!-- <img src="/images/150x150.png" /> -->
+				<img src="/images/development_blue.svg" />
 				<span class="summary-header">Development</span>
 				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
@@ -97,19 +100,19 @@ require_once(HEADER_FRAGMENT);
 		<div class="column small-10 medium-5">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
-				<dl class="">
-					<dt>Front-End</dt>
+				<dl>
+					<dt>Web Front-End</dt>
 					<dd>HTML5, CSS3, JS, jQuery</dd>
-					<dt>Back-End</dd>
+					<dt>Web Back-End</dd>
 					<dd>PHP, ASP.NET, MySQL</dd>
-					<dt>Preprocessors</dt>
+					<dt>Additional</dt>
 					<dd>Gulp, SASS, Git</dd>
+					<dt>Desktop</dt>
+					<dd>C#, Java</dd>
 					<dt>Operating Systems</dt>
 					<dd>Linux, Windows</dd>
 					<dt>Environments</dt>
 					<dd>Vim, Visual Studio</dd>
-					<dt>Additional</dt>
-					<dd>Microsoft Office, Serif</dd>
 				</dl>
 			</div>
 		</div>
@@ -121,6 +124,8 @@ require_once(HEADER_FRAGMENT);
 					<li>Data Modeling</li>
 					<li>Object Oriented Programming</li>
 					<li>Development Cycle</li>
+					<li>Responsive Design</li>
+					<li>Project Planning</li>
 				</ul>
 			</div>
 		</div>
