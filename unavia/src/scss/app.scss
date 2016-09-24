@@ -98,7 +98,7 @@ body {
 	padding: 1.5rem;
 	color: white;
 	font-weight: bold;
-	background-color: black;
+	background-color: rgb(25, 25, 25);
 
 	p {
 		margin: 0;
@@ -167,6 +167,13 @@ body {
 			font-size: 0.9rem;
 		}
 	}
+
+	//Background colours for the skill card images
+	#skill-analysis img { background-color: rgb(236, 109, 27); }
+
+	#skill-design img { background-color: rgb(25, 153, 226); }
+
+	#skill-development img { background-color: rgb(213, 42, 42); }
 }
 
 //Job experience and projects

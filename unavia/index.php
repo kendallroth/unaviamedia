@@ -31,12 +31,12 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column small-11 large-9">
-			<blockquote>I'm primarily passionate about responsive web design, focusing on clean and simple design. I strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
+			<blockquote>I'm primarily passionate about responsive web design, focusing on clean and simple design. I&nbsp;strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
 		</div>
 	</div>
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
-			<div class="summary-block">
+			<div class="summary-block" id="skill-analysis">
 				<!-- <img src="/images/150x150.png" /> -->
 				<img src="/images/skills/analysis.svg" />
 				<span class="summary-header">Analysis</span>
@@ -44,7 +44,7 @@ require_once(HEADER_FRAGMENT);
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
-			<div class="summary-block">
+			<div class="summary-block" id="skill-design">
 				<!-- <img src="/images/150x150.png" /> -->
 				<img src="/images/skills/design.svg" />
 				<span class="summary-header">Design</span>
@@ -52,9 +52,9 @@ require_once(HEADER_FRAGMENT);
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
-			<div class="summary-block">
+			<div class="summary-block" id="skill-development">
 				<!-- <img src="/images/150x150.png" /> -->
-				<img src="/images/skills/development_blue.svg" />
+				<img src="/images/skills/development.svg" />
 				<span class="summary-header">Development</span>
 				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			</div>
