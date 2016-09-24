@@ -13,6 +13,9 @@
 		}
 
 		img {
+			width: 30px;
+			box-sizing: border-box;
+			background-color: $medium-gray;
 			border-radius: 1000px;
 		}
 	}
