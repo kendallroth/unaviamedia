@@ -75,14 +75,14 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div class="row align-center small-collapse medium-uncollapse">
-		<div class="column small-12 medium-4">
+		<div class="column small-12 medium-5">
 			<div class="work-card">
 				<!-- <img src="/images/300x200.png" /> -->
 				<img src="/images/projects/UnaviaMedia_Project.png" />
 				<p>UnaviaMedia<span>2016</span></p>
 			</div>
 		</div>
-		<div class="column small-12 medium-4">
+		<div class="column small-12 medium-5">
 			<div class="work-card">
 				<!-- <img src="/images/300x200.png" /> -->
 				<img src="/images/projects/Captain_CPA_Project.png" />
@@ -99,7 +99,7 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column small-10 medium-5">
+		<div class="column small-10 medium-5 large-4">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
 				<dl>
@@ -118,7 +118,7 @@ require_once(HEADER_FRAGMENT);
 				</dl>
 			</div>
 		</div>
-		<div class="column small-10 medium-5">
+		<div class="column small-10 medium-5 large-4">
 			<div id="analysis-card" class="skill-card">
 				<h3>Analysis &amp; Design</h3>
 				<ul>
