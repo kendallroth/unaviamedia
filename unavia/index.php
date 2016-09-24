@@ -15,7 +15,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="portfolio-wrapper" class="content-bar">
+<section id="portfolio-wrapper">
 	<div id="portfolio-bar" class="row">
 		<div class="column text-center">
 			<p>Welcome to my online portfolio!</p>
