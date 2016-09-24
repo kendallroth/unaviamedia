@@ -78,7 +78,7 @@ body {
 		bottom: 0;
 		left: 0;
 		position: fixed;
-		z-index: -1;
+		z-index: -2;
 	}
 }
 
@@ -91,21 +91,40 @@ body {
 }
 
 #welcome-wrapper {
-	padding: 3rem;
+	position: relative;
+	padding: 0 3rem;
 	color: white;
-
-	//Background image from http://sixrevisions.com/css/responsive-background-image/
-	background-image: url("/images/background_1.jpg");
 	height: 100vh;
 	width: 100%;
-	//Set the scaling axis at the center of the viewport
-	background-position: center center;
-	//Set the image to not repeat
-	background-repeat: no-repeat;
-	//Set the image to be fixed (and not move)
-	background-attachment: fixed;
-	//Scale background proportionally so it's width/height are equal/greater than width/height of element
-	background-size: cover;
+
+	&::after {
+		//Background image from http://sixrevisions.com/css/responsive-background-image/
+		content: "";
+
+		//Background opacity taken from http://stackoverflow.com/a/23208450/4206438
+		background:
+			linear-gradient(
+				rgba(0, 0, 0, 0.6),
+				rgba(0, 0, 0, 0.6)
+			),
+			url("/images/background_1.jpg");
+
+		//Scale background proportionally so it's width/height are equal/greater than width/height of element
+		background-size: cover;
+		//Set the scaling axis at the center of the viewport
+		background-position: center bottom;
+		//Set the image to not repeat
+		background-repeat: no-repeat;
+		//Set the image to be fixed (and not move)
+		background-attachment: fixed;
+		opacity: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+	}
 
 	#welcome-card {
 		height: 100%;
