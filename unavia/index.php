@@ -78,7 +78,7 @@ require_once(HEADER_FRAGMENT);
 		<div class="column small-12 medium-5">
 			<div class="work-card">
 				<!-- <img src="/images/300x200.png" /> -->
-				<img src="/images/projects/UnaviaMedia_Project.png" />
+				<img src="/images/projects/UnaviaMedia_Project_2.png" />
 				<p>UnaviaMedia<span>2016</span></p>
 			</div>
 		</div>
