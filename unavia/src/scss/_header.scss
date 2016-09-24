@@ -18,17 +18,19 @@ header {
 	position: fixed;
 	width: 100%;
 	background-color: rgba(250, 250, 250, 0.95);
+	z-index: 95;
 }
 
 .header-bar {
 	padding: 0.5rem;
 
 	.menu {
+		//Logo in the center of the menu
 		.menu-logo {
 			margin: 0 1.5rem;
-			border: none !important;
 
 			a {
+				//Remove border from logo link
 				border: none !important;
 			}
 
