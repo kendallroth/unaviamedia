@@ -6,7 +6,8 @@
 - Removed backup files
 - Added CHANGELOG
 - Minor changes to site content and styles
-	- Projects/work section
+	- Projects/work images
+	- Description card content
 
 ## September 17, 2016
 - Large changes to site content and styles
