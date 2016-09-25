@@ -11,7 +11,7 @@ echo "Nginx Setup"
 
 echo "Installing nginx"
 sudo apt-get install -y nginx > /dev/null
-sudo service nginx start
+sudo service nginx start > /dev/null
 
 echo "Configuring nginx"
 sudo rm /etc/nginx/sites-available/site_conf
@@ -51,17 +51,17 @@ sudo service nginx restart > /dev/null
 
 ##################################################
 # mysql
-echo "MySQL Setup"
+#echo "MySQL Setup"
 
-echo "Installing automation utilities"
-sudo apt-get install -y debconf-utils > /dev/null
+#echo "Installing automation utilities"
+#sudo apt-get install -y debconf-utils > /dev/null
 
-echo "Setting mysql setup variables"
-debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
-debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
+#echo "Setting mysql setup variables"
+#debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
+#debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
 
-echo "Installing mysql"
-sudo apt-get install -y mysql-server > /dev/null
+#echo "Installing mysql"
+#sudo apt-get install -y mysql-server > /dev/null
 
 
 ##################################################
@@ -76,7 +76,7 @@ sudo apt-get install -y git > /dev/null
 echo "NodeJS Setup"
 
 echo "Updating NodeJS repositories"
-sudo curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - > /dev/null
+sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - > /dev/null
 
 echo "Installing nodejs"
 sudo apt-get install -y nodejs > /dev/null
@@ -85,3 +85,11 @@ sudo apt-get install -y nodejs > /dev/null
 # foundation
 echo "Foundation Setup"
 sudo npm install --global foundation-cli > /dev/null
+
+sudo npm install --global gulp > /dev/null
+
+echo "Node Packages Install"
+cd /var/www/unavia
+
+#Install npm packages
+sudo npm install > /dev/null

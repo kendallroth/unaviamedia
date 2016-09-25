@@ -2,156 +2,309 @@
 
 @import 'settings';
 @import 'foundation';
-@import 'variables';
-@import 'utilities';
 //@import 'motion-ui';
 
 @include foundation-global-styles;
-// @include foundation-grid;
+//@include foundation-grid;
 @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
+//@include foundation-range-input;
+//@include foundation-accordion;
+//@include foundation-accordion-menu;
 @include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-close-button;
+//@include foundation-breadcrumbs;
+//@include foundation-button-group;
+//@include foundation-callout;
+//@include foundation-close-button;
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-flex-video;
+//@include foundation-menu-icon;
+//@include foundation-drilldown-menu;
+//@include foundation-dropdown;
+//@include foundation-dropdown-menu;
+//@include foundation-flex-video;
 @include foundation-label;
-@include foundation-media-object;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
+//@include foundation-media-object;
+//@include foundation-off-canvas;
+//@include foundation-orbit;
+//@include foundation-pagination;
+//@include foundation-progress-bar;
+//@include foundation-progress-element;
+//@include foundation-meter-element;
 @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
 @include foundation-switch;
 @include foundation-table;
-@include foundation-tabs;
+//@include foundation-tabs;
 @include foundation-thumbnail;
-@include foundation-title-bar;
+//@include foundation-title-bar;
 @include foundation-tooltip;
-@include foundation-top-bar;
+//@include foundation-top-bar;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
+//@include foundation-float-classes;
 @include foundation-flex-classes;
 
 //@include motion-ui-transitions;
 //@include motion-ui-animations;
 
+@font-face {
+	font-family: "Raleway";
+	src: url("/fonts/Raleway/Raleway-Regular.ttf");
+}
 
+h1, h2, h3, h4, p, span, div {
+	font-family: Raleway, sans-serif;
+}
+
+//Import header and footer styles
 @import 'header';
 @import 'footer';
-@import 'index';
-@import 'about';
 
-
-body, p, h1, h2, h3, h4, h5, div, span
-{
-	font-family: 'Varela Round', sans-serif;
-}
-
-body
-{
-	color: $dark-grey;
-	background-color: $light-grey;
-}
-
-.hover-primary:hover
-{
-	color: $primary-color;
-}
-
-.hover-secondary:hover
-{
-	color: $secondary-color;
-}
-
-
-
-/******************************************************************************/
-.error-page {
-	background-image: url("/dist/images/dark_sharp_edges.png");
-
-	.error-page-overlay {
-		height: 100%;
-		background-color: rgba(255, 255, 255, 0.25);
-	}
-
-	section {
-		height: 100%;
-	}
-}
-
-/******************************************************************************/
-// Console Code Classes
-.console {
+//Background Image Opacity
+//	Taken from https://css-tricks.com/snippets/css/transparent-background-images/
+body {
 	position: relative;
-	overflow: hidden;
+	background-color: rgb(250, 250, 250);
+
+	&::after {
+		content: "";
+		background: url("/images/backgrounds/cork-wallet.png");
+		background-repeat: repeat;
+		opacity: 0.35;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: fixed;
+		z-index: -2;
+	}
+}
+
+.content-wrapper {
+	h2 {
+		margin: 0 auto 1.25rem auto;
+		font-size: 1.75rem;
+		font-weight: bold;
+	}
+}
+
+#welcome-wrapper {
+	position: relative;
+	padding: 0 3rem;
 	color: white;
-	background-color: rgba(40, 5, 25, 0.75);
-	border-radius: 0.5rem;
+	height: 100vh;
+	width: 100%;
 
-	nav {
-		padding: 0.5rem;
-		background-color: rgb(60, 60, 60);
+	&::after {
+		//Background image from http://sixrevisions.com/css/responsive-background-image/
+		content: "";
 
-		a {
-			display: inline-block;
-			width: 1.25rem;
-			height: 1.25rem;
-			padding: 0.25rem;
-			color: black !important;
-			line-height: 0.75rem;
+		//Background opacity taken from http://stackoverflow.com/a/23208450/4206438
+		//	Image - https://hd.unsplash.com/photo-1432821579285-1b649e5b1ce3 (no attribution)
+		background:
+			linear-gradient(
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
+			),
+			url("/images/backgrounds/background_wooden.jpg");
+
+		//Scale background proportionally so it's width/height are equal/greater than width/height of element
+		background-size: cover;
+		//Set the scaling axis at the center of the viewport
+		background-position: center center;
+		//Set the image to not repeat
+		background-repeat: no-repeat;
+		//Set the image to be fixed (and not move)
+		background-attachment: fixed;
+		opacity: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		z-index: -1;
+	}
+
+	#welcome-card {
+		height: 100%;
+	}
+}
+
+#portfolio-wrapper {
+	padding: 1.5rem;
+	color: white;
+	font-weight: bold;
+	background-color: rgb(25, 25, 25);
+
+	p {
+		margin: 0;
+	}
+}
+
+//Summary of what I do
+#summary-wrapper {
+	padding: 3rem 0;
+
+	blockquote {
+		margin-bottom: 2rem;
+
+		//Styles for this blockquotes on mobile
+		@include breakpoint(small only) {
 			text-align: center;
-			background-color: white;
+			border: none;
+			border-top: 1px solid $medium-gray;
+			border-bottom: 1px solid $medium-gray;
+		}
+
+		@include breakpoint(medium) {
+			margin-bottom: 2.5rem;
+		}
+	}
+
+	//Give the summary cards bottom margin (except for the last one)
+	@include breakpoint(small only) {
+		#summary-card > div:not(:last-of-type) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	//Separate summary blocks
+	.summary-block {
+		padding: 1rem;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.95);
+
+		//Grow animation
+		//transition-duration: 0.10s;
+		//transition-property: transform;
+
+		&:hover {
+			//transform: scale(1.01);
+		}
+
+		//Summary block images
+		img {
+			display: block;
+			margin: auto;
 			border-radius: 1000px;
+		}
 
-			&:first-of-type {
-				background-color: rgb(225, 69, 0);
+		//Summary block headers
+		.summary-header {
+			display: block;
+			margin: 0.75rem auto 0.5rem auto;
+			text-align: center;
+			font-weight: bold;
+		}
 
-				&:hover {
-					background-color: rgb(255, 75, 50);
-				}
-			}
+		//Summary block descriptions
+		p {
+			margin: 0;
+			font-size: 0.9rem;
+		}
+	}
 
-			&:nth-of-type(2) {
-				background-color: rgb(200, 200, 200);
+	//Background colours for the skill card images
+	#skill-analysis img { background-color: rgb(236, 109, 27); }
+	#skill-design img { background-color: rgb(25, 153, 226); }
+	#skill-development img { background-color: rgb(213, 42, 42); }
+}
 
-				&:hover {
-					background-color: rgb(235, 235, 235);
-				}
-			}
+//Job experience and projects
+#work-wrapper {
+	padding: 2.5rem 0 0 0;
+	background-color: rgb(255, 255, 255);
+
+	@include breakpoint(medium) {
+		padding: 2.5rem 0;
+	}
+
+	.work-card {
+		/*&:hover p {
+			border-bottom-color: rgb(27, 126, 207);
+		}*/
+
+		img {
+			width: 100%;
+		}
+
+		p {
+			margin: 0;
+			padding: 0.5rem;
+			font-weight: bold;
+			// TODO: Change background colour on medium up
+			background-color: rgb(255, 255, 255);
+			border-bottom: 5px solid rgb(81, 156, 217);
 		}
 
 		span {
-			margin-left: 1rem;
-			font-weight: bold;
+			float: right;
+			margin: 0;
+			font-weight: normal;
+			font-style: italic;
 		}
 	}
+}
 
-	div {
+#skills-wrapper {
+	padding: 2rem 0;
+
+	.skill-card {
+		// margin-bottom: 1.5rem;
 		padding: 0.75rem;
-		font-family: "Courier New", Courier, monospace;
+		background-color: rgba(255, 255, 255, 1);
+		border-bottom: 3px solid rgb(217, 67, 83);
 
-		.console-error {
-			color: rgb(255, 50, 50);
+		h3 {
+			font-weight: bold;
+
+			@include breakpoint(medium) {
+				width: 75%;
+				margin: 0 auto 0.75rem auto;
+				font-size: 1.25rem;
+				text-align: center;
+				border-top: 2px solid rgb(217, 67, 83);
+				border-bottom: 2px solid rgb(217, 67, 83);
+			}
 		}
 
-		.console-prompt {
-			color: goldenrod;
+		//Technologies section
+		dl {
+			margin: 0;
+
+			dt {
+				margin: 0;
+			}
+
+			dd {
+				margin-bottom: 0.25rem;
+			}
+		}
+
+		//Analysis section
+		ul {
+			margin: 0;
+			list-style: none;
+		}
+	}
+}
+
+#contact-wrapper {
+	padding: 2.5rem;
+	background-color: rgb(60, 60, 60);
+
+	a {
+		display: inline-block;
+		padding: 1rem;
+		color: lightgrey;
+		border: 3px double lightgrey;
+		border-radius: 0.1rem;
+
+		&:hover {
+			border-style: solid;
+			background-color: rgb(50, 50, 50);
 		}
 	}
 }

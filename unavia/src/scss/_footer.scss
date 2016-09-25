@@ -1,55 +1,26 @@
-.footer-bar-top {
-	.horizontal-menu li {
-		&:not(:last-of-type) {
-			margin-right: 0.25rem;
-		}
+//Styling for the footer
+.footer-bar {
+	padding: 2rem 0;
+	color: white;
+	background-color: rgb(15, 15, 15);
 
-		a {
-			padding: 0 15px;
-			color: white;
+	//Social media icons bar
+	.social-media-bar {
+		margin-bottom: 1.25rem;
 
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-}
-
-.footer-bar-bottom {
-	position: relative;
-
-	.social-media-bar a {
-		margin-bottom: 1rem;
-
-		&:not(:first-of-type) {
-			margin-left: 0.75rem;
+		a:not(:last-of-type) {
+			margin-right: 0.6rem;
 		}
 
 		img {
-			background-color: $medium-light-grey;
+			width: 30px;
+			box-sizing: border-box;
+			background-color: $medium-gray;
+			border-radius: 1000px;
 
 			&:hover {
-				background-color: $primary-color;
+				background-color: rgb(25, 153, 226);
 			}
 		}
-	}
-}
-
-.btn-page-top {
-	position: fixed;
-	right: 0;
-	bottom: 0;
-	background-color: $dark-grey;
-	border-top-left-radius: 1000px;
-	opacity: 0.3;
-
-	&:hover {
-		opacity: 0.75;
-	}
-}
-
-@include breakpoint(small only) {
-	.social-media-bar {
-		margin-bottom: 1rem;
 	}
 }
