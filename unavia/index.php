@@ -39,27 +39,26 @@ require_once(HEADER_FRAGMENT);
 			<div class="summary-block" id="skill-analysis">
 				<img src="/images/skills/analysis.svg" />
 				<span class="summary-header">Analysis</span>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				<p>Careful analysis, including data modeling and project management, is a necessity for project planning and plays a vital role in my work.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-design">
 				<img src="/images/skills/design.svg" />
 				<span class="summary-header">Design</span>
-				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				<p>While not a designer, I do enjoy creating my own content and illustrations while striving to follow a simple and minimalistic approach.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-development">
 				<img src="/images/skills/development.svg" />
 				<span class="summary-header">Development</span>
-				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>The steps in the development cycle&mdash;whether front-end, back-end, database, documentation, etc.&mdash;all receive the same careful attention to detail.</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- TODO: Add project descriptions to slide up on hover and cover the image (also animate the bottom border colour) -->
 <section id="work-wrapper" class="content-wrapper">
 	<div class="row">
 		<div class="column text-center" >
