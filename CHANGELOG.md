@@ -3,6 +3,7 @@
 ## September 24, 2016
 - Added hero image to home page
 - Refactored styles
+- Removed backup files
 - Added CHANGELOG
 - Minor changes to site content and styles
 	- Projects/work section
