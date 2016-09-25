@@ -70,7 +70,7 @@ body {
 
 	&::after {
 		content: "";
-		background: url("/images/cork-wallet.png");
+		background: url("/images/backgrounds/cork-wallet.png");
 		background-repeat: repeat;
 		opacity: 0.35;
 		top: 0;
@@ -104,15 +104,15 @@ body {
 		//Background opacity taken from http://stackoverflow.com/a/23208450/4206438
 		background:
 			linear-gradient(
-				rgba(0, 0, 0, 0.6),
-				rgba(0, 0, 0, 0.6)
+				rgba(0, 0, 0, 0.5),
+				rgba(0, 0, 0, 0.5)
 			),
-			url("/images/background_1.jpg");
+			url("/images/backgrounds/background_wooden.jpg");
 
 		//Scale background proportionally so it's width/height are equal/greater than width/height of element
 		background-size: cover;
 		//Set the scaling axis at the center of the viewport
-		background-position: center bottom;
+		background-position: center center;
 		//Set the image to not repeat
 		background-repeat: no-repeat;
 		//Set the image to be fixed (and not move)

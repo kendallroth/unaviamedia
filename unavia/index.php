@@ -37,7 +37,6 @@ require_once(HEADER_FRAGMENT);
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-analysis">
-				<!-- <img src="/images/150x150.png" /> -->
 				<img src="/images/skills/analysis.svg" />
 				<span class="summary-header">Analysis</span>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -45,7 +44,6 @@ require_once(HEADER_FRAGMENT);
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-design">
-				<!-- <img src="/images/150x150.png" /> -->
 				<img src="/images/skills/design.svg" />
 				<span class="summary-header">Design</span>
 				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -53,7 +51,6 @@ require_once(HEADER_FRAGMENT);
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-development">
-				<!-- <img src="/images/150x150.png" /> -->
 				<img src="/images/skills/development.svg" />
 				<span class="summary-header">Development</span>
 				<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -77,14 +74,12 @@ require_once(HEADER_FRAGMENT);
 	<div class="row align-center small-collapse medium-uncollapse">
 		<div class="column small-12 medium-5">
 			<div class="work-card">
-				<!-- <img src="/images/300x200.png" /> -->
-				<img src="/images/projects/UnaviaMedia_Project_2.png" />
+				<img src="/images/projects/UnaviaMedia_Project.png" />
 				<p>UnaviaMedia<span>2016</span></p>
 			</div>
 		</div>
 		<div class="column small-12 medium-5">
 			<div class="work-card">
-				<!-- <img src="/images/300x200.png" /> -->
 				<img src="/images/projects/Captain_CPA_Project.png" />
 				<p>CaptainCPA<span>2015</span></p>
 			</div>
