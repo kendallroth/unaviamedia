@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <footer class="footer-bar">
 	<!-- Row of social media icons -->
 	<div class="row social-media-bar">

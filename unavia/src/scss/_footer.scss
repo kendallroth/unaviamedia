@@ -17,6 +17,10 @@
 			box-sizing: border-box;
 			background-color: $medium-gray;
 			border-radius: 1000px;
+
+			&:hover {
+				background-color: rgb(25, 153, 226);
+			}
 		}
 	}
 }
