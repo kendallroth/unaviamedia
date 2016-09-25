@@ -91,6 +91,5 @@ sudo npm install --global gulp > /dev/null
 echo "Node Packages Install"
 cd /var/www/unavia
 
-#Run bower and npm
-bower install > /dev/null
+#Install npm packages
 sudo npm install > /dev/null
