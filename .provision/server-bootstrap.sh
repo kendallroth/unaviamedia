@@ -45,3 +45,8 @@ sudo systemctl reload nginx
 # Clean html directory and create php test file
 sudo rm /var/www/html/*
 sudo vim /var/www/html/info.php
+
+# Update web directory owner
+sudo chown -R "$USER":www-data /var/www
+# Update web direcotry permissions (set 755 for directories and 644 for files)
+chmod -R u+rwX,go+rX,go-w /var/www
