@@ -8,7 +8,7 @@ cd /var/www
 # Clone git repository and link web root and nginx server block
 git clone https://github.com/unaviamedia/unaviamedia.git
 ln -s /var/www/unaviamedia/unavia /var/www/html
-ln -s /var/www/unaviamedia/.provision/nginx/site_conf /etc/nginx/sites-available/site_conf
+sudo ln -s /var/www/unaviamedia/.provision/nginx/site_conf /etc/nginx/sites-available/site_conf
 
 # Update repositories and upgrade available packages
 sudo apt update -y
