@@ -2,7 +2,12 @@
 adduser development
 usermod -aG sudo development
 su development
+cd /var/www
 # Will need to enter password for first sudo use
+
+# Clone git repository and link web root
+git clone https://github.com/unaviamedia/unaviamedia.git
+ln -s /var/www/unaviamedia/unavia /var/www/html
 
 # Update repositories and upgrade available packages
 sudo apt update -y
@@ -46,7 +51,7 @@ sudo systemctl reload nginx
 sudo rm /var/www/html/*
 sudo vim /var/www/html/info.php
 
-# Update web directory owner
+# Update web directory owner and permissions (set 755 for directories and 644 for files)
+#   This will need to be run frequently (after changes) until permission inheritance is set
 sudo chown -R "$USER":www-data /var/www
-# Update web direcotry permissions (set 755 for directories and 644 for files)
 chmod -R u+rwX,go+rX,go-w /var/www
