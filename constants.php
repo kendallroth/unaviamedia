@@ -3,7 +3,7 @@
 ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 'On');
 
-define("HTML_ROOT", "/var/www/unavia");
+define("HTML_ROOT", "/var/www/html");
 
 define("INCLUDES", HTML_ROOT . "/include");
 
