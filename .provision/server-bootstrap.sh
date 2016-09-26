@@ -56,3 +56,15 @@ sudo vim /var/www/html/info.php
 #   This will need to be run frequently (after changes) until permission inheritance is set
 sudo chown -R "$USER":www-data /var/www
 chmod -R u+rwX,go+rX,go-w /var/www
+
+# Install nodejs and npm, and link nodejs to node (PATH issues)
+sudo apt install nodejs
+sudo apt install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+# Install gulp globally
+sudo npm install --global npm
+
+# Install node packages
+cd /var/www/html
+npm install
