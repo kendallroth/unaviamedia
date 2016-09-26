@@ -1,6 +1,18 @@
 # Change Log
 
+## September 26, 2016
+- Updated scripts for Ubuntu 16.04 installation process
+	- Involved refactoring site location and permissions
+- Configured DNS to add a testing server to test the changes
+- Successfully created server and tested functioning site
+
+## September 25, 2016
+- Attempted to upgrade server to Ubuntu 16.04
+	- Failed, rolled back to backup
+- Started work on another branch to upgrade to Ubuntu 16.04 and PHP7.0
+
 ## September 24, 2016
+- Merged `attractive` branch into `master` in preparation for pushing live
 - Added hero image to home page
 - Refactored styles
 - Removed backup files
