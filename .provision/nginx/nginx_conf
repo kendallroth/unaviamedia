@@ -1,7 +1,7 @@
 server {
 	listen 80 default_server;
 
-	root /var/www/unavia/;
+	root /var/www/html;
 	index index.php index.html;
 
 	sendfile off;
@@ -17,22 +17,27 @@ server {
 
 	error_page 404 /404.html;
 	location = /404.html {
-		root /var/www/unavia;
+		root /var/www/html;
 		internal;
 	}
 
 	error_page 500 502 503 504 /50x.html;
 	location = /50x.html {
-		root /var/www/unavia;
+		root /var/www/html;
 		internal;
 	}
 
 	location ~ \.php$ {
-		include fastcgi_params;
+		#include fastcgi_params;
+		include snippets/fastcgi-php.conf;
 		fastcgi_split_path_info ^(.+\.php)(/.+)$;
-		fastcgi_pass unix:/var/run/php5-fpm.sock;
+		fastcgi_pass unix:/run/php/php7.0-fpm.sock;
 		fastcgi_index index.php;
 		fastcgi_intercept_errors on;
 		error_page 404 /404.html;
+	}
+	
+	location ~ /\.ht {
+		deny all;
 	}
 }
