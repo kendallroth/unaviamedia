@@ -11,6 +11,6 @@ The site displays several of the skills I have learned/am learning, including th
 - Back-End
 	- PHP, MySQL
 - Responsive Design
-	- Utilizing [Foundation 6](//www.foundation.zurb.com)
+	- Utilizing [Foundation 6](www.foundation.zurb.com)
 - Project Management
 	- Git, Gulp
