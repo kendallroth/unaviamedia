@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/icons/Logo-Grey.png" />
+	<link rel="icon" href="/logo/logo_plant.png" />
 	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
@@ -21,7 +21,7 @@
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
 				<li><a href="/">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile_logo.jpeg" width="75" alt="UnaviaMedia" /></a></li>
+				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/logo_plant.png" width="75" alt="UnaviaMedia" /></a></li>
 				<li><a href="mailto:kroth@unaviamedia.ca">Contact</a></li>
 			</ul>
 		</nav>
