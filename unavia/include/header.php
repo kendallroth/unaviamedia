@@ -21,7 +21,7 @@
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
 				<li><a href="/">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/logo_plant.png" width="75" alt="UnaviaMedia" /></a></li>
+				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
 				<li><a href="mailto:kroth@unaviamedia.ca">Contact</a></li>
 			</ul>
 		</nav>
