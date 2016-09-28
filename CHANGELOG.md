@@ -2,7 +2,7 @@
 
 ## September 27, 2016
 - Removed debugging screen size indicator by default
-- Started work on defining blog components
+- Created new logo and updated site
 
 ## September 26, 2016
 - Updated scripts for Ubuntu 16.04 installation process
