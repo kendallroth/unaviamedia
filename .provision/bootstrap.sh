@@ -1,98 +1,70 @@
-#!/usr/bin/env bash
+# Create new sudo user and sign in with the account
+adduser development
+usermod -aG sudo development
+su development
+cd /var/www
+# Will need to enter password for first sudo use
 
-#sudo bash
+# Clone git repository and link web root and nginx server block
+git clone https://github.com/unaviamedia/unaviamedia.git
+ln -s /var/www/unaviamedia/unavia /var/www/html
+sudo ln -s /var/www/unaviamedia/.provision/nginx/site_conf /etc/nginx/sites-available/site_conf
 
-echo "Updating repositores"
-sudo apt-get update -y > /dev/null
+# Update repositories and upgrade available packages
+sudo apt update -y
+sudo apt upgrade -y
 
-##################################################
-# nginx
-echo "Nginx Setup"
+# Install nginx
+sudo apt install nginx -y
+# Possible check to ensure nginx is working (go to ip)
 
-echo "Installing nginx"
-sudo apt install -y nginx > /dev/null
-sudo service nginx start > /dev/null
+# Install mysql
+sudo apt install mysql-server
+# Add password automatically ("Passw0rD")
 
-echo "Configuring nginx"
-sudo rm /etc/nginx/sites-available/site_conf
-sudo rm /etc/nginx/sites-enabled/site_conf
-sudo cp /vagrant/.provision/nginx/nginx_conf /etc/nginx/sites-available/site_conf > /dev/null
-sudo chmod 644 /etc/nginx/sites-available/site_conf
-ln -s /etc/nginx/sites-available/site_conf /etc/nginx/sites-enabled/site_conf
-sudo rm -rf /etc/nginx/sites-available/default
-sudo rm -rf /etc/nginx/sites-enabled/default
+sudo mysql_secure_installation
+# Validate password (n)
+# Change password (n)
+# Remove anonymous users (y)
+# Disallow root login remotely (y)
+# Remove test database (y)
+# Reload table privileges (y)
 
-sudo service nginx restart > /dev/null
+# Install php and mysql handling
+sudo apt install php-fpm php-mysql -y
 
-# clean /var/www
-sudo rm -Rf /var/www
+# Security configuration to php.ini (/etc/php/7.0/fpm/php.ini) and restart php
+# Find/replace "#cgi.fix_pathinfo=1" to "cgi.fix_pathinfo=0"
+sudo systemctl restart php7.0-fpm
 
-# symlink /var/www => /vagrant
-ln -s /vagrant /var/www
+# Move default site configuration file into sites-available and link to sites-enabled
 
-##################################################
-# php
-echo "PHP Setup"
+cd /etc/nginx/sites-enabled/
+sudo rm default
+sudo ln -s /etc/nginx/sites-available/site_conf /etc/nginx/sites-enabled/site_conf
+cd -
 
-echo "Updating php repositories"
-#sudo apt-get install -y python-software-properties build-essential > /dev/null
-#sudo add-apt-repository ppa:ondrej/php5 > /dev/null
-#sudo apt-get update > /dev/null
+# Check nginx configuration and reload
+sudo nginx -t
+sudo systemctl reload nginx
 
-echo "Installing php"
-#sudo apt-get install -y php5-common php5-dev php5-cli php5-fpm > /dev/null
-sudo apt install php-fpm > /dev/null
+# Clean html directory and create php test file
+sudo rm /var/www/html/*
+sudo vim /var/www/html/info.php
 
-echo "Installing php extensions"
-#sudo apt-get install -y curl php5-curl php5-gd php5-mcrypt php5-mysql > /dev/null
-sudo apt install curl php-mysql > /dev/null
+# Update web directory owner and permissions (set 755 for directories and 644 for files)
+#   This will need to be run frequently (after changes) until permission inheritance is set
+sudo chown -R "$USER":www-data /var/www
+chmod -R u+rwX,go+rX,go-w /var/www
 
-sudo sed -i s/\;cgi\.fix_pathinfo\s*\=\s*l/cgi.fix_pathinfo\=0/ /etc/php/7.0/fpm/php.ini
-#sudo service php5-fpm restart > /dev/null
-sudo systemctl restart php7.0-fpm > /dev/null
-sudo service nginx restart > /dev/null
+# Install nodejs and npm, and link nodejs to node (PATH issues)
+sudo apt install nodejs
+sudo apt install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
 
-##################################################
-# mysql
-#echo "MySQL Setup"
+# Install gulp globally
+sudo npm install --global npm
 
-#echo "Installing automation utilities"
-#sudo apt-get install -y debconf-utils > /dev/null
-
-#echo "Setting mysql setup variables"
-#debconf-set-selections <<< 'mysql-server mysql-server/root_password password Passw0rd'
-#debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Passw0rd'
-
-#echo "Installing mysql"
-#sudo apt-get install -y mysql-server > /dev/null
-
-
-##################################################
-# git
-echo "Git Setup"
-
-echo "Installing git"
-sudo apt-get install -y git > /dev/null
-
-##################################################
-# nodejs
-echo "NodeJS Setup"
-
-echo "Updating NodeJS repositories"
-sudo curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - > /dev/null
-
-echo "Installing nodejs"
-sudo apt install -y nodejs > /dev/null
-
-##################################################
-# foundation
-echo "Foundation Setup"
-sudo npm install --global foundation-cli > /dev/null
-
-sudo npm install --global gulp > /dev/null
-
-echo "Node Packages Install"
-cd /var/www/unavia
-
-#Install npm packages
-sudo npm install > /dev/null
+# Install node packages
+cd /var/www/html
+npm install
