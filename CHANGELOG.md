@@ -1,5 +1,8 @@
 # Change Log
 
+## September 29, 2016
+- Rearranged provisioning scripts
+
 ## September 27, 2016
 - Removed debugging screen size indicator by default
 - Created new logo and updated site
