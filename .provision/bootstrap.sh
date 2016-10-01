@@ -81,7 +81,6 @@ sudo vim /var/www/html/info.php
 echo "Install nodejs and npm"
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
-sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 # Install gulp globally
 echo "Install gulp globally"
