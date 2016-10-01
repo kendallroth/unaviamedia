@@ -1,5 +1,8 @@
 # Change Log
 
+## October 1, 2016
+- Major changes to provisioning script
+
 ## September 29, 2016
 - Rearranged provisioning scripts
 
