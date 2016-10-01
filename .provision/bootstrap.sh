@@ -91,3 +91,6 @@ sudo npm install --global gulp
 echo "Install node packages"
 cd /var/www/html
 npm install
+
+# Run SASS
+gulp sass
