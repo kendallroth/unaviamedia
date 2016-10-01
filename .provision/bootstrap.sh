@@ -11,11 +11,11 @@ sudo apt upgrade -y
 
 # Install git
 echo "Install some helper programs"
-sudo apt install git vim curl screen -y
+sudo apt install -y git vim curl screen 
 
 # Install nginx
 echo "Install nginx"
-sudo apt install nginx -y
+sudo apt install -y nginx
 # Possible check to ensure nginx is working (go to ip)
 
 # Move to web directory and clean it
@@ -79,7 +79,8 @@ sudo vim /var/www/html/info.php
 
 # Install nodejs and npm, and link nodejs to node (PATH issues)
 echo "Install nodejs and npm"
-sudo apt install nodejs npm -y
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt install -y nodejs build-essential
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 
 # Install gulp globally
