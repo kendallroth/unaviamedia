@@ -47,7 +47,7 @@ sudo apt install php-fpm php-mysql -y
 
 # Run some configuration changes to php.ini (/etc/php/7.0/fpm/php.ini) and restart php
 # Find/replace "#cgi.fix_pathinfo=1" to "cgi.fix_pathinfo=0"
-# Find/replace ";error_reporting = E_ALL"
+# DEVELOPMENT-ONLY: Find/replace ";error_reporting = E_ALL"
 echo "Security fix for php.ini"
 sudo systemctl restart php7.0-fpm
 sudo service php7.0-fpm restart
