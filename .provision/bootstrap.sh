@@ -28,7 +28,7 @@ git clone https://github.com/unaviamedia/unaviamedia.git
 
 # Install mysql
 echo "Install mysql"
-sudo apt install mysql-server
+sudo apt install -y mysql-server
 
 echo "Secure mysql installation"
 sudo mysql_secure_installation
