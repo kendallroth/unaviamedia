@@ -1,6 +1,6 @@
 # Create new sudo user and sign in with the account
-adduser development
-usermod -aG sudo development
+sudo adduser development
+sudo usermod -aG sudo development
 su development
 
 # Update repositories and upgrade available packages
@@ -28,14 +28,14 @@ git clone https://github.com/unaviamedia/unaviamedia.git
 
 # Install mysql
 echo "Install mysql"
-sudo apt install mysql-server
+sudo apt install -y mysql-server
 
 echo "Secure mysql installation"
 sudo mysql_secure_installation
 
 # Install php and mysql handling
 echo "Install PHP and MySQL handling"
-sudo apt install php-fpm php-mysql -y
+sudo apt install -y php-fpm php-mysql
 
 # Run some configuration changes to php.ini and restart php
 # Find/replace "#cgi.fix_pathinfo=1" to "cgi.fix_pathinfo=0" in "/etc/php/7.0/fpm/php.ini"
