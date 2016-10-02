@@ -21,44 +21,44 @@ header {
 	width: 100%;
 	background-color: rgba(250, 250, 250, 0.95);
 	z-index: 95;
-}
 
-//Container for navigation menu
-.header-bar {
-	padding: 0.5rem;
+	//Container for navigation menu
+	.header-bar {
+		padding: 0.5rem;
 
-	//Logo in the center of the menu
-	.menu-logo {
-		margin: 0 1.5rem;
+		//Logo in the center of the menu
+		.menu-logo {
+			margin: 0 1.5rem;
 
-		a {
-			//Remove border from logo link
-			border: none !important;
-		}
+			a {
+				//Remove border from logo link
+				border: none !important;
+			}
 
-		img {
-			height: 2.5rem;
-			width: 2.5rem;
-			margin: 0;
-			opacity: 0.75;
-			border-radius: 1.25rem;
+			img {
+				height: 2.5rem;
+				width: 2.5rem;
+				margin: 0;
+				opacity: 0.75;
+				border-radius: 1.25rem;
 
-			&:hover {
-				opacity: 0.9;
+				&:hover {
+					opacity: 0.9;
+				}
 			}
 		}
-	}
 
-	//Navigation links
-	a {
-		margin: 0rem;
-		padding: 0rem;
-		color: black;
-		border-bottom: 1.5px solid transparent;
+		//Navigation links
+		a {
+			margin: 0rem;
+			padding: 0rem;
+			color: black;
+			border-bottom: 1.5px solid transparent;
 
-		&:hover {
-			box-sizing: border-box;
-			border-color: black;
+			&:hover {
+				box-sizing: border-box;
+				border-color: black;
+			}
 		}
 	}
 }

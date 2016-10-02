@@ -70,7 +70,7 @@ require_once(HEADER_FRAGMENT);
 	<div class="row align-center small-collapse medium-uncollapse">
 		<div class="column small-12 medium-5">
 			<div class="work-card">
-				<img src="/images/projects/UnaviaMedia.png" />
+				<img src="/images/projects/UnaviaMedia_Site.png" />
 				<p>UnaviaMedia<span>2016</span></p>
 			</div>
 		</div>
