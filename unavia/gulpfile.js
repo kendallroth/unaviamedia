@@ -1,7 +1,11 @@
-var gulp = require("gulp");
-var $    = require("gulp-load-plugins")();
+var gulp	= require("gulp");
+var del		= require("del");
+var $    	= require("gulp-load-plugins")();
 
 gulp.task("sass", function() {
+	//Delete old files
+	del.sync('dist/css');
+
 	setTimeout(function() {
 		return gulp.src("src/scss/app.scss")
 			//Compile the SCSS to CSS
@@ -18,7 +22,7 @@ gulp.task("sass", function() {
 			}))
 			//Output the CSS
 			.pipe(gulp.dest("dist/css"));
-	}, 500);
+	}, 10);
 });
 
 gulp.task("scripts", function() {
