@@ -7,6 +7,7 @@
 	}
 }
 
+//Welcom section
 #welcome-wrapper {
 	position: relative;
 	padding: 0 3rem;
@@ -14,6 +15,7 @@
 	height: 100vh;
 	width: 100%;
 
+	//Hero image for site
 	&::after {
 		//Background image from http://sixrevisions.com/css/responsive-background-image/
 		content: "";
@@ -49,6 +51,7 @@
 	}
 }
 
+//Portfolio introduction section
 #portfolio-wrapper {
 	padding: 1.5rem;
 	color: white;
@@ -60,14 +63,15 @@
 	}
 }
 
-//Summary of what I do
+//Summary section
 #summary-wrapper {
 	padding: 3rem 0;
 
+	//Summary quotation
 	blockquote {
 		margin-bottom: 2rem;
 
-		//Styles for this blockquotes on mobile
+		//Styles for this blockquotes on mobile (override Foundation defaults)
 		@include breakpoint(small only) {
 			text-align: center;
 			border: none;
@@ -129,7 +133,7 @@
 	#skill-development img { background-color: rgb(213, 42, 42); }
 }
 
-//Job experience and projects
+//Projects section
 #work-wrapper {
 	padding: 2.5rem 0 0 0;
 	background-color: rgb(255, 255, 255);
@@ -138,15 +142,18 @@
 		padding: 2.5rem 0;
 	}
 
+	//Card for different projects
 	.work-card {
 		/*&:hover p {
 			border-bottom-color: rgb(27, 126, 207);
 		}*/
 
+		//Project image
 		img {
 			width: 100%;
 		}
 
+		//Project name
 		p {
 			margin: 0;
 			padding: 0.5rem;
@@ -156,6 +163,7 @@
 			border-bottom: 5px solid rgb(81, 156, 217);
 		}
 
+		//Project date
 		span {
 			float: right;
 			margin: 0;
@@ -165,9 +173,11 @@
 	}
 }
 
+//Skill section
 #skills-wrapper {
 	padding: 2rem 0;
 
+	//Cards for skill sections
 	.skill-card {
 		// margin-bottom: 1.5rem;
 		padding: 0.75rem;
@@ -177,6 +187,7 @@
 		h3 {
 			font-weight: bold;
 
+			//Styles for the header on medium+ screens
 			@include breakpoint(medium) {
 				width: 75%;
 				margin: 0 auto 0.75rem auto;
@@ -208,10 +219,12 @@
 	}
 }
 
+//Contact section
 #contact-wrapper {
 	padding: 2.5rem;
 	background-color: rgb(60, 60, 60);
 
+	//Contact me button
 	a {
 		display: inline-block;
 		padding: 1rem;
