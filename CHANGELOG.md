@@ -1,7 +1,10 @@
 # Change Log
 
+## October 2, 2016
+- Added synced folder configuration to Vagrantfile, in order to link it automatically to /var/www
+
 ## October 1, 2016
-- Major changes to provisioning script
+- Major changes to provisioning script to get it to work properly with Ubuntu 16.04
 
 ## September 29, 2016
 - Rearranged provisioning scripts
