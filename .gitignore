@@ -1,3 +1,10 @@
+# Handle ignored files for the server
 .vagrant/
 ubuntu-xenial-*
 .swp
+
+# Handle ignored files inside web directory
+.DS_Store
+node_modules
+npm-debug.log
+css
