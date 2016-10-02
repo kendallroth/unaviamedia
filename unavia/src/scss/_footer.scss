@@ -1,5 +1,5 @@
-//Styling for the footer
-.footer-bar {
+//Wrapper for footer
+footer {
 	padding: 2rem 0;
 	color: white;
 	background-color: rgb(15, 15, 15);
@@ -12,6 +12,7 @@
 			margin-right: 0.6rem;
 		}
 
+		//Social media icons
 		img {
 			width: 30px;
 			box-sizing: border-box;
