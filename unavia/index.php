@@ -37,21 +37,21 @@ require_once(HEADER_FRAGMENT);
 	<div id="summary-card" class="row align-center">
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-analysis">
-				<img src="/images/skills/analysis.svg" />
+				<img src="/images/skills/analysis.svg" alt="Analysis" />
 				<span class="summary-header">Analysis</span>
 				<p>Careful analysis, including data modeling and project management, is a necessity for project planning and plays a vital role in my work.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-design">
-				<img src="/images/skills/design.svg" />
+				<img src="/images/skills/design.svg" alt="Design" />
 				<span class="summary-header">Design</span>
 				<p>While not a designer, I do enjoy creating my own content and illustrations while striving to follow a simple and minimalistic approach.</p>
 			</div>
 		</div>
 		<div class="column small-11 medium-4 align-self-stretch">
 			<div class="summary-block" id="skill-development">
-				<img src="/images/skills/development.svg" />
+				<img src="/images/skills/development.svg" alt="Development" />
 				<span class="summary-header">Development</span>
 				<p>The steps in the development cycle&mdash;whether front-end, back-end, database, documentation, etc.&mdash;all receive the same careful attention to detail.</p>
 			</div>
