@@ -1,4 +1,4 @@
-<footer class="footer-bar">
+<footer>
 	<!-- Row of social media icons -->
 	<div class="row social-media-bar">
 		<div class="column text-center">
