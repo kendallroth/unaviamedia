@@ -1,6 +1,6 @@
 # Create new sudo user and sign in with the account
-adduser development
-usermod -aG sudo development
+sudo adduser development
+sudo usermod -aG sudo development
 su development
 
 # Update repositories and upgrade available packages
