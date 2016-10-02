@@ -35,7 +35,7 @@ sudo mysql_secure_installation
 
 # Install php and mysql handling
 echo "Install PHP and MySQL handling"
-sudo apt install php-fpm php-mysql -y
+sudo apt install -y php-fpm php-mysql
 
 # Run some configuration changes to php.ini and restart php
 # Find/replace "#cgi.fix_pathinfo=1" to "cgi.fix_pathinfo=0" in "/etc/php/7.0/fpm/php.ini"
