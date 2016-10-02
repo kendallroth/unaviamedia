@@ -24,15 +24,16 @@
 		//	Image - https://hd.unsplash.com/photo-1432821579285-1b649e5b1ce3 (no attribution)
 		background:
 			linear-gradient(
-				rgba(0, 0, 0, 0.5),
-				rgba(0, 0, 0, 0.5)
+				rgba(0, 0, 0, 0.7),
+				rgba(0, 0, 0, 0.7)
 			),
-			url("/images/backgrounds/background_wooden.jpg");
+			// url("/images/backgrounds/background_wooden.jpg");
+			url("/images/backgrounds/background_desktop_bw.jpg");
 
 		//Scale background proportionally so it's width/height are equal/greater than width/height of element
 		background-size: cover;
 		//Set the scaling axis at the center of the viewport
-		background-position: center center;
+		background-position: top center;
 		//Set the image to not repeat
 		background-repeat: no-repeat;
 		//Set the image to be fixed (and not move)
