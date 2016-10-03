@@ -71,13 +71,13 @@ require_once(HEADER_FRAGMENT);
 		<div class="column small-12 medium-5">
 			<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="project-card" target="_blank">
 				<img src="/images/projects/UnaviaMedia_Site.png" />
-				<p>UnaviaMedia Site<span>2016</span></p>
+				<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
 			</a>
 		</div>
 		<div class="column small-12 medium-5">
 			<a href="https://github.com/UnaviaMedia/CaptainCPA" class="project-card" target="_blank">
 				<img src="/images/projects/Captain_CPA.png" />
-				<p>CaptainCPA<span>2015</span></p>
+				<p><strong>CaptainCPA</strong><span>2015</span></p>
 			</a>
 		</div>
 	</div>
