@@ -135,19 +135,16 @@
 }
 
 //Projects section
-#work-wrapper {
+#project-wrapper {
+	$project-background: rgb(78, 146, 202);
 	padding: 2.5rem 0 0 0;
-	background-color: rgb(255, 255, 255);
-
-	@include breakpoint(medium) {
-		padding: 2.5rem 0;
-	}
+	background-color: $project-background;
+	color: white;
 
 	//Card for different projects
-	.work-card {
-		/*&:hover p {
-			border-bottom-color: rgb(27, 126, 207);
-		}*/
+	.project-card {
+		display: block;
+		background-color: rgb(255, 255, 255);
 
 		//Project image
 		img {
@@ -158,18 +155,27 @@
 		p {
 			margin: 0;
 			padding: 0.5rem;
-			font-weight: bold;
-			// TODO: Change background colour on medium up
-			background-color: rgb(255, 255, 255);
-			border-bottom: 5px solid rgb(81, 156, 217);
+			color: rgb(50, 50, 50);
+			border-bottom: 5px solid $project-background;
 		}
 
 		//Project date
 		span {
 			float: right;
 			margin: 0;
-			font-weight: normal;
 			font-style: italic;
+		}
+	}
+
+	//Switch to carded styles for medium+
+	@include breakpoint(medium) {
+		padding: 2.5rem 0;
+
+		.project-card {
+			padding: 0.25rem 0.25rem 0 0.25rem;
+			border-radius: 0.2rem;
+
+			p { border: none; }
 		}
 	}
 }

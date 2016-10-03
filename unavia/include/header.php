@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="/logo/logo_plant.png" />
+	<link rel="icon" href="/icons/logo_plant.png" />
 	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
