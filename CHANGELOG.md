@@ -1,12 +1,13 @@
 # Change Log
 
 ## October 2, 2016
-- Added synced folder configuration to Vagrantfile, in order to link it automatically to /var/www
 - Changed hero image
 - Updated project image to match new site look
-- Researched developing simple blog
-- Added dist/css cleanup to gulpfile before SASS processing
+- Added new favicon icon
+- Renamed projects section and updated styles
 - Added 'dev' branch to hold development changes before merging into master
+- Added synced folder configuration to Vagrantfile, in order to link it automatically to /var/www
+- Researched developing simple blog
 
 ## October 1, 2016
 - Major changes to provisioning script to get it to work properly with Ubuntu 16.04
