@@ -69,16 +69,16 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center small-collapse medium-uncollapse">
 		<div class="column small-12 medium-5">
-			<div class="work-card">
+			<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="work-card" target="_blank">
 				<img src="/images/projects/UnaviaMedia_Site.png" />
-				<p>UnaviaMedia<span>2016</span></p>
-			</div>
+				<p>UnaviaMedia Site<span>2016</span></p>
+			</a>
 		</div>
 		<div class="column small-12 medium-5">
-			<div class="work-card">
+			<a href="https://github.com/UnaviaMedia/CaptainCPA" class="work-card" target="_blank">
 				<img src="/images/projects/Captain_CPA.png" />
 				<p>CaptainCPA<span>2015</span></p>
-			</div>
+			</a>
 		</div>
 	</div>
 </section>
