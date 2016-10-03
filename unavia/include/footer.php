@@ -19,7 +19,7 @@
 	<!-- Copyright notice -->
 	<div class="row align-center">
 		<div class="column text-center">
-			<span>&copy; UnaviaMedia 2016</span>
+			<span>&copy; UnaviaMedia <?php echo date("Y"); ?></span>
 		</div>
 	</div>
 </footer>
