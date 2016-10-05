@@ -141,6 +141,7 @@
 	background-color: $project-background;
 	color: white;
 
+	//Container for different types of projects
 	.project-section {
 		padding-top: 2.5rem;
 	}
@@ -174,11 +175,6 @@
 	//Switch to carded styles for medium+
 	@include breakpoint(medium) {
 		padding-bottom: 2.5rem;
-
-		//Divider between finished and planned projects
-		hr {
-			margin: 2.75rem auto 0 auto;
-		}
 
 		.project-card {
 			padding: 0.25rem 0.25rem 0 0.25rem;
