@@ -57,8 +57,8 @@ require_once(HEADER_FRAGMENT);
 </section>
 
 <section id="project-wrapper" class="content-wrapper">
+	<!-- Finished Projects -->
 	<div id="projects" class="project-section">
-		<!-- Finished Projects -->
 		<div class="row">
 			<div class="column text-center" >
 				<h2>Projects</h2>
@@ -80,8 +80,8 @@ require_once(HEADER_FRAGMENT);
 			</div>
 		</div>
 	</div>
+	<!-- Planned projects -->
 	<div id="plans" class="project-section">
-		<!-- Planned projects -->
 		<div class="row">
 			<div class="column text-center">
 				<h2>Upcoming Plans</h2>
