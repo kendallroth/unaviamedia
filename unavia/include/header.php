@@ -12,11 +12,11 @@
 
 <body>
 	<!-- TODO: Development only -->
-	<!--<section id="media-query">
+	<section id="media-query">
 		<span class="show-for-small-only">small</span>
 		<span class="show-for-medium-only">medium</span>
 		<span class="show-for-large">large</span>
-	</section>-->
+	</section>
 	<header>
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
