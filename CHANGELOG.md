@@ -1,5 +1,12 @@
 # Change Log
 
+## October 4, 2016
+- Added planned projects section
+- Added new favicon
+
+## October 3, 2016
+- Add dynamic date to copyright in footer
+
 ## October 2, 2016
 - Changed hero image
 - Updated project image to match new site look

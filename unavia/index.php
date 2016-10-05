@@ -57,28 +57,44 @@ require_once(HEADER_FRAGMENT);
 </section>
 
 <section id="project-wrapper" class="content-wrapper">
-	<div class="row">
-		<div class="column text-center" >
-			<h2>Projects</h2>
+	<!-- Finished Projects -->
+	<div id="projects" class="project-section">
+		<div class="row">
+			<div class="column text-center" >
+				<h2>Projects</h2>
+				<p>Here's what I've been up to recently:</p>
+			</div>
+		</div>
+		<div class="row align-center small-collapse medium-uncollapse">
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="project-card" target="_blank">
+					<img src="/images/projects/UnaviaMedia_Site.png" />
+					<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
+				</a>
+			</div>
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/CaptainCPA" class="project-card" target="_blank">
+					<img src="/images/projects/Captain_CPA.png" />
+					<p><strong>CaptainCPA</strong><span>2015</span></p>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="column text-center">
-			<p>Here's what I've been up to recently:</p>
+	<!-- Planned projects -->
+	<div id="plans" class="project-section">
+		<div class="row">
+			<div class="column text-center">
+				<h2>Upcoming Plans</h2>
+				<p>And here's a look ahead at what's coming!</p>
+			</div>
 		</div>
-	</div>
-	<div class="row align-center small-collapse medium-uncollapse">
-		<div class="column small-12 medium-5">
-			<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="project-card" target="_blank">
-				<img src="/images/projects/UnaviaMedia_Site.png" />
-				<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
-			</a>
-		</div>
-		<div class="column small-12 medium-5">
-			<a href="https://github.com/UnaviaMedia/CaptainCPA" class="project-card" target="_blank">
-				<img src="/images/projects/Captain_CPA.png" />
-				<p><strong>CaptainCPA</strong><span>2015</span></p>
-			</a>
+		<div class="row align-center small-collapse medium-uncollapse">
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/CommitteeHelp" class="project-card" target="_blank">
+					<img src="images/300x200.png" />
+					<p><strong>CommitteeHelp</strong><span>coming soon</span></p>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
