@@ -137,9 +137,13 @@
 //Projects section
 #project-wrapper {
 	$project-background: rgb(78, 146, 202);
-	padding: 2.5rem 0 0 0;
+	//padding: 2.5rem 0 0 0;
 	background-color: $project-background;
 	color: white;
+
+	.project-section {
+		padding-top: 2.5rem;
+	}
 
 	//Card for different projects
 	.project-card {
@@ -169,7 +173,12 @@
 
 	//Switch to carded styles for medium+
 	@include breakpoint(medium) {
-		padding: 2.5rem 0;
+		padding-bottom: 2.5rem;
+
+		//Divider between finished and planned projects
+		hr {
+			margin: 2.75rem auto 0 auto;
+		}
 
 		.project-card {
 			padding: 0.25rem 0.25rem 0 0.25rem;
