@@ -1,5 +1,8 @@
 # Change Log
 
+## October 5, 2016
+- Add About Me page for summary information and contact form
+
 ## October 4, 2016
 - Added planned projects section
 - Added new favicon
