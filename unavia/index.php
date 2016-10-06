@@ -141,8 +141,8 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="contact-wrapper">
-	<div id="contact-bar" class="row">
+<section id="quick-contact-wrapper">
+	<div id="quick-contact-bar" class="row">
 		<div class="column text-center">
 			<a href="mailto:kroth@unaviamedia.ca">Contact Me</a>
 		</div>
