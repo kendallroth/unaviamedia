@@ -1,0 +1,45 @@
+#about-wrapper {
+	padding: 5rem 0 2rem 0;
+
+	h1 {
+		margin-bottom: 0.75rem;
+	}
+
+	h2 {
+		margin-top: 1rem;
+		color: $dark-grey;
+		border-bottom: 1px solid rgb(199, 54, 71);
+	}
+
+	h3 {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.about-education ul:last-of-type, .about-employment ul:last-of-type {
+		margin-bottom: 0;
+	}
+
+	//Utility classes on the about page
+	.employment-type {
+		margin-left: 0.5rem;
+		font-size: 0.8rem;
+		color: $dark-gray;
+	}
+
+	.date-right {
+		display: block;
+		font-weight: normal;
+		font-size: 0.8rem;
+
+		@include breakpoint(350px) {
+			float: right;
+			font-size: 0.9rem;
+		}
+	}
+}
