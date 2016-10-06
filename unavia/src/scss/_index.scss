@@ -129,9 +129,12 @@
 	}
 
 	//Background colours for the skill card images
-	#skill-analysis img { background-color: rgb(236, 109, 27); }
-	#skill-design img { background-color: rgb(25, 153, 226); }
-	#skill-development img { background-color: rgb(213, 42, 42); }
+	//#skill-analysis img { background-color: rgb(236, 109, 27); }
+	//#skill-design img { background-color: rgb(25, 153, 226); }
+	//#skill-development img { background-color: rgb(213, 42, 42); }
+	#skill-analysis img { background-color: $icon-orange; }
+	#skill-design img { background-color: $icon-blue; }
+	#skill-development img { background-color: $icon-red; }
 }
 
 //Projects section
