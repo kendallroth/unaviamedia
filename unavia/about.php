@@ -80,7 +80,50 @@ require_once(HEADER_FRAGMENT);
 </section>
 
 <section id="contact-wrapper">
-
+	<div class="row">
+		<div class="column text-center">
+			<h2>Contact Me</h2>
+		</div>
+	</div>
+	<div class="row align-center">
+		<div class="column medium-8">
+			<form action="">
+				<div class="row">
+					<div class="column">
+						<label>Name
+							<input type="text" id="contactName" name="contactName" placehold="Name" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label>Email
+							<input type="email" id="contactEmail" name="contactEmail" placehold="Email" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label>Organization
+							<input type="text" id="contactOrganization" name="contactOrganization" placehold="Organization" />
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label>Comments
+							<textarea  id="contactComments" name="contactComments" placehold="Comments"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 </section>
 
 <?php require_once(FOOTER_FRAGMENT); ?>
