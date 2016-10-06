@@ -21,10 +21,10 @@
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
 				<li><a href="/">Home</a></li>
-				<li><a href="/resume.php">Resume</a></li>
+				<!-- <li><a href="/resume.php">Resume</a></li> -->
 				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
-				<li><a href="/about.php">About Me</a></li>
-				<li><a href="mailto:kroth@unaviamedia.ca">Contact</a></li>
+				<li><a href="/about.php">About</a></li>
+				<!-- <li><a href="mailto:kroth@unaviamedia.ca">Contact</a></li> -->
 			</ul>
 		</nav>
 	</header>
