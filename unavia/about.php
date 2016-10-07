@@ -57,7 +57,7 @@ require_once(HEADER_FRAGMENT);
 					<h2>Employment</h2>
 
 					<h3>
-						<a href="//www.netsweeper.com/">Web Developer</a>
+						<a href="//www.netsweeper.com/" target="_blank">Web Developer</a>
 						<span class="employment-type">(Coop)</span>
 						<span class="date-right">2016&mdash;Present</span>
 					</h3>
@@ -69,7 +69,7 @@ require_once(HEADER_FRAGMENT);
 					</ul>
 
 					<h3>
-						<a href="//www.conestogac.on.ca">Web Developer</a>
+						<a href="//www.conestogac.on.ca" target="_blank">Web Developer</a>
 						<span class="employment-type">(Work Study)</span>
 						<span class="date-right">2015&mdash;2016</span>
 					</h3>
