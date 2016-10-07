@@ -61,7 +61,7 @@ require_once(HEADER_FRAGMENT);
 						<span class="employment-type">(Coop)</span>
 						<span class="date-right">2016&mdash;Present</span>
 					</h3>
-					<p>Netsweeper Inc, Kitchener, ON</p>
+					<p><em>Netsweeper Inc, Kitchener, ON</em></p>
 					<ul>
 						<li>Analyze and apply fixes to bugs while working in a sprint-based development cycle under source control.</li>
 						<li>Responsible for developing, integrating and documenting new features as specified by team supervisor.</li>
@@ -73,7 +73,7 @@ require_once(HEADER_FRAGMENT);
 						<span class="employment-type">(Work Study)</span>
 						<span class="date-right">2015&mdash;2016</span>
 					</h3>
-					<p>Conestoga College, Kitchener, ON</p>
+					<p><em>Conestoga College, Kitchener, ON</em></p>
 					<ul>
 						<li>Responsible for creating, updating and maintaining web pages based on content provided by Project Manager and clients.</li>
 						<li>Ensure design and content of web pages meet usability and accessibility standards.</li>
@@ -89,6 +89,7 @@ require_once(HEADER_FRAGMENT);
 	<div class="row">
 		<div class="column text-center">
 			<h2>Contact Me</h2>
+			<p>Feel free to contact me with any questions&nbsp;or&nbsp;comments!</p>
 		</div>
 	</div>
 	<div class="row align-center">
@@ -96,34 +97,30 @@ require_once(HEADER_FRAGMENT);
 			<form action="">
 				<div class="row">
 					<div class="column">
-						<label>Name
-							<input type="text" id="contactName" name="contactName" placehold="Name" />
-						</label>
+						<label for="contactName" class="hide">Name</label>
+						<input type="text" id="contactName" name="contactName" placeholder="Name" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<label>Email
-							<input type="email" id="contactEmail" name="contactEmail" placehold="Email" />
-						</label>
+						<label for="contactEmail" class="hide">Email</label>
+						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<label>Organization
-							<input type="text" id="contactOrganization" name="contactOrganization" placehold="Organization" />
-						</label>
+						<label for="contactSubject" class="hide">Subject</label>
+						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<label>Comments
-							<textarea  id="contactComments" name="contactComments" placehold="Comments"></textarea>
-						</label>
+						<label for="contactComments" class="hide">Comments</label>
+						<textarea  id="contactComments" name="contactComments" placeholder="Comments"></textarea>
 					</div>
 				</div>
 				<div class="row">
-					<div class="column">
+					<div class="column text-center">
 						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
 					</div>
 				</div>
