@@ -1,9 +1,7 @@
 #about-wrapper {
 	padding: 5rem 0 2rem 0;
 
-	h1 {
-		margin-bottom: 0.75rem;
-	}
+	h1 { margin: 0; }
 
 	//About section headers
 	h2 {
@@ -19,19 +17,19 @@
 		font-weight: bold;
 	}
 
-	p {
-		margin-bottom: 0;
-	}
+	p { margin-bottom: 0; }
 
 	a {
 		//Color to indicate link
-		color: rgb(10, 16, 98);
+		color: rgb(32, 38, 110);
+
+		&:hover {
+			border-bottom: 2px dotted $site-blue;
+		}
 	}
 
-	.about-subsection ul:last-of-type {
-		//No margins on the lasts lists in a subsection
-		margin-bottom: 0;
-	}
+	//No margins on the lasts lists in a subsection
+	.about-subsection ul:last-of-type { margin-bottom: 0; }
 
 	//Utility classes on the about page
 	.employment-type {
@@ -40,6 +38,7 @@
 		color: $medium-dark-grey;
 	}
 
+	//Date range utility
 	.date-right {
 		display: block;
 		font-weight: normal;
@@ -54,21 +53,44 @@
 
 #contact-wrapper {
 	padding: 2rem 0;
-	background-color: rgb(68, 140, 66);
+	background-color: $site-blue;
 	color: white;
 
-	h2 {
-		margin: 0;
+	@include breakpoint(small only) {
+		h2 {
+			font-size: 1.5rem;
+		}
 	}
 
-	label {
+	input[type=text], textarea {
+		margin-bottom: 1.5rem;
+		padding: 0.3rem 0.5rem;
 		color: white;
-		font-weight: bold;
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid white;
+		box-shadow: none;
+
+		&::placeholder {
+			color: rgb(245, 245, 245);
+		}
+	}
+
+	textarea {
+		resize: vertical;
+		max-height: 15rem;
 	}
 
 	input[type=submit] {
-		width: 100%;
-		padding: 0.75rem;
-		color: black;
+		padding: 1rem;
+		color: white;
+		background-color: transparent;
+		border: 3px double white;
+		border-radius: 0.1rem;
+
+		&:hover {
+			border-style: solid;
+			background-color: rgb(53, 119, 175);
+		}
 	}
 }
