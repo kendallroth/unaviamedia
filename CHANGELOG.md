@@ -1,5 +1,20 @@
 # Change Log
 
+## October 7, 2016
+- Finish styles for Contact form on About page
+- Finalize About and Contact page
+- Create and add content to Planned Projects section
+
+## October 6, 2016
+- Optimize social media icons
+- Create SCSS colour variables
+
+## October 5, 2016
+- Add About page for summary information with a Contact form
+- Added styles for About page
+- Created rough styles for Contact form
+- Decided on page structure and update header menu
+
 ## October 4, 2016
 - Added planned projects section
 - Added new favicon
