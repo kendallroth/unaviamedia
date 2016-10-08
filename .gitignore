@@ -7,4 +7,5 @@ ubuntu-xenial-*
 .DS_Store
 node_modules
 npm-debug.log
-css
+css/
+vendor/
