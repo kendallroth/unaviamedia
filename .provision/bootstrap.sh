@@ -69,6 +69,12 @@ chmod -R u+rwX,go+rX,go-w /var/www
 echo "Create file to test PHP configuration"
 echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 
+# Install composer to manage PHP packages and test insallation
+echo "Install composer to manage PHP packages"
+wget https://getcomposer.org/installer
+sudo php installer --install-dir=/usr/local/bin --filename=composer
+composer
+
 # Install nodejs and npm
 echo "Install nodejs and npm"
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
@@ -78,9 +84,18 @@ sudo apt install -y nodejs build-essential
 echo "Install gulp globally"
 sudo npm install --global gulp
 
+# Prepare for project package installation
+echo "Prepare for project package installation"
+cd /var/www/html
+
+# Install composer packages
+echo "Install composer packages"
+composer require phpmailer/phpmailer
+#composer require league/oauth2-google
+composer install
+
 # Install node packages
 echo "Install node packages"
-cd /var/www/html
 npm install
 
 # Compile CSS
