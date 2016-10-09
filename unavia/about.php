@@ -85,6 +85,8 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
+<?php require_once(HTML_ROOT . "/controllers/contact_controller.php"); ?>
+
 <section id="contact-wrapper">
 	<div class="row">
 		<div class="column text-center">
@@ -94,31 +96,32 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column medium-6 large-5">
-			<form action="">
+			<form action="/about.php" method="POST">
 				<div class="row">
 					<div class="column">
 						<label for="contactName" class="hide">Name</label>
-						<input type="text" id="contactName" name="contactName" placeholder="Name" />
+						<input type="text" id="contactName" name="contactName" placeholder="Name" value="<?= $contactName ?>" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
 						<label for="contactEmail" class="hide">Email</label>
-						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" />
+						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" value="<?= $contactEmail ?>" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
 						<label for="contactSubject" class="hide">Subject</label>
-						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" />
+						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" value="<?= $contactSubject ?>" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
 						<label for="contactComments" class="hide">Comments</label>
-						<textarea  id="contactComments" name="contactComments" placeholder="Comments"></textarea>
+						<textarea  id="contactComments" name="contactComments" placeholder="Comments"><?= $contactComments ?></textarea>
 					</div>
 				</div>
+				<?= $mailMessageHTML //Output the status of the form submission ?>
 				<div class="row">
 					<div class="column text-center">
 						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
