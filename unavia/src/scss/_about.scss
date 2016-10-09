@@ -94,3 +94,22 @@
 		}
 	}
 }
+
+.form-message {
+	margin-bottom: 1.5rem;
+	padding: 0.75rem;
+	border: 3px solid $dark-grey;
+	border-radius: 2px;
+}
+
+.form-error {
+	color: $site-red;
+	background-color:lighten($site-red, 40%);
+	border: 3px solid $site-red;
+}
+
+.form-success {
+	color: darken($site-green, 25%);
+	background-color: lighten($site-green, 35%);
+	border: 3px solid $site-green;
+}

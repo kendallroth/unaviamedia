@@ -5,6 +5,9 @@
 @import "foundation";
 //@import 'motion-ui';
 
+$fi-path: "bower_components/foundation-icons";
+@import "foundation-icons";
+
 @include foundation-global-styles;
 //@include foundation-grid;
 @include foundation-flex-grid;
