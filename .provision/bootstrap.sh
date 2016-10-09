@@ -80,9 +80,9 @@ echo "Install nodejs and npm"
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
 
-# Install gulp globally
-echo "Install gulp globally"
-sudo npm install --global gulp
+# Install gulp and bower globally
+echo "Install gulp and bower globally"
+sudo npm install --global gulp bower
 
 # Prepare for project package installation
 echo "Prepare for project package installation"
