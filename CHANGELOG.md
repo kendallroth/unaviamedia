@@ -1,5 +1,9 @@
 # Change Log
 
+## October 8, 2016
+- Add Composer to manage PHP packages
+- Start adding email submission to contact form
+
 ## October 7, 2016
 - Finish styles for Contact form on About page
 - Finalize About and Contact page
