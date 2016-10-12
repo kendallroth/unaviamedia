@@ -3,6 +3,10 @@
 ## October 11, 2016
 - Create and add project image for CommitteeFlow
 
+## October 9, 2016
+- Add Foundation Icon font
+- Update Contact form to support postback with pre-filled fields
+
 ## October 8, 2016
 - Add Composer to manage PHP packages
 - Start adding email submission to contact form
