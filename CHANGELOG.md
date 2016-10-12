@@ -1,5 +1,8 @@
 # Change Log
 
+## October 11, 2016
+- Create and add project image for CommitteeFlow
+
 ## October 8, 2016
 - Add Composer to manage PHP packages
 - Start adding email submission to contact form
