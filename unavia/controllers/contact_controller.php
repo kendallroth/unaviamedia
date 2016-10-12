@@ -14,10 +14,10 @@ if (isset($_POST["contactSubmit"])) {
 	$emailTo = "kroth@unaviamedia.ca";
 
 	//Capture form input
-	$contactName = trim($_POST['contactName']);
-	$contactEmail = trim($_POST['contactEmail']);
-	$contactSubject = trim($_POST['contactSubject']);
-	$contactComments = trim($_POST['contactComments']);
+	$contactName = htmlspecialchars(trim($_POST['contactName']));
+	$contactEmail = htmlspecialchars(trim($_POST['contactEmail']));
+	$contactSubject = htmlspecialchars(trim($_POST['contactSubject']));
+	$contactComments = htmlspecialchars(trim($_POST['contactComments']));
 
 	//Validation variables
 	$validation = true;
