@@ -1,13 +1,16 @@
 # Change Log
 
+## October 14, 2016
+- Update planned project image
+
 ## October 13, 2016
-- Edit CommitteeFlow project image and upload higher quality image
+- Edit planned project image and upload higher quality image
 
 ## October 12, 2016
 - Add security functions to contact form
 
 ## October 11, 2016
-- Create and add project image for CommitteeFlow
+- Create and add project image for CommitteeHelp
 
 ## October 9, 2016
 - Add Foundation Icon font
