@@ -1,5 +1,8 @@
 # Change Log
 
+## October 12, 2016
+- Add security functions to contact form
+
 ## October 11, 2016
 - Create and add project image for CommitteeFlow
 
