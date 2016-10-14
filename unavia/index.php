@@ -91,7 +91,7 @@ require_once(HEADER_FRAGMENT);
 		<div class="row align-center small-collapse medium-uncollapse">
 			<div class="column small-12 medium-5">
 				<a href="https://github.com/UnaviaMedia/CommitteeHelp" class="project-card" target="_blank">
-					<img src="/images/projects/CommitteeFlow.png" />
+					<img src="/images/projects/CommitteeHelp.png" />
 					<p><strong>CommitteeHelp</strong><span>coming soon</span></p>
 				</a>
 			</div>
