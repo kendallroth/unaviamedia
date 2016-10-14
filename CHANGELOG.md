@@ -1,5 +1,8 @@
 # Change Log
 
+## October 13, 2016
+- Edit CommitteeFlow project image and upload higher quality image
+
 ## October 12, 2016
 - Add security functions to contact form
 
