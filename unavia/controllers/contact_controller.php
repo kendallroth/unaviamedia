@@ -29,7 +29,7 @@ if (isset($_POST["contactSubmit"])) {
 		$validation = false;
 		$errName = "Name is required";
 	}
-	if (strlen($contactEmail) < 2 || strlen($contactEmail) > 75) {
+	if (strlen($contactEmail) < 2 || strlen($contactEmail) > 75 || filter_var($contactEmail, FILTER_SANITIZE_EMAIL) == false) {
 		$validation = false;
 		$errEmail = "Email is required";
 	}
