@@ -29,7 +29,7 @@ if (isset($_POST["contactSubmit"])) {
 		$validation = false;
 		$errName = "Name is required";
 	}
-	if (strlen($contactEmail) < 2 || strlen($contactEmail) > 75 || filter_var($contactEmail, FILTER_SANITIZE_EMAIL) == false) {
+	if (strlen($contactEmail) < 2 || strlen($contactEmail) > 75 || filter_var($contactEmail, FILTER_VALIDATE_EMAIL) == false) {
 		$validation = false;
 		$errEmail = "Email is required";
 	}
@@ -47,7 +47,7 @@ if (isset($_POST["contactSubmit"])) {
 		$mail = new PHPMailer;
 
 		//Configure SMTP
-		$mail->SMTPDebug = 3;
+		//$mail->SMTPDebug = 3;
 		$mail->isSMTP();
 		$mail->Host = SMTP_HOST;
 		$mail->SMTPAuth = true;
@@ -57,7 +57,7 @@ if (isset($_POST["contactSubmit"])) {
 		$mail->Port = SMTP_PORT;
 
 		//Set email headers
-		$mail->setFrom($emailFrom);
+		$mail->setFrom($emailFrom, "Contact Us Submission");
 		$mail->addAddress($emailTo, "Contact Us Submission");
 		$mail->addReplyTo($contactEmail, $contactName);
 		$mail->isHTML(true);
@@ -75,6 +75,9 @@ if (isset($_POST["contactSubmit"])) {
 			//Success message
 			$mailMessage = "Thanks! Your message has been sent!";
 			$mailMessageType = "success";
+
+			//Reset the form
+			$contactName = $contactEmail = $contactSubject = $contactComments = "";
 		}
 	} else {
 		//Display the validation errors
@@ -99,10 +102,12 @@ function createFormMessage($message, $messageType) {
 	switch($messageType) {
 		case "success": {
 			$messageClass = "submission-success";
+			break;
 		}
 		case "error":
 		default: {
 			$messageClass = "submission-error";
+			break;
 		}
 	}
 
