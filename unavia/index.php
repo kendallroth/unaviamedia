@@ -4,7 +4,7 @@ $PAGE_TITLE = "Home";
 require_once(HEADER_FRAGMENT);
 ?>
 
-<section id="welcome-wrapper" class="content-wrapper">
+<section id="welcome" class="content-wrapper">
 	<div id="welcome-card" class="row align-center align-middle">
 		<div class="column text-center large-8">
 			<h1>Hi, I'm Kendall Roth, a web developer currently studying at Conestoga College</h1>
@@ -12,7 +12,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="portfolio-wrapper">
+<section id="portfolio">
 	<div id="portfolio-bar" class="row">
 		<div class="column text-center">
 			<p>Welcome to my online portfolio!</p>
@@ -20,7 +20,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="summary-wrapper" class="content-wrapper">
+<section id="summary" class="content-wrapper">
 	<div class="row">
 		<div class="column small-12 text-center">
 			<h2>What I Do</h2>
@@ -56,7 +56,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="project-wrapper" class="content-wrapper">
+<section id="projects" class="content-wrapper">
 	<!-- Finished Projects -->
 	<div id="projects" class="project-section">
 		<div class="row">
@@ -99,7 +99,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="skills-wrapper" class="content-wrapper">
+<section id="skills" class="content-wrapper">
 	<div class="row">
 		<div class="column text-center">
 			<h2>Skills</h2>
@@ -141,7 +141,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="quick-contact-wrapper">
+<section id="quick-contact">
 	<div id="quick-contact-bar" class="row">
 		<div class="column text-center">
 			<a href="mailto:kroth@unaviamedia.ca">Contact Me</a>

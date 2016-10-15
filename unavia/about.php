@@ -4,7 +4,7 @@ $PAGE_TITLE = "About Me";
 require_once(HEADER_FRAGMENT);
 ?>
 
-<section id="about-wrapper">
+<section id="about" class="about-wrapper">
 	<div class="row align-center">
 		<div class="column medium-10 large-8">
 			<div class="row">
@@ -87,7 +87,7 @@ require_once(HEADER_FRAGMENT);
 
 <?php require_once(HTML_ROOT . "/controllers/contact_controller.php"); ?>
 
-<section id="contact-wrapper">
+<section id="contact" class="contact-wrapper">
 	<div class="row">
 		<div class="column text-center">
 			<h2>Contact Me</h2>
@@ -96,7 +96,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column medium-6 large-5">
-			<form action="/about.php" method="POST">
+			<form action="<?=ABOUT_URL?>#contact" method="POST">
 				<div class="row">
 					<div class="column">
 						<label for="contactName" class="hide">Name</label>

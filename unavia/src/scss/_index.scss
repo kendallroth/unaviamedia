@@ -8,7 +8,7 @@
 }
 
 //Welcom section
-#welcome-wrapper {
+#welcome {
 	position: relative;
 	padding: 0 3rem;
 	color: white;
@@ -53,7 +53,7 @@
 }
 
 //Portfolio introduction section
-#portfolio-wrapper {
+#portfolio {
 	padding: 1.5rem;
 	color: white;
 	font-weight: bold;
@@ -65,7 +65,7 @@
 }
 
 //Summary section
-#summary-wrapper {
+#summary {
 	padding: 3rem 0;
 
 	//Summary quotation
@@ -135,7 +135,7 @@
 }
 
 //Projects section
-#project-wrapper {
+#projects {
 	$project-background: rgb(78, 146, 202);
 	background-color: $project-background;
 	color: white;
@@ -185,7 +185,7 @@
 }
 
 //Skill section
-#skills-wrapper {
+#skills {
 	padding: 2rem 0;
 
 	//Cards for skill sections
@@ -231,7 +231,7 @@
 }
 
 //Contact section
-#quick-contact-wrapper {
+#quick-contact {
 	padding: 2.5rem;
 	background-color: rgb(60, 60, 60);
 
