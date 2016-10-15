@@ -10,19 +10,19 @@ $mailMessageHTML = "";
 
 //Handle form submission
 if (isset($_POST["contactSubmit"])) {
-	$emailFrom = "kroth@unaviamedia.ca";
-	$emailTo = "kroth@unaviamedia.ca";
+	$emailFrom = MAIL_ADDRESS;
+	$emailTo = MAIL_ADDRESS;
 
 	//Capture form input
-	$contactName = htmlspecialchars(trim($_POST['contactName']));
-	$contactEmail = htmlspecialchars(trim($_POST['contactEmail']));
-	$contactSubject = htmlspecialchars(trim($_POST['contactSubject']));
-	$contactComments = htmlspecialchars(trim($_POST['contactComments']));
+	$contactName = trim($_POST['contactName']);
+	$contactEmail = trim($_POST['contactEmail']);
+	$contactSubject = trim($_POST['contactSubject']);
+	$contactComments = trim($_POST['contactComments']);
 
 	//Validation variables
 	$validation = true;
 	$mailMessage = "";
-	$mailMessageType = "";
+	$mailMessageType = "error";
 
 	//Validation
 	if (strlen($contactName) < 2 || strlen($contactName) > 50) {
@@ -46,47 +46,68 @@ if (isset($_POST["contactSubmit"])) {
 	if ($validation == true) {
 		$mail = new PHPMailer;
 
+		//Configure SMTP
+		$mail->SMTPDebug = 3;
+		$mail->isSMTP();
+		$mail->Host = SMTP_HOST;
+		$mail->SMTPAuth = true;
+		$mail->Username = SMTP_USERNAME;
+		$mail->Password = SMTP_PASSWORD;
+		$mail->SMTPSecure = "ssl";
+		$mail->Port = SMTP_PORT;
+
+		//Set email headers
 		$mail->setFrom($emailFrom);
 		$mail->addAddress($emailTo, "Contact Us Submission");
-		$mail->addReplyTo($email, $name);
+		$mail->addReplyTo($contactEmail, $contactName);
 		$mail->isHTML(true);
 
-		$mail->Subject = $subject;
-		$mail->Body = $comments;
-		$mail->AltBody = $comments;
+		//Set email content
+		$mail->Subject = $contactSubject;
+		$mail->Body = $contactComments;
+		$mail->AltBody = $contactComments;
 
+		//Attempt to send the message and display the results to the user
 		if ($mail->send() == false) {
 			//Error
 			$mailMessage = "Message could not be sent.";
-			$mailMessageType = "error";
 		} else {
 			//Success
 			$mailMessage = "Thanks! Your message has been sent!";
 			$mailMessageType = "success";
 		}
 	} else {
+		//Display the validation errors
 		$mailMessage = "Form contains validation errors.";
-		$mailMessageType = "error";
 	}
 
 	//Create the form message bar to indicate status of form submission
 	$mailMessageHTML = createFormMessage($mailMessage, $mailMessageType);
 }
 
+/**
+ * @brief	Create the HTML to display the form submission message
+ *
+ * @param	$message		Message to display
+ * @param	$messageType	Type of message *
+ * @return	Form submission message HTML
+ */
 function createFormMessage($message, $messageType) {
 	$messageClass = "";
 
+	//$messageClass = strcmp($messageType, "success") == 0 ? "form-success" : "form-error";
 	switch($messageType) {
 		case "success": {
-			$messageClass = "form-success";
+			$messageClass = "submission-success";
 		}
 		case "error":
 		default: {
-			$messageClass = "form-success";
+			$messageClass = "submission-error";
 		}
 	}
 
-	return "<div class='form-message $messageClass text-center'><i class='fi-check'></i>$message</div>";
+	//Return the form submission message HTML
+	return "<div class='submission-message $messageClass text-center'><i class='fi-check'></i>$message</div>";
 }
 
 ?>
