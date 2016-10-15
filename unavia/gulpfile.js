@@ -12,7 +12,8 @@ gulp.task("sass", function() {
 			.pipe($.sass({
 				includePaths: [
 					"bower_components/foundation-sites/scss",
-					"bower_components/motion_ui/src"
+					"bower_components/motion_ui/src",
+					"bower_components/foundation-icon-fonts"
 				]
 			}))
 			//Add vendor prefixes to CSS
@@ -25,6 +26,14 @@ gulp.task("sass", function() {
 	}, 10);
 });
 
+//Copy fonts to the output directory
+gulp.task("fonts", function() {
+	return gulp.src("bower_components/foundation-icon-fonts/**/*.{ttf,woff,eof,svg}")
+		//Copy the fonts
+		.pipe(gulp.dest("dist/css"));
+});
+
+//TODO: Add script minification
 gulp.task("scripts", function() {
 	return gulp.src(["src/app.js"])
 		//Output the JS
@@ -39,4 +48,4 @@ gulp.task("watch", ["sass", "scripts"], function() {
 });
 
 //Default gulp task
-gulp.task("default", ["watch"]);
+gulp.task("default", ["fonts","watch"]);

@@ -97,22 +97,25 @@ if (isset($_POST["contactSubmit"])) {
  */
 function createFormMessage($message, $messageType) {
 	$messageClass = "";
+	$messageIcon = "";
 
 	//$messageClass = strcmp($messageType, "success") == 0 ? "form-success" : "form-error";
 	switch($messageType) {
 		case "success": {
 			$messageClass = "submission-success";
+			$messageIcon = "fi-check";
 			break;
 		}
 		case "error":
 		default: {
 			$messageClass = "submission-error";
+			$messageIcon = "fi-x";
 			break;
 		}
 	}
 
 	//Return the form submission message HTML
-	return "<div class='submission-message $messageClass text-center'><i class='fi-check'></i>$message</div>";
+	return "<div class='submission-message $messageClass text-center'><i class='$messageIcon'></i>$message</div>";
 }
 
 ?>
