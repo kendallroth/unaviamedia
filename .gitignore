@@ -12,3 +12,7 @@ vendor/
 
 # Ignore custom constants file
 custom_constants.php
+
+# Ignore large images
+*_Large*.png
+*_Large*.jpg
