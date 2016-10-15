@@ -9,3 +9,6 @@ node_modules
 npm-debug.log
 css/
 vendor/
+
+# Ignore custom constants file
+custom_constants.php
