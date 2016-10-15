@@ -24,7 +24,7 @@ if (isset($_POST["contactSubmit"])) {
 	$mailMessage = "";
 	$mailMessageType = "error";
 
-	//Validation
+	//If anything is invalid, create an error message and set the validation flag
 	if (strlen($contactName) < 2 || strlen($contactName) > 50) {
 		$validation = false;
 		$errName = "Name is required";
@@ -63,16 +63,16 @@ if (isset($_POST["contactSubmit"])) {
 		$mail->isHTML(true);
 
 		//Set email content
-		$mail->Subject = $contactSubject;
-		$mail->Body = $contactComments;
-		$mail->AltBody = $contactComments;
+		$mail->Subject = htmlspecialchars($contactSubject);
+		$mail->Body = htmlspecialchars($contactComments);
+		$mail->AltBody = htmlspecialchars($contactComments);
 
 		//Attempt to send the message and display the results to the user
 		if ($mail->send() == false) {
-			//Error
+			//Error message
 			$mailMessage = "Message could not be sent.";
 		} else {
-			//Success
+			//Success message
 			$mailMessage = "Thanks! Your message has been sent!";
 			$mailMessageType = "success";
 		}
