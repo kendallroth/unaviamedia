@@ -1,5 +1,12 @@
 # Change Log
 
+## October 15, 2016
+- Add SMTP authentication to contact form to fix nonsubmission errors
+- Add additional file for custom constants and development security
+	- Updated README with new development requirements
+- Add Foundation Icon Fonts to project with Bower
+- Remove large images from repository
+
 ## October 14, 2016
 - Update planned project image
 
