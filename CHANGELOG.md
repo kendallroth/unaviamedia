@@ -1,9 +1,12 @@
 # Change Log
 
+This will eventually be used to track changes made to live site, but is currently used in place of blog.
+
 ## October 18, 2016
 - Remove contact form in preparation for pushing site live
 	- Remove associated files, styles, etc
-- Push site live
+- Merge `resume` branch into `master` and push site live
+- Add Frameworks card to Skills section
 - Create new image for site project section
 	- [MagicMockups](http://magicmockups.com) & [SmartMockups](http://smartmockups.com)
 	- Restructured project images directory
