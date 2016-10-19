@@ -106,7 +106,7 @@ require_once(HEADER_FRAGMENT);
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column small-10 medium-5 large-4">
+		<div class="column small-10 medium-5 large-4 align-stretch">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
 				<dl>
@@ -121,11 +121,11 @@ require_once(HEADER_FRAGMENT);
 					<dt>Operating Systems</dt>
 					<dd>Linux, Windows</dd>
 					<dt>Environments</dt>
-					<dd>Vim, Visual Studio</dd>
+					<dd>Vim, Visual Studio, Atom</dd>
 				</dl>
 			</div>
 		</div>
-		<div class="column small-10 medium-5 large-4">
+		<div class="column small-10 medium-5 large-4 align-stretch">
 			<div id="analysis-card" class="skill-card">
 				<h3>Analysis &amp; Design</h3>
 				<ul>
@@ -135,6 +135,14 @@ require_once(HEADER_FRAGMENT);
 					<li>Development Cycle</li>
 					<li>Responsive Design</li>
 					<li>Project Planning</li>
+				</ul>
+			</div><br class="show-for-medium" />
+			<div id="frameworks-card" class="skill-card">
+				<h3>Frameworks</h3>
+				<ul>
+					<li>GitHub&ensp;<small><em>Project Management</em></small></li>
+					<li>BugZilla&ensp;<small><em>Issue Tracking</em></small></li>
+					<li>Cloud 9&ensp;<small><em>Online IDE</em></small></li>
 				</ul>
 			</div>
 		</div>
