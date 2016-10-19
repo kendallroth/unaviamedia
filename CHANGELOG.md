@@ -1,5 +1,13 @@
 # Change Log
 
+## October 18, 2016
+- Remove contact form in preparation for pushing site live
+	- Remove associated files, styles, etc
+- Push site live
+- Create new image for site project section
+	- [MagicMockups](http://magicmockups.com) & [SmartMockups](http://smartmockups.com)
+	- Restructured project images directory
+
 ## October 15, 2016
 - Add SMTP authentication to contact form to fix nonsubmission errors
 - Add additional file for custom constants and development security
