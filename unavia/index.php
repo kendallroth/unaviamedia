@@ -28,7 +28,10 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column small-11 large-9">
-			<blockquote>I'm primarily passionate about responsive web design, focusing on clean and simple design. I&nbsp;strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
+			<blockquote>
+				I'm passionate about web design and development, focusing on clean and simple design/functionality. I&nbsp;strive to be a dedicated team player while adapting to different environments and tasks.<br />
+				<cite>Kendall Roth</cite>
+			</blockquote>
 		</div>
 	</div>
 	<div id="summary-card" class="row align-center">
