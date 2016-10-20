@@ -13,15 +13,21 @@ require_once(HEADER_FRAGMENT);
 				</div>
 			</div>
 			<div class="row about-subsection about-introduction">
-				<div class="column">
+				<div class="column paragraph-block">
 					<h2>Introduction</h2>
-					<p>Hi, my name is Kendall Roth. I am currently pursuing my dream as a developer by attending Conestoga College for Computer Programming/Analysis. I am passionate about learning and applying new concepts to my work, and enjoy facing a challenge head on. One of my career goals is to become a better developer through constant learning and experimentation; a goal that I also apply to life in general.</p>
+					<p>Hi, I'm Kendall Roth! I am currently pursuing my dream as a developer as a student at Conestoga College for Computer Programming/Analysis. My primary passion involves learning and applying new concepts to my work, and I enjoy facing challenges head on. One of my goals is to become a better developer through constant learning and experimentation; a goal that I also try to apply to life in general.</p>
+					<blockquote class="text-center no-border">
+						Continuous effort&thinsp;&ndash;&thinsp;not strength or intelligence&thinsp;&ndash;&thinsp;is the&nbsp;key&nbsp;to&nbsp;unlocking&nbsp;our&nbsp;potential.<br />
+						<cite>Winston Churchill</cite>
+					</blockquote>
+					<p>I'm passionate about web design and development, focusing primarily on simple and modern design/functionality. No matter what I am doing, I try to produce clean and maintainable code while still being committed to producing quality work. On a personal level, I am a dedicated team player who enjoys working in a collaborative environment and forming relationships within a team.</p>
 				</div>
 			</div>
 			<div class="row about-subsection about-interests">
-				<div class="column">
+				<div class="column paragraph-block">
 					<h2>Interests</h2>
-					<p>Aside from my inner "geek zone", my interests also include relaxation through reading and choral music.</p>
+					<p>In my spare time I enjoy playing around with various technologies or simply experiment with my current knowledge by trying to apply it in new ways. This site is a primary example, as I update it frequently with interesting (to me) discoveries/ideas that I come across in my daily work or side experimentation.</p>
+					<p>Aside from my inner "geek zone", my interests also include unwinding through reading and choral music. Reading (along with colouring) plays a very active role in my life, and I can often be found curled up on a couch with a book. Choral music offers another form of relaxation and I was recently privileged to sing with the Faith Builders Chorale on their British Isles Tour in 2015, as well as several other local choirs (<a href="//villagevoicescchoir.weebly.com/" target="_blank">Village Voices</a>, Menno Mass Singers, youth choirs, etc).</p>
 				</div>
 			</div>
 			<div class="row about-subsection about-objective">
@@ -54,8 +60,7 @@ require_once(HEADER_FRAGMENT);
 			</div>
 			<div class="row about-subsection about-employment">
 				<div class="column">
-					<h2>Employment</h2>
-
+				<h2>Employment</h2>
 					<h3>
 						<a href="//www.netsweeper.com/" target="_blank">Web Developer</a>
 						<span class="employment-type">(Coop)</span>
@@ -67,7 +72,6 @@ require_once(HEADER_FRAGMENT);
 						<li>Responsible for developing, integrating and documenting new features as specified by team supervisor.</li>
 						<li>Assist with quality assurance testing on product involving writing unit tests and running manual tests.</li>
 					</ul>
-
 					<h3>
 						<a href="//www.conestogac.on.ca" target="_blank">Web Developer</a>
 						<span class="employment-type">(Work Study)</span>
