@@ -4,7 +4,7 @@ $PAGE_TITLE = "Home";
 require_once(HEADER_FRAGMENT);
 ?>
 
-<section id="welcome-wrapper" class="content-wrapper">
+<section id="welcome" class="content-wrapper">
 	<div id="welcome-card" class="row align-center align-middle">
 		<div class="column text-center large-8">
 			<h1>Hi, I'm Kendall Roth, a web developer currently studying at Conestoga College</h1>
@@ -12,7 +12,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="portfolio-wrapper">
+<section id="portfolio">
 	<div id="portfolio-bar" class="row">
 		<div class="column text-center">
 			<p>Welcome to my online portfolio!</p>
@@ -20,7 +20,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="summary-wrapper" class="content-wrapper">
+<section id="summary" class="content-wrapper">
 	<div class="row">
 		<div class="column small-12 text-center">
 			<h2>What I Do</h2>
@@ -28,7 +28,10 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column small-11 large-9">
-			<blockquote>I'm primarily passionate about responsive web design, focusing on clean and simple design. I&nbsp;strive to be a dedicated team player while adapting to different environments and tasks.<br /><em>&mdash; Kendall Roth</em></blockquote>
+			<blockquote>
+				I'm passionate about web design and development, focusing on clean and simple design/functionality. I&nbsp;strive to be a dedicated team player while adapting to different environments and tasks.<br />
+				<cite>Kendall Roth</cite>
+			</blockquote>
 		</div>
 	</div>
 	<div id="summary-card" class="row align-center">
@@ -56,41 +59,57 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<section id="project-wrapper" class="content-wrapper">
-	<div class="row">
-		<div class="column text-center" >
-			<h2>Projects</h2>
+<section id="projects" class="content-wrapper">
+	<!-- Finished Projects -->
+	<div id="recent-projects" class="project-section">
+		<div class="row">
+			<div class="column text-center" >
+				<h2>Projects</h2>
+				<p>Here's what I've been up to recently:</p>
+			</div>
+		</div>
+		<div class="row align-center small-collapse medium-uncollapse">
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="project-card" target="_blank">
+					<img src="/images/projects/UnaviaMedia_WebSite.png" />
+					<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
+				</a>
+			</div>
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/CaptainCPA" class="project-card" target="_blank">
+					<img src="/images/projects/Captain_CPA.png" />
+					<p><strong>CaptainCPA</strong><span>2015</span></p>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="column text-center">
-			<p>Here's what I've been up to recently:</p>
+	<!-- Planned projects -->
+	<div id="upcoming-projects" class="project-section">
+		<div class="row">
+			<div class="column text-center">
+				<h2>Upcoming Plans</h2>
+				<p>And here's a look ahead at what's coming!</p>
+			</div>
 		</div>
-	</div>
-	<div class="row align-center small-collapse medium-uncollapse">
-		<div class="column small-12 medium-5">
-			<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="project-card" target="_blank">
-				<img src="/images/projects/UnaviaMedia_Site.png" />
-				<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
-			</a>
-		</div>
-		<div class="column small-12 medium-5">
-			<a href="https://github.com/UnaviaMedia/CaptainCPA" class="project-card" target="_blank">
-				<img src="/images/projects/Captain_CPA.png" />
-				<p><strong>CaptainCPA</strong><span>2015</span></p>
-			</a>
+		<div class="row align-center small-collapse medium-uncollapse">
+			<div class="column small-12 medium-5">
+				<a href="https://github.com/UnaviaMedia/CommitteeHelp" class="project-card" target="_blank">
+					<img src="/images/projects/CommitteeHelp.png" />
+					<p><strong>CommitteeHelp</strong><span>coming soon</span></p>
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
 
-<section id="skills-wrapper" class="content-wrapper">
+<section id="skills" class="content-wrapper">
 	<div class="row">
 		<div class="column text-center">
 			<h2>Skills</h2>
 		</div>
 	</div>
 	<div class="row align-center">
-		<div class="column small-10 medium-5 large-4">
+		<div class="column small-10 medium-5 large-4 align-stretch">
 			<div id="technologies-card" class="skill-card">
 				<h3>Technologies</h3>
 				<dl>
@@ -105,11 +124,11 @@ require_once(HEADER_FRAGMENT);
 					<dt>Operating Systems</dt>
 					<dd>Linux, Windows</dd>
 					<dt>Environments</dt>
-					<dd>Vim, Visual Studio</dd>
+					<dd>Vim, Visual Studio, Atom</dd>
 				</dl>
 			</div>
 		</div>
-		<div class="column small-10 medium-5 large-4">
+		<div class="column small-10 medium-5 large-4 align-stretch">
 			<div id="analysis-card" class="skill-card">
 				<h3>Analysis &amp; Design</h3>
 				<ul>
@@ -120,13 +139,21 @@ require_once(HEADER_FRAGMENT);
 					<li>Responsive Design</li>
 					<li>Project Planning</li>
 				</ul>
+			</div><br class="show-for-medium" />
+			<div id="frameworks-card" class="skill-card">
+				<h3>Frameworks</h3>
+				<ul>
+					<li>GitHub&ensp;<small><em>Project Management</em></small></li>
+					<li>BugZilla&ensp;<small><em>Issue Tracking</em></small></li>
+					<li>Cloud 9&ensp;<small><em>Online IDE</em></small></li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section id="contact-wrapper">
-	<div id="contact-bar" class="row">
+<section id="quick-contact">
+	<div id="quick-contact-bar" class="row">
 		<div class="column text-center">
 			<a href="mailto:kroth@unaviamedia.ca">Contact Me</a>
 		</div>

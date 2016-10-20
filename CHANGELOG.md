@@ -1,5 +1,66 @@
 # Change Log
 
+This will eventually be used to track changes made to live site, but is currently used in place of blog.
+
+## October 18, 2016
+- Remove contact form in preparation for pushing site live
+	- Remove associated files, styles, etc
+- Merge `resume` branch into `master` and push site live
+- Added content to About page
+- Add Frameworks card to Skills section
+- Create new image for site project section
+	- [MagicMockups](http://magicmockups.com) & [SmartMockups](http://smartmockups.com)
+	- Restructured project images directory
+
+## October 15, 2016
+- Add SMTP authentication to contact form to fix nonsubmission errors
+- Add additional file for custom constants and development security
+	- Updated README with new development requirements
+- Add Foundation Icon Fonts to project with Bower
+- Remove large images from repository
+
+## October 14, 2016
+- Update planned project image
+
+## October 13, 2016
+- Edit planned project image and upload higher quality image
+
+## October 12, 2016
+- Add security functions to contact form
+
+## October 11, 2016
+- Create and add project image for CommitteeHelp
+
+## October 9, 2016
+- Add Foundation Icon font
+- Update Contact form to support postback with pre-filled fields
+
+## October 8, 2016
+- Add Composer to manage PHP packages
+- Start adding email submission to contact form
+
+## October 7, 2016
+- Finish styles for Contact form on About page
+- Finalize About and Contact page
+- Create and add content to Planned Projects section
+
+## October 6, 2016
+- Optimize social media icons
+- Create SCSS colour variables
+
+## October 5, 2016
+- Add About page for summary information with a Contact form
+- Added styles for About page
+- Created rough styles for Contact form
+- Decided on page structure and update header menu
+
+## October 4, 2016
+- Added planned projects section
+- Added new favicon
+
+## October 3, 2016
+- Add dynamic date to copyright in footer
+
 ## October 2, 2016
 - Changed hero image
 - Updated project image to match new site look

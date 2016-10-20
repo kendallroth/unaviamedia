@@ -4,14 +4,14 @@
 	//medium - 640 - 1023
 	//small - 0 - 639
 	position: fixed;
-	top: 5px;
+	bottom: 5px;
 	left: 5px;
 
 	padding: 0.25rem;
 	background-color: rgb(250, 250, 250);
 	border: 2px solid dodgerblue;
 	border-radius: 1000px;
-	opacity: 0.75;
+	opacity: 0.5;
 	z-index: 100;
 }
 
@@ -26,9 +26,13 @@ header {
 	.header-bar {
 		padding: 0.5rem;
 
+		li {
+			margin: auto 0.5rem;
+		}
+
 		//Logo in the center of the menu
 		.menu-logo {
-			margin: 0 1.5rem;
+			margin: 0 1rem;
 
 			a {
 				//Remove border from logo link

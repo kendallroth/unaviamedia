@@ -58,6 +58,7 @@ sudo systemctl reload nginx
 echo "Link repository web files into web root"
 sudo ln -s /var/www/unaviamedia/unavia /var/www/html
 sudo ln -s /var/www/unaviamedia/constants.php /var/www/constants.php
+sudo ln -s /var/www/unaviamedia/custom_constants.php /var/www/custom_constants.php
 
 # Update web directory owner and permissions (set 755 for directories and 644 for files)
 #   This will need to be run frequently (after changes) until permission inheritance is set
@@ -69,18 +70,33 @@ chmod -R u+rwX,go+rX,go-w /var/www
 echo "Create file to test PHP configuration"
 echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 
+# Install composer to manage PHP packages and test insallation
+echo "Install composer to manage PHP packages"
+wget https://getcomposer.org/installer
+sudo php installer --install-dir=/usr/local/bin --filename=composer
+composer
+
 # Install nodejs and npm
 echo "Install nodejs and npm"
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs build-essential
 
-# Install gulp globally
-echo "Install gulp globally"
-sudo npm install --global gulp
+# Install gulp and bower globally
+echo "Install gulp and bower globally"
+sudo npm install --global gulp bower
+
+# Prepare for project package installation
+echo "Prepare for project package installation"
+cd /var/www/html
+
+# Install composer packages
+echo "Install composer packages"
+composer require phpmailer/phpmailer
+#composer require league/oauth2-google
+composer install
 
 # Install node packages
 echo "Install node packages"
-cd /var/www/html
 npm install
 
 # Compile CSS

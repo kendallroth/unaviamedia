@@ -16,14 +16,12 @@ define("HEADER_FRAGMENT", INCLUDES . "/header.php");
 define("FOOTER_FRAGMENT", INCLUDES . "/footer.php");
 
 
-// Static Page Title
+//Static Page Title
 define("PAGE_TITLE", "&ensp;|&ensp;UnaviaMedia");
+//Dynamic Page Title
+$PAGE_TITLE = "";
 
 
-// Links
+//Links
 define("HOME_URL", "/index.php");
 define("ABOUT_URL", "/about.php");
-
-
-// Dynamic Page Title
-$PAGE_TITLE = "";

@@ -8,7 +8,7 @@
 }
 
 //Welcom section
-#welcome-wrapper {
+#welcome {
 	position: relative;
 	padding: 0 3rem;
 	color: white;
@@ -53,7 +53,7 @@
 }
 
 //Portfolio introduction section
-#portfolio-wrapper {
+#portfolio {
 	padding: 1.5rem;
 	color: white;
 	font-weight: bold;
@@ -65,7 +65,7 @@
 }
 
 //Summary section
-#summary-wrapper {
+#summary {
 	padding: 3rem 0;
 
 	//Summary quotation
@@ -129,17 +129,21 @@
 	}
 
 	//Background colours for the skill card images
-	#skill-analysis img { background-color: rgb(236, 109, 27); }
-	#skill-design img { background-color: rgb(25, 153, 226); }
-	#skill-development img { background-color: rgb(213, 42, 42); }
+	#skill-analysis img { background-color: $icon-orange; }
+	#skill-design img { background-color: $icon-blue; }
+	#skill-development img { background-color: $icon-red; }
 }
 
 //Projects section
-#project-wrapper {
+#projects {
 	$project-background: rgb(78, 146, 202);
-	padding: 2.5rem 0 0 0;
 	background-color: $project-background;
 	color: white;
+
+	//Container for different types of projects
+	.project-section {
+		padding-top: 2.5rem;
+	}
 
 	//Card for different projects
 	.project-card {
@@ -169,7 +173,7 @@
 
 	//Switch to carded styles for medium+
 	@include breakpoint(medium) {
-		padding: 2.5rem 0;
+		padding-bottom: 2.5rem;
 
 		.project-card {
 			padding: 0.25rem 0.25rem 0 0.25rem;
@@ -181,13 +185,13 @@
 }
 
 //Skill section
-#skills-wrapper {
+#skills {
 	padding: 2rem 0;
 
 	//Cards for skill sections
 	.skill-card {
 		// margin-bottom: 1.5rem;
-		padding: 0.75rem;
+		padding: 1rem;
 		background-color: rgba(255, 255, 255, 1);
 		border-bottom: 3px solid rgb(217, 67, 83);
 
@@ -224,10 +228,13 @@
 			list-style: none;
 		}
 	}
+
+	//Force full height on the technologies section
+	#technologies-card { height: 100%; }
 }
 
 //Contact section
-#contact-wrapper {
+#quick-contact {
 	padding: 2.5rem;
 	background-color: rgb(60, 60, 60);
 

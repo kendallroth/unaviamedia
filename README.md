@@ -14,3 +14,19 @@ The site displays several of the skills I have learned/am learning, including th
 	- Utilizing [Foundation 6](www.foundation.zurb.com)
 - Project Management
 	- Git, Gulp
+
+## Setup
+Clone project onto a **Ubuntu 16.04** server and manually run the `.provision/bootstrap.sh` script to setup.
+
+### Security Note:
+For security reasons, there is an additional file that **must** be created in the folder containing web root that will store several security/custom variables.
+
+The file should be called "**custom_constants.php**" and be contain the following constants and values:
+
+| Constant | Description | Example |
+| :------- | :---------- | :------ |
+| `MAIL_ADDRESS`  | Email address that mail will appear to come from | `test@example.com` |
+| `SMTP_HOST`     | SMTP host server address | `smtp.gmail.com` |
+| `SMTP_PORT`     | SMTP port number | `234` |
+| `SMTP_USERNAME` | SMTP authentication username | `email@gmail.com` |
+| `SMTP_PASSWORD` | SMTP authentication password | `test1234` |

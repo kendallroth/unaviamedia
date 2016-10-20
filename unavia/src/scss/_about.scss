@@ -1,0 +1,52 @@
+.about-wrapper {
+	padding: 5.5rem 0 2rem 0;
+
+	h1 { margin: 0; }
+
+	//About section headers
+	h2 {
+		margin-top: 1rem;
+		color: $dark-grey;
+		border-bottom: 1px solid rgb(199, 54, 71);
+	}
+
+	//About section subheaders
+	h3 {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	p { margin-bottom: 0; }
+
+	a {
+		//Color to indicate link
+		color: rgb(32, 38, 110);
+
+		&:hover {
+			border-bottom: 2px dotted $site-blue;
+		}
+	}
+
+	//No margins on the lasts lists in a subsection
+	.about-subsection ul:last-of-type { margin-bottom: 0; }
+
+	//Utility classes on the about page
+	.employment-type {
+		margin-left: 0.5rem;
+		font-size: 0.8rem;
+		color: $medium-dark-grey;
+	}
+
+	//Date range utility
+	.date-right {
+		display: block;
+		font-weight: normal;
+		font-size: 0.8rem;
+
+		@include breakpoint(350px) {
+			float: right;
+			font-size: 0.9rem;
+		}
+	}
+}
