@@ -90,3 +90,15 @@ body {
 		z-index: -2;
 	}
 }
+
+//Utility class to remove the bottom-margin the last paragraph in a block
+.paragraph-block {
+	p:not(:last-of-type) {
+		margin-bottom: 0.75rem;
+	}
+}
+
+//Utility class to remove borders
+.no-border {
+	border: none;
+}
