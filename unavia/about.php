@@ -121,6 +121,11 @@ require_once(HEADER_FRAGMENT);
 						<textarea  id="contactComments" name="contactComments" placeholder="Comments"><?= $contactComments ?></textarea>
 					</div>
 				</div>
+				<div class="row">
+					<div class="column">
+						<div class="g-recaptcha" data-sitekey="6LfObQoUAAAAAMWFrkgq-dJotKsKZEJq0NM5NqoL"></div>
+					</div>
+				</div>
 				<?= $mailMessageHTML //Output the status of the form submission ?>
 				<div class="row">
 					<div class="column text-center">
