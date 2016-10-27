@@ -1,5 +1,8 @@
 # Change Log
 
+## October 27, 2016
+- Create a remote repository to contain secure values
+
 ## October 15, 2016
 - Add SMTP authentication to contact form to fix nonsubmission errors
 - Add additional file for custom constants and development security
