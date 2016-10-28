@@ -1,5 +1,8 @@
 # Change Log
 
+## October 28, 2016
+- Add ZenHub plugin to GitHub for project managment
+
 ## October 27, 2016
 - Create a remote repository to contain secure values
 
