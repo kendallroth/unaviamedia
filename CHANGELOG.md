@@ -1,5 +1,8 @@
 # Change Log
 
+## October 30, 2016
+- Switched to Zube.io for amazing GitHub issue management!
+
 ## October 28, 2016
 - Add ZenHub plugin to GitHub for project managment
 
