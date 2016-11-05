@@ -103,33 +103,4 @@ if (isset($_POST["contactSubmit"])) {
 	$mailMessageHTML = createFormMessage($mailMessage, $mailMessageType);
 }
 
-/**
- * @brief	Create the HTML to display the form submission message
- *
- * @param	$message		Message to display
- * @param	$messageType	Type of message *
- * @return	Form submission message HTML
- */
-function createFormMessage($message, $messageType) {
-	$messageClass = "";
-	$messageIcon = "";
-
-	switch($messageType) {
-		case "success": {
-			$messageClass = "submission-success";
-			$messageIcon = "fi-check";
-			break;
-		}
-		case "error":
-		default: {
-			$messageClass = "submission-error";
-			$messageIcon = "fi-x";
-			break;
-		}
-	}
-
-	//Return the form submission message HTML
-	return "<div class='submission-message $messageClass text-center'><i class='$messageIcon'></i>$message</div>";
-}
-
 ?>
