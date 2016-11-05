@@ -2,6 +2,15 @@
 
 This will eventually be used to track changes made to live site, but is currently used in place of blog.
 
+## October 30, 2016
+- Switched to Zube.io for amazing GitHub issue management!
+
+## October 28, 2016
+- Add ZenHub plugin to GitHub for project managment
+
+## October 27, 2016
+- Create a remote repository to contain secure values
+
 ## October 18, 2016
 - Remove contact form in preparation for pushing site live
 	- Remove associated files, styles, etc

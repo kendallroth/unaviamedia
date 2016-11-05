@@ -8,6 +8,8 @@
 	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
+	<!-- Scripts -->
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>

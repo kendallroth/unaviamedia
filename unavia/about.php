@@ -89,4 +89,56 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
+<?php require_once(HTML_ROOT . "/controllers/contact_controller.php"); ?>
+
+<section id="contact" class="contact-wrapper">
+	<div class="row">
+		<div class="column text-center">
+			<h2>Contact Me</h2>
+			<p>Feel free to contact me with any questions&nbsp;or&nbsp;comments!</p>
+		</div>
+	</div>
+	<div class="row align-center">
+		<div class="column medium-6 large-5">
+			<form action="<?=ABOUT_URL?>#contact" method="POST">
+				<div class="row">
+					<div class="column">
+						<label for="contactName" class="hide">Name</label>
+						<input type="text" id="contactName" name="contactName" placeholder="Name" value="<?= $contactName ?>" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label for="contactEmail" class="hide">Email</label>
+						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" value="<?= $contactEmail ?>" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label for="contactSubject" class="hide">Subject</label>
+						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" value="<?= $contactSubject ?>" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<label for="contactComments" class="hide">Comments</label>
+						<textarea  id="contactComments" name="contactComments" placeholder="Comments"><?= $contactComments ?></textarea>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<div class="g-recaptcha" data-sitekey="6LfObQoUAAAAAMWFrkgq-dJotKsKZEJq0NM5NqoL"></div>
+					</div>
+				</div>
+				<?= $mailMessageHTML //Output the status of the form submission ?>
+				<div class="row">
+					<div class="column text-center">
+						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
 <?php require_once(FOOTER_FRAGMENT); ?>
