@@ -1,5 +1,5 @@
 //Wrapper for content cards
-.content-wrapper {
+.content__wrapper {
 	h2 {
 		margin: 0 auto 1.25rem auto;
 		font-size: 1.75rem;
@@ -8,7 +8,7 @@
 }
 
 //Welcom section
-#welcome {
+.section--welcome {
 	position: relative;
 	padding: 0 3rem;
 	color: white;
@@ -53,7 +53,7 @@
 }
 
 //Portfolio introduction section
-#portfolio {
+.section--portfolio {
 	padding: 1.5rem;
 	color: white;
 	font-weight: bold;
@@ -65,7 +65,7 @@
 }
 
 //Summary section
-#summary {
+.section--summary {
 	padding: 3rem 0;
 
 	//Summary quotation
@@ -93,7 +93,7 @@
 	}
 
 	//Separate summary blocks
-	.summary-block {
+	.summary__block {
 		padding: 1rem;
 		height: 100%;
 		background-color: rgba(255, 255, 255, 0.95);
@@ -114,7 +114,7 @@
 		}
 
 		//Summary block headers
-		.summary-header {
+		.summary__header {
 			display: block;
 			margin: 0.75rem auto 0.5rem auto;
 			text-align: center;
@@ -135,18 +135,18 @@
 }
 
 //Projects section
-#projects {
+.section--projects {
 	$project-background: rgb(78, 146, 202);
 	background-color: $project-background;
 	color: white;
 
 	//Container for different types of projects
-	.project-section {
+	.projects__section {
 		padding-top: 2.5rem;
 	}
 
 	//Card for different projects
-	.project-card {
+	.card--project {
 		display: block;
 		background-color: rgb(255, 255, 255);
 
@@ -175,7 +175,7 @@
 	@include breakpoint(medium) {
 		padding-bottom: 2.5rem;
 
-		.project-card {
+		.card--project {
 			padding: 0.25rem 0.25rem 0 0.25rem;
 			border-radius: 0.2rem;
 
@@ -185,11 +185,11 @@
 }
 
 //Skill section
-#skills {
+.section--skills {
 	padding: 2rem 0;
 
 	//Cards for skill sections
-	.skill-card {
+	.card--skill {
 		// margin-bottom: 1.5rem;
 		padding: 1rem;
 		background-color: rgba(255, 255, 255, 1);
@@ -210,17 +210,9 @@
 		}
 
 		//Technologies section
-		dl {
-			margin: 0;
-
-			dt {
-				margin: 0;
-			}
-
-			dd {
-				margin-bottom: 0.25rem;
-			}
-		}
+		dl { margin: 0; }
+		dt { margin: 0; }
+		dd { margin-bottom: 0.25rem; }
 
 		//Analysis section
 		ul {
@@ -234,7 +226,7 @@
 }
 
 //Contact section
-#quick-contact {
+.section--quick-contact {
 	padding: 2.5rem;
 	background-color: rgb(60, 60, 60);
 

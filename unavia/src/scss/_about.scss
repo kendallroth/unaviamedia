@@ -1,4 +1,4 @@
-.about-wrapper {
+.about__wrapper {
 	padding: 5.5rem 0 2rem 0;
 
 	h1 { margin: 0; }
@@ -29,7 +29,7 @@
 	}
 
 	//No margins on the lasts lists in a subsection
-	.about-subsection ul:last-of-type { margin-bottom: 0; }
+	.about__subsection ul:last-of-type { margin-bottom: 0; }
 
 	//Utility classes on the about page
 	.employment-type {
@@ -39,7 +39,7 @@
 	}
 
 	//Date range utility
-	.date-right {
+	.date--right {
 		display: block;
 		font-weight: normal;
 		font-size: 0.8rem;
@@ -51,7 +51,7 @@
 	}
 }
 
-#contact {
+.contact__wrapper {
 	padding: 2rem 0;
 	background-color: $site-blue;
 	color: white;
@@ -99,10 +99,13 @@
 	margin-bottom: 1.5rem;
 }
 
-.submission-message {
-	margin-bottom: 1.5rem;
+.message {
 	padding: 0.75rem;
-	border: 3px solid $dark-grey;
+	color: darken($site-blue, 10%);;
+	background-color: lighten($site-blue, 20%);
+	border-color: darken($site-blue, 10%);
+	border-width: 3px;
+	border-style: solid;
 	border-radius: 2px;
 
 	i {
@@ -110,14 +113,18 @@
 	}
 }
 
-.submission-error {
-	color: $site-red;
-	background-color:lighten($site-red, 40%);
-	border: 3px solid $site-red;
+.message--submission {
+	margin-bottom: 1.5rem;
 }
 
-.submission-success {
+.message--error {
+	color: $site-red;
+	background-color:lighten($site-red, 40%);
+	border-color: $site-red;
+}
+
+.message--success {
 	color: darken($site-green, 25%);
 	background-color: lighten($site-green, 35%);
-	border: 3px solid $site-green;
+	border-color: $site-green;
 }
