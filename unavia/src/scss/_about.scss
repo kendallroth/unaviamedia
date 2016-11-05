@@ -94,37 +94,3 @@
 		}
 	}
 }
-
-.form__row {
-	margin-bottom: 1.5rem;
-}
-
-.message {
-	padding: 0.75rem;
-	color: darken($site-blue, 10%);;
-	background-color: lighten($site-blue, 20%);
-	border-color: darken($site-blue, 10%);
-	border-width: 3px;
-	border-style: solid;
-	border-radius: 2px;
-
-	i {
-		margin-right: 0.5rem;
-	}
-}
-
-.message--submission {
-	margin-bottom: 1.5rem;
-}
-
-.message--error {
-	color: $site-red;
-	background-color:lighten($site-red, 40%);
-	border-color: $site-red;
-}
-
-.message--success {
-	color: darken($site-green, 25%);
-	background-color: lighten($site-green, 35%);
-	border-color: $site-green;
-}
