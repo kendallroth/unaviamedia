@@ -35,7 +35,7 @@ gulp.task("fonts", function() {
 
 //TODO: Add script minification
 gulp.task("scripts", function() {
-	return gulp.src(["src/app.js"])
+	return gulp.src(["src/js/app.js"])
 		//Output the JS
 		.pipe(gulp.dest("dist/js"));
 });
