@@ -1,6 +1,8 @@
 <?php
 
-require_once(HTML_ROOT . "/vendor/autoload.php");
+require_once("/var/www/constants.php");
+require_once(AUTOLOADER);
+require_once(UTILITIES);
 
 $contactName = "";
 $contactEmail = "";
@@ -17,8 +19,7 @@ if (isset($_POST["contactSubmit"])) {
 
 	if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
 		//Send reCAPTCHA request
-		$verifyReCAPTCHA = file_get_contents(sprintf("https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s", RECAPTCHA_SECRET, $_POST['g-recaptcha-response']));
-		$responseData = json_decode($verifyReCAPTCHA);
+		$responseData = getReCAPTCHA($_POST['g-recaptcha-response']);
 
 		//Validate reCAPTCHA response
 		if ($responseData->success == false) {
