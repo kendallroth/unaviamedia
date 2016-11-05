@@ -10,6 +10,7 @@ This will eventually be used to track changes made to live site, but is currentl
 
 ## October 27, 2016
 - Create a remote repository to contain secure values
+- Add ReCAPTCHA support to Contact form
 
 ## October 18, 2016
 - Remove contact form in preparation for pushing site live
