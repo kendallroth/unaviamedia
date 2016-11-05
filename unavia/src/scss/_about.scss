@@ -63,7 +63,7 @@
 	}
 
 	input[type=text], textarea {
-		margin-bottom: 1.5rem;
+		margin: 0;
 		padding: 0.3rem 0.5rem;
 		color: white;
 		background-color: transparent;
@@ -93,6 +93,10 @@
 			background-color: rgb(53, 119, 175);
 		}
 	}
+}
+
+.form__row {
+	margin-bottom: 1.5rem;
 }
 
 .submission-message {
