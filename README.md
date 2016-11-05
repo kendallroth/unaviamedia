@@ -25,8 +25,10 @@ The file should be called "**custom_constants.php**" and be contain the followin
 
 | Constant | Description | Example |
 | :------- | :---------- | :------ |
-| `MAIL_ADDRESS`  | Email address that mail will appear to come from | `test@example.com` |
-| `SMTP_HOST`     | SMTP host server address | `smtp.gmail.com` |
-| `SMTP_PORT`     | SMTP port number | `234` |
-| `SMTP_USERNAME` | SMTP authentication username | `email@gmail.com` |
-| `SMTP_PASSWORD` | SMTP authentication password | `test1234` |
+| `MAIL_ADDRESS`  		| Email address that mail will appear to come from | `test@example.com` |
+| `SMTP_HOST`     		| SMTP host server address | `smtp.gmail.com` |
+| `SMTP_PORT`     		| SMTP port number | `234` |
+| `SMTP_USERNAME` 		| SMTP authentication username | `email@gmail.com` |
+| `SMTP_PASSWORD` 		| SMTP authentication password | `test1234` |
+| `RECAPTCHA_SITE`		| ReCAPTCHA public site authentication key | 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI |
+| `RECAPTCHA_SECRET`	| ReCAPTCHA secure authentication key | 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe |

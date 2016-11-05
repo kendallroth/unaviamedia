@@ -8,4 +8,5 @@ define("SMTP_USERNAME",		"");
 define("SMTP_PASSWORD",		"");
 
 //ReCAPTCHA constants
-define("RECAPCHA_SECRET", 	"");
+define("RECAPTCHA_SITE",	"");
+define("RECAPTCHA_SECRET", 	"");

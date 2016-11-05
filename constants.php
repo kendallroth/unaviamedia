@@ -6,10 +6,14 @@ ini_set('display_errors', 'On');
 //Require the custom constants file (not committed for security)
 require_once("/var/www/custom_constants.php");
 
+//PHP Paths
 define("HTML_ROOT", "/var/www/html");
-
 define("INCLUDES", HTML_ROOT . "/include");
+define("AUTOLOADER", HTML_ROOT . "/vendor/autoload.php");
+define("UTILITIES", INCLUDES . "/utilities.php");
 
+
+//HTML Paths
 define("STYLES", "/dist/css");
 define("SCRIPTS", "/dist/js");
 define("IMAGES", "/dist/images");
