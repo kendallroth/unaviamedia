@@ -8,14 +8,14 @@ $contactName = "";
 $contactEmail = "";
 $contactSubject = "";
 $contactComments = "";
-$mailMessageHTML = "";
+$messageHTML = "";
 
 //Handle form submission
 if (isset($_POST["contactSubmit"])) {
 	//Validation variables
 	$validation = true;
-	$mailMessage = "";
-	$mailMessageType = "error";
+	$message = "";
+	$messageType = "error";
 
 	if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
 		//Send reCAPTCHA request
@@ -32,9 +32,9 @@ if (isset($_POST["contactSubmit"])) {
 	}
 
 	//Capture regular form input
-	$contactName = trim($_POST['contactName']);
-	$contactEmail = trim($_POST['contactEmail']);
-	$contactSubject = trim($_POST['contactSubject']);
+	$contactName = str_replace(array("\r","\n"), array(" "," "), trim($_POST['contactName']));
+	$contactEmail = filter_var(trim($_POST['contactEmail']), FILTER_SANITIZE_EMAIL);
+	$contactSubject = str_replace(array("\r","\n"), array(" "," "), trim($_POST['contactSubject']));
 	$contactComments = trim($_POST['contactComments']);
 
 	//If anything is invalid, create an error message and set the validation flag
@@ -85,22 +85,24 @@ if (isset($_POST["contactSubmit"])) {
 		//Attempt to send the message and display the results to the user
 		if ($mail->send() == false) {
 			//Error message
-			$mailMessage = "Message could not be sent.";
+			$message = "Message could not be sent.";
 		} else {
 			//Success message
-			$mailMessage = "Thanks! Your message has been sent!";
-			$mailMessageType = "success";
+			$message = "Thanks! Your message has been sent!";
+			$messageType = "success";
 
 			//Reset the form
 			$contactName = $contactEmail = $contactSubject = $contactComments = "";
 		}
 	} else {
 		//Display the validation errors
-		$mailMessage = "Form contains validation errors.";
+		$message = "Form contains validation errors.";
 	}
 
 	//Create the form message bar to indicate status of form submission
-	$mailMessageHTML = createFormMessage($mailMessage, $mailMessageType);
+	//$messageHTML = createFormMessage($mailMessage, $mailMessageType);
+	$mailMessage = new Message("contact-message", $message, $messageType);
+	$messageHTML = $mailMessage->create();
 }
 
 ?>

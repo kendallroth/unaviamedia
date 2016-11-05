@@ -130,7 +130,11 @@ require_once(HEADER_FRAGMENT);
 						<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE?>"></div>
 					</div>
 				</div>
-				<?= $mailMessageHTML //Output the status of the form submission ?>
+				<?php //Output the status of the form submission
+				if (isEmpty($messageHTML) == false) {
+					echo "<div class='row form__row' data-closable><div class='column'>$messageHTML</div></div>";
+				}
+				?>
 				<div class="row">
 					<div class="column text-center">
 						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
