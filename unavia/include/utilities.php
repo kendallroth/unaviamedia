@@ -1,6 +1,29 @@
 <?php
 
 /**
+ * @brief	Test whether a variable is empty/unset/null
+ * @param	$input	Variable to check
+ * @return	Boolean indicating whether variable is empty
+ */
+function isEmpty($input) {
+	$var = $input;
+
+    if (is_null($var)) {
+        return true;
+    } else if (is_array($var) || is_object($var)) {
+		return empty($var);
+    } else if (is_bool($var)) {
+        return false;
+    } else {
+        $var = trim($var);
+        return (empty($var) && strcmp($var, "0"));
+    }
+
+    //Failsafe (although may give incorrect results if an edge case wasn't handled above)
+    return empty($var);
+}
+
+/**
  * @brief	Send and receive a ReCAPTCHA verification request
  *
  * @param	$reCaptchaResponse		ReCAPTCHA value
