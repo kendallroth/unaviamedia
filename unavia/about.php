@@ -127,7 +127,7 @@ require_once(HEADER_FRAGMENT);
 				</div>
 				<div class="row">
 					<div class="column">
-						<div class="g-recaptcha" data-sitekey="6LfObQoUAAAAAMWFrkgq-dJotKsKZEJq0NM5NqoL"></div>
+						<div class="g-recaptcha" data-sitekey="6Lc2NQsUAAAAAEkKnwvp2rV6EmzGckaWdaNKUbto"></div>
 					</div>
 				</div>
 				<?= $mailMessageHTML //Output the status of the form submission ?>

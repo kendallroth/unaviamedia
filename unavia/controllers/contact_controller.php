@@ -10,19 +10,31 @@ $mailMessageHTML = "";
 
 //Handle form submission
 if (isset($_POST["contactSubmit"])) {
-	$emailFrom = MAIL_ADDRESS;
-	$emailTo = MAIL_ADDRESS;
-
-	//Capture form input
-	$contactName = trim($_POST['contactName']);
-	$contactEmail = trim($_POST['contactEmail']);
-	$contactSubject = trim($_POST['contactSubject']);
-	$contactComments = trim($_POST['contactComments']);
-
 	//Validation variables
 	$validation = true;
 	$mailMessage = "";
 	$mailMessageType = "error";
+
+	if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
+		//Send reCAPTCHA request
+		$verifyReCAPTCHA = file_get_contents(sprintf("https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s", RECAPTCHA_SECRET, $_POST['g-recaptcha-response']));
+		$responseData = json_decode($verifyReCAPTCHA);
+
+		//Validate reCAPTCHA response
+		if ($responseData->success == false) {
+			$validation = false;
+			$errReCaptcha = "ReCAPTCHA verification failed";
+		}
+	} else {
+		$validation = false;
+		$errReCaptcha = "ReCAPTCHA verification is required";
+	}
+
+	//Capture regular form input
+	$contactName = trim($_POST['contactName']);
+	$contactEmail = trim($_POST['contactEmail']);
+	$contactSubject = trim($_POST['contactSubject']);
+	$contactComments = trim($_POST['contactComments']);
 
 	//If anything is invalid, create an error message and set the validation flag
 	if (strlen($contactName) < 2 || strlen($contactName) > 50) {
@@ -47,12 +59,11 @@ if (isset($_POST["contactSubmit"])) {
 
 	//Compose and send the email if there are no validation errors
 	if ($validation == true) {
+		//Configure SMTP authentication
 		$mail = new PHPMailer;
-		//Configure SMTP
 		//$mail->SMTPDebug = 3;
 		$mail->isSMTP();
 		$mail->Host = SMTP_HOST;
-
 		$mail->SMTPAuth = true;
 		$mail->Username = SMTP_USERNAME;
 		$mail->Password = SMTP_PASSWORD;
@@ -60,8 +71,8 @@ if (isset($_POST["contactSubmit"])) {
 		$mail->Port = SMTP_PORT;
 
 		//Set email headers
-		$mail->setFrom($emailFrom, "Contact Us Submission");
-		$mail->addAddress($emailTo, "Contact Us Submission");
+		$mail->setFrom(MAIL_ADDRESS, "Contact Us Submission");
+		$mail->addAddress(MAIL_ADDRESS, "Contact Us Submission");
 		$mail->addReplyTo($contactEmail, $contactName);
 		$mail->isHTML(true);
 
