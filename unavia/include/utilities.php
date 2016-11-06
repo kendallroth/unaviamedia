@@ -97,7 +97,7 @@ class Message {
 			$closeHTML = "<svg class='close' data-close width='20' height='20'><g><line x1='7' x2='13' y1='7' y2='13' stroke-width='2'></line><line x1='7' x2='13' y1='13' y2='7' stroke-width='2'></line></g></svg>";
 
 			if ($this->timeout > 0) {
-				//$timerScript = createMessageTimer();
+				$timerScript = $this->createMessageTimer();
 			}
 		}
 
@@ -118,7 +118,7 @@ class Message {
 			$iconHTML = "<i class='{$icon}'></i>";
 		}
 
-		return "<div id='{$this->id}' data-closable class='message {$messageClass} text-center'>{$iconHTML}{$this->message}{$closeHTML}</div>{$timerScript}";
+		return "<div id='{$this->id}' class='message {$messageClass} text-center'>{$iconHTML}{$this->message}{$closeHTML}</div>{$timerScript}";
 	}
 
 	/**
@@ -128,8 +128,7 @@ class Message {
 	 */
 	private function createMessageTimer() {
 		return "<script>
-			console.log('createMessageTimer({$this->id}, {$this->timeout}, {$this->timerSize})');
-			createMessageTimer({$this->id}, {$this->timeout}, {$this->timerSize});
+			createMessageTimer('{$this->id}', {$this->timeout}, {$this->timerSize});
 		</script>";
 	}
 }

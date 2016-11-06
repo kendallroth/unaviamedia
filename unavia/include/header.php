@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="/dist/css/app.css" />
 	<!-- Scripts -->
 	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<script src="/dist/js/utilities.js"></script>
 </head>
 
 <body>

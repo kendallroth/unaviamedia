@@ -4,9 +4,9 @@ var $    	= require("gulp-load-plugins")();
 
 gulp.task("sass", function() {
 	//Delete old files
-	del.sync('dist/css');
+	//del.sync('dist/css');
 
-	setTimeout(function() {
+	//setTimeout(function() {
 		return gulp.src("src/scss/app.scss")
 			//Compile the SCSS to CSS
 			.pipe($.sass({
@@ -23,7 +23,7 @@ gulp.task("sass", function() {
 			}))
 			//Output the CSS
 			.pipe(gulp.dest("dist/css"));
-	}, 10);
+	//}, 10);
 });
 
 //Copy fonts to the output directory
@@ -35,17 +35,17 @@ gulp.task("fonts", function() {
 
 //TODO: Add script minification
 gulp.task("scripts", function() {
-	return gulp.src(["src/js/app.js"])
+	return gulp.src(["src/js/app.js", "src/js/utilities.js"])
 		//Output the JS
 		.pipe(gulp.dest("dist/js"));
 });
 
 
 //Gulp watch task
-gulp.task("watch", ["sass", "scripts"], function() {
+gulp.task("watch", ["sass", "scripts", "fonts"], function() {
 	gulp.watch("src/scss/*.scss", ["sass"]);
-	gulp.watch("src/js*.js", ["scripts"]);
+	gulp.watch("src/js/*.js", ["scripts"]);
 });
 
 //Default gulp task
-gulp.task("default", ["fonts","watch"]);
+gulp.task("default", ["watch"]);
