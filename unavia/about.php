@@ -100,7 +100,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column medium-6 large-5">
-			<form action="<?=ABOUT_URL?>#contact" method="POST">
+			<form action="<?=ABOUT_URL ?>#contact" method="POST">
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactName" class="hide">Name</label>

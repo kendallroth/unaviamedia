@@ -100,8 +100,8 @@ if (isset($_POST["contactSubmit"])) {
 	}
 
 	//Create the form message bar to indicate status of form submission
-	//$messageHTML = createFormMessage($mailMessage, $mailMessageType);
 	$mailMessage = new Message("contact-message", $message, $messageType);
+	$mailMessage->timeout = 5;
 	$messageHTML = $mailMessage->create();
 }
 
