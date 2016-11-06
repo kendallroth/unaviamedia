@@ -97,7 +97,7 @@ class Message {
 			$closeHTML = "<svg class='close' data-close width='20' height='20'><g><line x1='7' x2='13' y1='7' y2='13' stroke-width='2'></line><line x1='7' x2='13' y1='13' y2='7' stroke-width='2'></line></g></svg>";
 
 			if ($this->timeout > 0) {
-				$timerScript = createMessageTimer();
+				//$timerScript = createMessageTimer();
 			}
 		}
 
@@ -132,36 +132,6 @@ class Message {
 			createMessageTimer({$this->id}, {$this->timeout}, {$this->timerSize});
 		</script>";
 	}
-}
-
-/**
- * @brief	Create the HTML to display a form submission message
- *
- * @param	$message		Message to display
- * @param	$messageType	Type of message *
- * @return	Form submission message HTML
- */
-function createFormMessage($message, $messageType, $closable = true) {
-	die("Deprecated in favour of `Message` class");
-	/*$messageClass = "";
-	$messageIcon = "";
-
-	switch($messageType) {
-		case "success": {
-			$messageClass = "message--success";
-			$messageIcon = "fi-check";
-			break;
-		}
-		case "error":
-		default: {
-			$messageClass = "message--error";
-			$messageIcon = "fi-x";
-			break;
-		}
-	}
-
-	//Return the form submission message HTML
-	return "<div class='message message--submission $messageClass text-center'><i class='$messageIcon'></i>$message</div>";*/
 }
 
 

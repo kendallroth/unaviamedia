@@ -109,11 +109,6 @@ body {
 
 /* Message styles */
 .message {
-	//Flexbox support to vertically/horizontally center message and icons
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
 	position: relative;
 	padding: 0.75rem;
 	color: darken($site-blue, 10%);;
