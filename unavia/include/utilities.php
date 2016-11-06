@@ -94,7 +94,7 @@ class Message {
 
 		//Allow message to be deleted if enabled, with the option to automatically close after a timeout period
 		if ($this->isClosable) {
-			$closeHTML = "<button type='button' class='close' data-close><i class='fi-x'></i></button>";
+			$closeHTML = "<svg class='close' data-close width='20' height='20'><g><line x1='7' x2='13' y1='7' y2='13' stroke-width='2'></line><line x1='7' x2='13' y1='13' y2='7' stroke-width='2'></line></g></svg>";
 
 			if ($this->timeout > 0) {
 				$timerScript = createMessageTimer();

@@ -123,12 +123,14 @@ body {
 	border-style: solid;
 	border-radius: 2px;
 
+	//Close buttons in messages
 	.close {
-		outline: none;
 		position: absolute;
 		right: 0.5rem;
 		top: 50%;
 		transform: translateY(-50%);
+		cursor: pointer;
+		outline: none;
 	}
 
 	i {
@@ -172,13 +174,15 @@ body {
 
 .message__timer circle {
 	fill: none;
-	stroke: rgba(50, 100, 50, 0.5);
+	stroke: currentColor;
+	stroke-opacity: 0.5;
 }
 
-.message__timer line {
-	fill: "transparent";
-	stroke: rgba(50, 100, 50, 0.75);
+.message__timer line, .close line {
+	fill: none;
 	stroke-linecap: round;
+	stroke: currentColor;
+	stroke-opacity: 0.75;
 }
 
 //Circle animation
