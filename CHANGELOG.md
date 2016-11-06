@@ -2,6 +2,13 @@
 
 This will eventually be used to track changes made to live site, but is currently used in place of blog.
 
+## November 6, 2016
+- Finish ReCAPTCHA on Contact form
+- Create `Message` class for creating messages (optional timeout)
+- Refactor SCSS to be more BEM-like
+- Update `Gulpfile` for scripts
+- Refactor site js structure
+
 ## October 30, 2016
 - Switched to Zube.io for amazing GitHub issue management!
 
