@@ -141,7 +141,7 @@ class Message {
  * @return	JSON array with result of verification
  */
 function getReCAPTCHA($reCaptchaResponse) {
-	$apiURL = 	sprintf("https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s", RECAPTCHA_SECRET, $reCaptchaResponse);
+	$apiURL = sprintf("https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s", RECAPTCHA_SECRET, $reCaptchaResponse);
 	$verifyReCAPTCHA = file_get_contents($apiURL);
 	return json_decode($verifyReCAPTCHA);
 }

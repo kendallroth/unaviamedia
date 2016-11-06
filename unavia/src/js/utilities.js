@@ -1,5 +1,5 @@
 /**
- * Extend the String object to allow for placeholder/value strings
+ * @brief	Extend the String object to allow for placeholder/value strings
  */
 if (!String.format) {
 	String.format = function(formatString) {
@@ -31,13 +31,17 @@ if (!String.format) {
 
 /**
  * @brief	Remove the specified message
+ *
+ * @param	messageId	Message to delete
  */
 function messageAlertDelete(messageId) {
+	//Find the nearest parent with the "data-closable" attribute
 	$("#" + messageId).parents("[data-closable]").remove();
 }
 
 /**
  * @brief	Create a timer for a message
+ *
  * @param	messageId [description]
  * @param	timeout   [description]
  */
