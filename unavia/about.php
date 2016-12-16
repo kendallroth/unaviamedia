@@ -127,7 +127,7 @@ require_once(HEADER_FRAGMENT);
 				</div>
 				<div class="row form__row">
 					<div class="column text-center">
-						<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_SITE?>"></div>
+						<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_PUBLIC?>"></div>
 					</div>
 				</div>
 				<?php //Output the status of the form submission
