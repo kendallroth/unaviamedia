@@ -2,6 +2,10 @@
 
 This will eventually be used to track changes made to live site, but is currently used in place of blog.
 
+## November 8, 2016
+- Add SSL certificate to site
+- Update server packages
+
 ## November 6, 2016
 - Finish ReCAPTCHA on Contact form
 - Create `Message` class for creating messages (optional timeout)
