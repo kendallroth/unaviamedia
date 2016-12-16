@@ -41,6 +41,8 @@ Vagrant.configure("2") do |config|
 	# argument is a set of non-required options.
 	# config.vm.synced_folder "../data", "/vagrant_data"
 	config.vm.synced_folder "./", "/var/www/unaviamedia", id: "vagrant-root",
+		owner: "development",
+		group: "www-data",
 		mount_options: ["dmode=755,fmode=644"]
 
 	# Provider-specific configuration so you can fine-tune various
