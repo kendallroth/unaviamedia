@@ -2,6 +2,12 @@
 require_once("/var/www/constants.php");
 $PAGE_TITLE = "Home";
 require_once(HEADER_FRAGMENT);
+
+/*
+//TODO: Remove debug statement
+echo "<pre>";
+print_r($_SERVER);
+echo "</pre>";*/
 ?>
 
 <section id="welcome" class="section--welcome content__wrapper">

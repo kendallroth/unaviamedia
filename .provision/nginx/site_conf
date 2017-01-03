@@ -2,7 +2,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
-	# Web root
+		# Web root
         root /var/www/html;
 
         # List of index files to serve by default
@@ -10,12 +10,15 @@ server {
 
         server_name unaviamedia.ca;
 
+		# Rewrite all requests to the index file
+		rewrite ^(.*)$ /index.php?request=$1 last;
+
         location / {
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
+                #try_files $uri $uri/ =404;
         }
-		
+
 		location ~ \.php$ {
         	include snippets/fastcgi-php.conf;
         	fastcgi_pass unix:/run/php/php7.0-fpm.sock;
