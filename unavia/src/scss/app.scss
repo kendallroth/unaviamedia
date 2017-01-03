@@ -171,3 +171,13 @@ body {
 	//stroke-dasharray & stroke-dashoffset are added in the JS
 	transition: all 1s linear;
 }
+
+
+
+/* Error Page Styles */
+
+.error__wrapper {
+	padding: 5.5rem 0 2rem 0;
+
+	h1 { margin: 0; }
+}

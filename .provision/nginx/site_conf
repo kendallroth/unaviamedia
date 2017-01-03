@@ -10,13 +10,11 @@ server {
 
         server_name unaviamedia.ca;
 
-		# Rewrite all requests to the index file
-		rewrite ^(.*)$ /index.php?request=$1 last;
-
         location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                #try_files $uri $uri/ =404;
+			sendfile off;
+			# First attempt to serve request as file, then as directory, then fall back to routing all requests to the router
+			# try_files $uri $uri/ =404;
+			try_files $uri $uri/ /index.php?request=$request_uri;
         }
 
 		location ~ \.php$ {

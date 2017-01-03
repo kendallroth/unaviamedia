@@ -1,6 +1,19 @@
 <?php
 
 /**
+ * @brief	Whether a value is a positive integer
+ * @param	$value	Integer to check
+ * @return	Whether the value is a positive integer
+ */
+function isPositiveInt($value) {
+	if ( is_numeric($value) && ((string)(int)$value === (string)$value) && (int)$value >= 0 ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
  * @brief	Test whether a variable is empty/unset/null
  * @param	$input	Variable to check
  * @return	Boolean indicating whether variable is empty
@@ -23,6 +36,19 @@ function isEmpty($input) {
     return empty($var);
 }
 
+
+/**
+ * @brief	Class to handle model validation errors
+ */
+class ValidationError {
+	public $fieldName;
+	public $message;
+	
+	function __construct($fieldName, $message) {
+		$this->fieldName = $fieldName;
+		$this->message = $message;
+	}
+}
 
 /**
  * Class for displaying messages to the user
@@ -145,3 +171,4 @@ function getReCAPTCHA($reCaptchaResponse) {
 	$verifyReCAPTCHA = file_get_contents($apiURL);
 	return json_decode($verifyReCAPTCHA);
 }
+

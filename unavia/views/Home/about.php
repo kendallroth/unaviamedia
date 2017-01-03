@@ -1,7 +1,7 @@
 <?php
 require_once("/var/www/constants.php");
 $PAGE_TITLE = "About Me";
-require_once(HEADER_FRAGMENT);
+require_once(FRAGMENT_HEADER);
 ?>
 
 <section id="about" class="about__wrapper">
@@ -100,7 +100,7 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column medium-6 large-5">
-			<form action="<?=ABOUT_URL ?>#contact" method="POST">
+			<form action="<?=URL_ABOUT?>#contact" method="POST">
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactName" class="hide">Name</label>
@@ -145,4 +145,4 @@ require_once(HEADER_FRAGMENT);
 	</div>
 </section>
 
-<?php require_once(FOOTER_FRAGMENT); ?>
+<?php require_once(FRAGMENT_FOOTER); ?>
