@@ -5,11 +5,13 @@ USE unaviamedia;
 
 -- Create user tables
 CREATE TABLE IF NOT EXISTS users (
-	username		VARCHAR(50) NOT NULL,
-	display_name	VARCHAR(50)	NOT NULL UNIQUE,
-	first_name		VARCHAR(25) NOT NULL,
-	last_name		VARCHAR(25) NOT NULL,
-	date_joined		DATETIME	NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	username		VARCHAR(50) 	NOT NULL,
+	display_name	VARCHAR(50)		NOT NULL UNIQUE,
+	password		VARCHAR(100)	NOT NULL,
+	email			VARCHAR(150)	UNIQUE,
+	first_name		VARCHAR(25) 	NOT NULL,
+	last_name		VARCHAR(25) 	NOT NULL,
+	date_joined		DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT pk_username
 		PRIMARY KEY (username)
 );
