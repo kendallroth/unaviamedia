@@ -7,8 +7,9 @@ ini_set('display_errors', 'On');
 require_once("/var/www/custom_constants.php");
 
 //PHP Paths
-define("HTML_ROOT",			"/var/www/html");
-define("INCLUDES",			HTML_ROOT . "/include");
+define("HTML_ROOT",		"/var/www/html");
+define("INCLUDES",		HTML_ROOT . "/include");
+define("FRAGMENTS",		HTML_ROOT . "/fragments");
 
 //Common utilities
 define("UTILITIES",			INCLUDES . "/utilities.php");
@@ -22,8 +23,8 @@ define("IMAGES",	"/dist/images");
 define("ICONS",		"/dist/icons");
 
 //Common fragments
-define("FRAGMENT_HEADER",	INCLUDES . "/header.php");
-define("FRAGMENT_FOOTER",	INCLUDES . "/footer.php");
+define("FRAGMENT_HEADER",	FRAGMENTS . "/header.php");
+define("FRAGMENT_FOOTER",	FRAGMENTS . "/footer.php");
 
 //MVC Constants
 define("ROUTES",		INCLUDES . "/routes.php");
