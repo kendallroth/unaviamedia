@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS posts (
 		FOREIGN KEY (username) REFERENCES users(username)
 );
 
--- Create categories table
+-- Create categories table (broader post type categories)
 CREATE TABLE IF NOT EXISTS categories (
 	name		VARCHAR(50)	NOT NULL,
 	description	TINYTEXT,
@@ -52,3 +52,20 @@ CREATE TABLE IF NOT EXISTS posts_categories (
 		FOREIGN KEY (category) REFERENCES categories(name)
 );
 
+-- Create flags table (more specific blog flags)
+CREATE TABLE IF NOT EXISTS flags (
+	name		VARCHAR(50)	NOT NULL,
+	description	TINYTEXT,
+	CONSTRAINT pk_name
+		PRIMARY KEY (name)
+);
+
+-- Create flags to posts membership table
+CREATE TABLE IF NOT EXISTS posts_flags (
+	post_id	INT,
+	flag	VARCHAR(50),
+	CONSTRAINT fk_post_id
+		FOREIGN KEY (post_id) REFERENCES posts(id),
+	CONSTRAINT fk_flag
+		FOREIGN KEY (flag) REFERENCES flags(name)
+);
