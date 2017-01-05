@@ -27,7 +27,7 @@ VALUES
 	( 'Security', 'Portfolio site security framework' );
 
 -- Create several initial posts
-INSERT INTO posts( title, description, content, username, published )
+INSERT INTO posts( title, description, content, author, published )
 VALUES
 	( 'First Post', 'This is my first blog post!', '<h1>First Blog Post!</h1><p>This is my first post!</p>', 'admin', 1),
 	( 'Test Post with Longer Title', 'This is a post with a longer title!', '<h1>Test Post</h1><p>Here is a blurb</p>', 'admin', 0),

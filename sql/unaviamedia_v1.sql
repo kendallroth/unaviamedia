@@ -28,14 +28,14 @@ CREATE TABLE IF NOT EXISTS posts (
 	title			VARCHAR(150)	NOT NULL UNIQUE,
 	description		TEXT			NOT NULL,
 	content			LONGTEXT		NOT NULL,
-	username		VARCHAR(50)		NOT NULL,
+	author			VARCHAR(50)		NOT NULL,
 	date_created	DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	date_modified	DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	published		BIT				NOT NULL DEFAULT 0,
 	CONSTRAINT pk_posts
 		PRIMARY KEY (id),
 	CONSTRAINT fk_users_posts
-		FOREIGN KEY (username) REFERENCES users(username)
+		FOREIGN KEY (author) REFERENCES users(username)
 );
 
 -- Create categories table (broader post type categories)
