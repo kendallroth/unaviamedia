@@ -11,17 +11,17 @@ class Post {
 	public $title;
 	public $description;
 	public $content;
-	public $username;
+	public $author;
 	public $dateCreated;
 	public $dateModified;
 	public $published;
 
-	function __construct($id, $title, $description, $content, $username, $dateCreate, $dateModified, $published = 0) {
+	function __construct($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published = 0) {
 		$this->id = $id;
 		$this->title = $title;
 		$this->description = $description;
 		$this->content = $content;
-		$this->username = $username;
+		$this->author = $author;
 		$this->dateCreated = $dateCreated;
 		$this->dateModified = $dateModified;
 		$this->published = $published;
@@ -64,7 +64,9 @@ class Post {
 	 */
 	public static function create($post) {
 		$conn = DB::connect();
-		$sql = sprintf("INSERT INTO posts VALUES (default, '%s');", $post->title);
+		$sql =
+			"INSERT INTO posts ( title, description, content, author, date_created, date_modified, published )
+			VALUES ( '{$post->title}, {$post->description}, {$post->content}, {$post->author}, {$post->dateCreated}, {$post->dateModified}, {$post->published}' );";
 
 		//Handle query errors
 		//	TODO: Add duplicate/existing record warning (or handle this in controller)
@@ -84,7 +86,7 @@ class Post {
 	public static function read($id) {
 		$conn = DB::connect();
 		$sql =
-			"SELECT *
+			"SELECT id, title, description, content, author, date_created, date_modified, published
 			FROM posts
 			WHERE id=$id
 			LIMIT 1;";
@@ -102,7 +104,7 @@ class Post {
 		//Create the post object
 		$row = $result->fetch_assoc();
 		$post = new Post($row["id"], $row["title"], $row["description"], $row["content"],
-			$row["username"], $row["date_created"], $row["date_modified"], $row["published"]);
+			$row["author"], $row["date_created"], $row["date_modified"], $row["published"]);
 
 		//Return database response with the post
 		return new DatabaseResponse(0, "Post retrieved ({$post->title})", $post);
@@ -114,9 +116,8 @@ class Post {
 	 */
 	public static function readAll() {
 		$conn = DB::connect();
-		//TODO: Remove '*'
 		$sql =
-			"SELECT *
+			"SELECT id, title, description, content, author, date_created, date_modified, published
 			FROM posts
 			ORDER BY id;";
 
@@ -134,7 +135,7 @@ class Post {
 
 		//Create an array of posts
 		while ( $row = $result->fetch_assoc() ) {
-			$post = new Post($row["id"], $row["title"], $row["description"], $row["content"], $row["username"], $row["date_created"], $row["date_modified"], $row["published"]);
+			$post = new Post($row["id"], $row["title"], $row["description"], $row["content"], $row["author"], $row["date_created"], $row["date_modified"], $row["published"]);
 			$posts[] = $post;
 		}
 
@@ -151,7 +152,7 @@ class Post {
 		$conn = DB::connect();
 		$sql =
 			"UPDATE posts
-			SET title='{$post->title}', description='{$post->description}', content='{$post->content}', username='{$post->username}', date_created='{$post->dateCreated}', date_modified='{$post->dateModified}', published='{$post->published}'
+			SET title='{$post->title}', description='{$post->description}', content='{$post->content}', author='{$post->author}', date_created='{$post->dateCreated}', date_modified='{$post->dateModified}', published='{$post->published}'
 			WHERE id='{$post->id}';";
 
 		//Handle query errors
@@ -170,7 +171,9 @@ class Post {
 	 */
 	public static function delete($id) {
 		$conn = DB::connect();
-		$sql = "DELETE FROM posts WHERE id='$id';";
+		$sql =
+			"DELETE FROM posts
+			WHERE id='$id';";
 
 		//DEBUG: Get the post for debugging purposes
 		$postResult = Post::read($id);
