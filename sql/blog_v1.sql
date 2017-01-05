@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
 	username		VARCHAR(50) 	NOT NULL,
 	display_name	VARCHAR(50)		NOT NULL UNIQUE,
 	password		VARCHAR(100)	NOT NULL,
+	salt			VARCHAR(100)	NOT NULL,
 	email			VARCHAR(150)	UNIQUE,
 	first_name		VARCHAR(25) 	NOT NULL,
 	last_name		VARCHAR(25) 	NOT NULL,
@@ -16,7 +17,7 @@ CREATE TABLE IF NOT EXISTS users (
 		PRIMARY KEY (username)
 );
 
--- Blog Specific Tables 
+-- Blog Specific Tables
 
 -- Create posts table
 CREATE TABLE IF NOT EXISTS posts (
@@ -45,7 +46,7 @@ CREATE TABLE IF NOT EXISTS categories (
 CREATE TABLE IF NOT EXISTS posts_categories (
 	post_id		INT,
 	category	VARCHAR(50),
-	CONSTRAINT fk_post_id	
+	CONSTRAINT fk_post_id
 		FOREIGN KEY (post_id) REFERENCES posts(id),
 	CONSTRAINT fk_category
 		FOREIGN KEY (category) REFERENCES categories(name)
