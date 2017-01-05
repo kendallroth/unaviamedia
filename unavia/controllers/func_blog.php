@@ -23,21 +23,21 @@ require_once(MODELS . "/Post.php");
 }*/
 
 /**
- * @brief	Get a specific continent
- * @param	$id	Continent id to retrieve
- * @return	DatabaseResponse object with specified continent
+ * @brief	Get a specific post
+ * @param	$id	Post id to retrieve
+ * @return	DatabaseResponse object with specified post
  */
-/*function readContinent($id) {
-	//Get the specified continent
-	return Continent::read($id);
-}*/
+function readPost($id) {
+	//Get the specified post
+	return Post::read($id);
+}
 
 /**
- * @brief	Get a list of all continents
- * @return	DatabaseResponse object with list of continents
+ * @brief	Get a list of all posts
+ * @return	DatabaseResponse object with list of posts
  */
 function readPosts() {
-	//Get a list of all continents
+	//Get a list of all posts
 	return Post::readAll();
 }
 

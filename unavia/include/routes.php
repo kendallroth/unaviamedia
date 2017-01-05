@@ -11,13 +11,13 @@ class Route {
 	//The HTTP method this request was made in, either GET, POST, PUT or DELETE
 	//protected $method = "";
 	//The Model requested in the URI. eg: /files
-	protected $controller = "";
+	public $controller = "";
 	//An optional additional descriptor about the controller, used for things that can not be handled by the basic methods.
 	//	eg: /files/process
-	protected $action = "";
+	public $action = "";
 	//Any additional URI components after the controller and action have been removed, in our case, an integer ID for the resource.
 	//	eg: /<controller>/<action>/<arg0>/<arg1> or /<controller>/<arg0>
-	protected $args = Array();
+	public $args = Array();
 
 	function __construct($request) {
 		//Get the request arguments (remove leading/trailing slashes first to avoid empty array elements)
@@ -126,7 +126,8 @@ class Route {
 				$this->controller = new HomeController();
 				break;
 			case "blog":
-				$this->controller = new BlogController();
+				$this->controller = new BlogController($this);
+				break;
 			default:
 				break;
 		}
