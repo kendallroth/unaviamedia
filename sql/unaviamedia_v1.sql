@@ -1,4 +1,6 @@
 -- Create generic site database if it doesn't exist
+DROP DATABASE IF EXISTS unaviamedia;
+
 CREATE DATABASE IF NOT EXISTS unaviamedia;
 
 USE unaviamedia;
@@ -13,7 +15,8 @@ CREATE TABLE IF NOT EXISTS users (
 	first_name		VARCHAR(25) 	NOT NULL,
 	last_name		VARCHAR(25) 	NOT NULL,
 	date_joined		DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	CONSTRAINT pk_username
+	activated		BIT				NOT NULL DEFAULT 0,
+	CONSTRAINT pk_users
 		PRIMARY KEY (username)
 );
 
@@ -28,9 +31,10 @@ CREATE TABLE IF NOT EXISTS posts (
 	username		VARCHAR(50)		NOT NULL,
 	date_created	DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	date_modified	DATETIME		NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	CONSTRAINT pk_id
+	published		BIT				NOT NULL DEFAULT 0,
+	CONSTRAINT pk_posts
 		PRIMARY KEY (id),
-	CONSTRAINT fk_username
+	CONSTRAINT fk_users_posts
 		FOREIGN KEY (username) REFERENCES users(username)
 );
 
@@ -38,7 +42,7 @@ CREATE TABLE IF NOT EXISTS posts (
 CREATE TABLE IF NOT EXISTS categories (
 	name		VARCHAR(50)	NOT NULL,
 	description	TINYTEXT,
-	CONSTRAINT pk_name
+	CONSTRAINT pk_categories
 		PRIMARY KEY (name)
 );
 
@@ -46,26 +50,26 @@ CREATE TABLE IF NOT EXISTS categories (
 CREATE TABLE IF NOT EXISTS posts_categories (
 	post_id		INT,
 	category	VARCHAR(50),
-	CONSTRAINT fk_post_id
+	CONSTRAINT fk_posts_categories_posts
 		FOREIGN KEY (post_id) REFERENCES posts(id),
-	CONSTRAINT fk_category
+	CONSTRAINT fk_posts_categories_categories
 		FOREIGN KEY (category) REFERENCES categories(name)
 );
 
--- Create flags table (more specific blog flags)
-CREATE TABLE IF NOT EXISTS flags (
+-- Create tags table (more specific blog tags)
+CREATE TABLE IF NOT EXISTS tags (
 	name		VARCHAR(50)	NOT NULL,
 	description	TINYTEXT,
-	CONSTRAINT pk_name
+	CONSTRAINT pk_tags
 		PRIMARY KEY (name)
 );
 
--- Create flags to posts membership table
-CREATE TABLE IF NOT EXISTS posts_flags (
+-- Create tags to posts membership table
+CREATE TABLE IF NOT EXISTS posts_tags (
 	post_id	INT,
-	flag	VARCHAR(50),
-	CONSTRAINT fk_post_id
+	tag	VARCHAR(50),
+	CONSTRAINT fk_posts_tags_posts
 		FOREIGN KEY (post_id) REFERENCES posts(id),
-	CONSTRAINT fk_flag
-		FOREIGN KEY (flag) REFERENCES flags(name)
+	CONSTRAINT fk_posts_tags_tags
+		FOREIGN KEY (tag) REFERENCES tags(name)
 );
