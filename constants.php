@@ -13,6 +13,7 @@ define("FRAGMENTS",		HTML_ROOT . "/fragments");
 
 //Common utilities
 define("UTILITIES",			INCLUDES . "/utilities.php");
+define("DATABASE",			"/var/www/database.php");
 define("AUTOLOADER",		HTML_ROOT . "/vendor/autoload.php");
 define("RESPONSE_CLASSES",	INCLUDES . "/responses.php");
 

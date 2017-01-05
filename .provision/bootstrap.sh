@@ -59,6 +59,7 @@ echo "Link repository web files into web root"
 sudo ln -s /var/www/unaviamedia/unavia /var/www/html
 sudo ln -s /var/www/unaviamedia/constants.php /var/www/constants.php
 sudo ln -s /var/www/unaviamedia/custom_constants.php /var/www/custom_constants.php
+sudo ln -s /var/www/unaviamedia/database.php /var/www/database.php
 
 # Update web directory owner and permissions (set 755 for directories and 644 for files)
 #   This will need to be run frequently (after changes) until permission inheritance is set

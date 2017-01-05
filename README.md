@@ -25,6 +25,10 @@ The file should be called "**custom_constants.php**" and be contain the followin
 
 | Constant | Description | Example |
 | :------- | :---------- | :------ |
+| `DB_HOST`				| Database host | `localhost` |
+| `DB_USER`				| User to log into database as | `test` |
+| `DB_PASSWORD``		| Password for database user | `*******` |
+| `DB_NAME`				| Name of database to use | `blog_db` |
 | `MAIL_ADDRESS`  		| Email address that mail will appear to come from | `test@example.com` |
 | `SMTP_HOST`     		| SMTP host server address | `smtp.gmail.com` |
 | `SMTP_PORT`     		| SMTP port number | `234` |
