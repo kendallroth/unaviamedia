@@ -24,9 +24,10 @@
 	<header>
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
-				<li><a href="<?=URL_HOME?>">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
+				<!-- <li><a href="<?=URL_HOME?>">Home</a></li> -->
 				<li><a href="<?=URL_ABOUT?>">About</a></li>
+				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
+				<li><a href="<?=URL_BLOG?>">Blog</a></li>
 			</ul>
 		</nav>
 	</header>

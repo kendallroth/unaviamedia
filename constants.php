@@ -42,3 +42,4 @@ $PAGE_TITLE = "";
 //Common links
 define("URL_HOME",	"/");
 define("URL_ABOUT",	"/About");
+define("URL_BLOG",	"/Blog");

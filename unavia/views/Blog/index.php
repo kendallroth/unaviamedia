@@ -21,7 +21,9 @@ require_once(FRAGMENT_HEADER);
 			<tbody>
 				<?php foreach($posts as $post) { ?>
 				<tr>
-					<td><?=$post->title ?></td>
+					<td>
+						<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
+					</td>
 					<td><?=$post->description ?></td>
 				</tr>
 				<?php } ?>
