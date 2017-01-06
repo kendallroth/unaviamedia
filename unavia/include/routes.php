@@ -5,7 +5,7 @@ require_once(RESPONSE_CLASSES);
 class Route {
 	public static $VALID_ROUTES = array(
 		"home" => array("index", "about", "error"),
-		"blog" => array("index")
+		"blog" => array("index", "create")
 	);
 
 	//The HTTP method this request was made in, either GET, POST, PUT or DELETE

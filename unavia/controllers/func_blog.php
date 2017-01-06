@@ -4,23 +4,23 @@ require_once(UTILITIES);
 require_once(MODELS . "/Post.php");
 
 /**
- * @brief	Create a continent and validate it before adding to database
- * @param	$name	Continent name
- * @return	DatabaseResponse object with created continent
+ * @brief	Create a post and validate it before adding to database
+ * @param	$name	Post name
+ * @return	DatabaseResponse object with created post
  */
-/*function createContinent($name) {
-	//Create and validate the continent
-	$continent = new Continent("", $name);
-	$result = $continent->validate();
+function createPost($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published) {
+	//Create and validate the post
+	$post = new Post($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published);
+	$result = $post->validate();
 
 	//Return the ValidationResult object
 	if ( $result->status != 0 ) {
 		return $result;
 	}
 
-	//Add the continent to the database
-	return Continent::create($continent);
-}*/
+	//Add the post to the database
+	return Post::create($post);
+}
 
 /**
  * @brief	Get a specific post

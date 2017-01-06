@@ -12,6 +12,7 @@ require_once(FRAGMENT_HEADER);
 </section>
 
 <section class="row align-center">
+	<!-- Blog listing -->
 	<div class="column small-12 medium-9 large-8">
 		<?php foreach($posts as $post) { ?>
 			<div class="post__card">
@@ -29,22 +30,38 @@ require_once(FRAGMENT_HEADER);
 			</div>
 		<?php } ?>
 	</div>
-	<!-- TODO: Create blog archive tool -->
+	<!-- Blog archive and controls -->
 	<div class="column small-12 medium-2 large-3">
-		<table>
-			<thead>
-				<th>Title</th>
-			</thead>
-			<tbody>
-				<?php foreach($posts as $post) { ?>
-				<tr>
-					<td>
-						<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
-					</td>
-				</tr>
-				<?php } ?>
-			</tbody>
-		</table>
+		<div class="row">
+			<div class="column">
+				<div class="blog__control">
+					<div class="control__header">
+						<span>Blog Control</span>
+					</div>
+					<div class="control__content">
+						<a href="<?=URL_BLOG ?>/Create" class="button expanded">Create Post</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<table class="blog__control">
+					<thead>
+						<th>Title</th>
+					</thead>
+					<tbody>
+						<?php foreach($posts as $post) { ?>
+						<tr>
+							<td>
+								<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
+							</td>
+						</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</div>
 </section>
 

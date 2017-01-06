@@ -43,3 +43,9 @@ $PAGE_TITLE = "";
 define("URL_HOME",	"/");
 define("URL_ABOUT",	"/About");
 define("URL_BLOG",	"/Blog");
+
+function debug($var) {
+	echo "<pre>";
+	print_r($var);
+	echo "</pre>";
+}

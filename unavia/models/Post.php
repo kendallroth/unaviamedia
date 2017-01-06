@@ -16,7 +16,7 @@ class Post {
 	public $dateModified;
 	public $published;
 
-	function __construct($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published = 0) {
+	function __construct($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published) {
 		$this->id = $id;
 		$this->title = $title;
 		$this->description = $description;
@@ -33,6 +33,12 @@ class Post {
 	public function validate() {
 		$errors = array();
 
+		//TODO: Validate the author
+		if ( $this->author != "admin" ) {
+			$errors[] = new ValidationError("author", "Post author must be a valid user allowed to post");
+			return new ValidationResponse(1, "Post author is invalid", $errors);
+		}
+
 		//Validation
 		if ( strlen($this->title) == 0 ) {
 			$errors[] = new ValidationError("title", "Post title is required");
@@ -41,7 +47,30 @@ class Post {
 			$errors[] = new ValidationError("title", "Post title must be greater than 5 characters");
 		}
 
-		//More validation...
+		if ( strlen($this->description) == 0 ) {
+			$errors[] = new ValidationError("description", "Post description is required");
+		} else if ( strlen($this->description) < 5 ) {
+			$errors[] = new ValidationError("description", "Post description must be greater than 5 characters");
+		}
+
+		if ( strlen($this->content) == 0 ) {
+			$errors[] = new ValidationError("content", "Post content is required");
+		} else if ( strlen($this->content) < 5 ) {
+			$errors[] = new ValidationError("content", "Post content must be greater than 5 characters");
+		}
+
+		if ( strlen($this->author) == 0 ) {
+			$errors[] = new ValidationError("author", "Post must have an author");
+		}
+
+		if ( date_create($this->dateModified) < date_create($this->dateCreated) ) {
+			$errors[] = new ValidationError("dateModified", "Post modification date must be after the creation date");
+		}
+
+		//Any incorrect values show that a post has not been published
+		if ( $this->published != 1 ) {
+			$this->published = 0;
+		}
 
 		//Handle any validation errors
 		if ( count($errors) > 0 ) {
@@ -66,10 +95,9 @@ class Post {
 		$conn = DB::connect();
 		$sql =
 			"INSERT INTO posts ( title, description, content, author, date_created, date_modified, published )
-			VALUES ( '{$post->title}, {$post->description}, {$post->content}, {$post->author}, {$post->dateCreated}, {$post->dateModified}, {$post->published}' );";
+			VALUES ( '{$post->title}', '{$post->description}', '{$post->content}', '{$post->author}', '{$post->dateCreated}', '{$post->dateModified}', {$post->published} );";
 
 		//Handle query errors
-		//	TODO: Add duplicate/existing record warning (or handle this in controller)
 		if ( $conn->query($sql) != true || $conn->affected_rows == 0) {
 			return new DatabaseResponse(1, "Adding post failed ('{$post->title}')", $conn->error);
 		}
