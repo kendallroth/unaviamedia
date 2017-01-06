@@ -1,3 +1,5 @@
+</section> <!-- End main section -->
+
 <footer>
 	<!-- Row of social media icons -->
 	<div class="row social-media-bar">

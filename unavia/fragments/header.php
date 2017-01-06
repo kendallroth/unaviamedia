@@ -14,20 +14,22 @@
 	<script src="/dist/js/utilities.js"></script>
 </head>
 
-<body>
-	<!-- TODO: Development only -->
-	<!--<section id="media-query">
-		<span class="show-for-small-only">small</span>
-		<span class="show-for-medium-only">medium</span>
-		<span class="show-for-large">large</span>
-	</section>-->
-	<header>
-		<nav class="header-bar row">
-			<ul class="menu align-center column">
-				<!-- <li><a href="<?=URL_HOME?>">Home</a></li> -->
-				<li><a href="<?=URL_ABOUT?>">About</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
-				<li><a href="<?=URL_BLOG?>">Blog</a></li>
-			</ul>
-		</nav>
-	</header>
+<body class="site__body">
+<!-- TODO: Development only -->
+<!--<section id="media-query">
+	<span class="show-for-small-only">small</span>
+	<span class="show-for-medium-only">medium</span>
+	<span class="show-for-large">large</span>
+</section>-->
+<header>
+	<nav class="header-bar row">
+		<ul class="menu align-center column">
+			<!-- <li><a href="<?=URL_HOME?>">Home</a></li> -->
+			<li><a href="<?=URL_ABOUT?>">About</a></li>
+			<li class="menu__logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
+			<li><a href="<?=URL_BLOG?>">Blog</a></li>
+		</ul>
+	</nav>
+</header>
+
+<section class="site__content">

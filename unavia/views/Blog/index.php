@@ -3,7 +3,7 @@ $PAGE_TITLE = "Blog";
 require_once(FRAGMENT_HEADER);
 ?>
 
-<section class="page__wrapper">
+<section class="content__header--offset">
 	<div class="row">
 		<div class="column text-center">
 			<h1>Blog</h1>

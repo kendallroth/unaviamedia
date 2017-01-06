@@ -4,7 +4,7 @@ $PAGE_TITLE = "Error";
 require_once(FRAGMENT_HEADER);
 ?>
 
-<section id="error" class="page__wrapper">
+<section id="error" class="content__header--offset">
 	<div class="row align-center">
 		<div class="column medium-10 large-8">
 			<div class="row">

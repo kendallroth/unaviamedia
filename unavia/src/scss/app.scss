@@ -107,6 +107,24 @@ body {
 .form__row { margin-bottom: 1.5rem; }
 
 
+//Flexbox wrapper to enable sticky footer (if not enough content is displayed)
+.site__body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+
+	.site__content {
+		flex: 1;
+	}
+}
+
+//Page header wrapper style (because of `fixed` nav header)
+.content__header--offset {
+	padding: 5.5rem 0 2rem 0;
+
+	h1 { margin: 0; }
+}
+
 
 /* Message styles */
 .message {
@@ -171,14 +189,4 @@ body {
 .timer__circle-animation {
 	//stroke-dasharray & stroke-dashoffset are added in the JS
 	transition: all 1s linear;
-}
-
-
-
-/* Page Wrapper Style (because of `fixed` nav header) */
-
-.page__wrapper {
-	padding: 5.5rem 0 2rem 0;
-
-	h1 { margin: 0; }
 }
