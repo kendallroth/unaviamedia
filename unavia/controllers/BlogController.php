@@ -1,6 +1,6 @@
 <?php
 require_once("/var/www/constants.php");
-require_once(CONTROLLERS . "/func_blog.php");
+require_once(CONTROLLERS . "/func_post.php");
 
 class BlogController {
 	public $request;
@@ -62,7 +62,6 @@ class BlogController {
 		$description = $_POST["description"] ?? "";
 		$author = $_POST["author"] ?? "";
 		$content = $_POST["content"] ?? "";
-		$categories = $_POST["categories"] ?? "";
 		$published = $_POST["published"] ?? 0;
 
 		//Create necessary metadata
@@ -78,13 +77,76 @@ class BlogController {
 		if ( $result->status == 0 ) {
 			$post = $result->data;
 			$this->request->args[0] = $post->id;
-			$page = "read.php";
+			$page = "read";
 		} else {
-			$page = "error.php";
+			$page = "error";
 		}
 
 		//Display the newly created post
-		require_once(VIEWS . "/Blog/$page");
+		require_once(VIEWS . "/Blog/{$page}.php");
+		return;
+	}
+
+	//Display the post update page
+	public function edit() {
+		//Create a post if the form was submitted
+		if ( isset($_REQUEST["submitPost"]) ) {
+			$this->editPost();
+			return;
+		}
+
+		$postId = null;
+
+		//Get the id of the requested post to update
+		if ( $this->request->args ) {
+			$postId = $this->request->args[0];
+		}
+
+		//Get the requested post for editing
+		$result = readPost($postId);
+
+		//Handle requested posts that don't exist
+		if ( $result->status == 0 ) {
+			$post = $result->data;
+			$page = "update";
+		} else {
+			$page = "error";
+		}
+
+		require_once(VIEWS . "/Blog/{$page}.php");
+		return;
+	}
+
+	//Update the post and display the appropriate page depending on the result
+	public function editPost() {
+		//Get data from request
+		$id = $_POST["id"] ?? "";
+		$title = $_POST["title"] ?? "";
+		$description = $_POST["description"] ?? "";
+		$author = $_POST["author"] ?? "";
+		$content = $_POST["content"] ?? "";
+		$published = $_POST["published"] ?? 0;
+
+		//Create necessary metadata
+		$dateCreated = $_POST["date_created"] ? date($_POST["date_created"]) : "";
+		$dateModified = date("Y-m-d H:i:s");
+
+		//Update post
+		$result = updatePost($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published);
+
+		//TODO: Update categories/flags association if post was successful
+
+		//Handle post update failures
+		if ( $result->status == 0 ) {
+			$post = $result->data;
+			$this->request->args[0] = $post->id;
+			$page = "read";
+		} else {
+			$page = "error";
+		}
+
+		//Display the newly updated post
+		require_once(VIEWS . "/Blog/{$page}.php");
 		return;
 	}
 }
