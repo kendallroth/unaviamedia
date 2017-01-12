@@ -42,6 +42,25 @@ function readPosts() {
 }
 
 /**
+ * @brief	Update a post and validate it before updating database
+ * @param	$id	Post id
+ * @return	DatabaseResponse object with created post
+ */
+function updatePost($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published) {
+	//Create and validate the post
+	$post = new Post($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published);
+	$result = $post->validate();
+
+	//Return the ValidationResult object
+	if ( $result->status != 0 ) {
+		return $result;
+	}
+
+	//Add the post to the database
+	return Post::update($post);
+}
+
+/**
  * @brief	Update a continent and validate it before updating database
  * @param	$id		Id of continent to update
  * @param	$name	Updated continent name

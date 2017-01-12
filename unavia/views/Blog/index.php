@@ -22,8 +22,12 @@ require_once(FRAGMENT_HEADER);
 					</span>
 					<span class="post-card__info clearfix">
 						<span class="post-card__actions">
-							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>" class="post-card__actions--edit" ><i class="fi-pencil"></i></a>
-							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>" class="post-card__actions--delete" ><i class="fi-trash"></i></a>
+							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>/<?=$post->title ?>" class="post-card__actions--edit" >
+								<i class="fi-pencil"></i>
+							</a>
+							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>" class="post-card__actions--delete" >
+								<i class="fi-trash"></i>
+							</a>
 						</span>
 						<?=$post->author ?> | <?=date_format(date_create($post->dateCreated), "Y-M-d") ?>
 					</span>
