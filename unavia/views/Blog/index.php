@@ -15,16 +15,20 @@ require_once(FRAGMENT_HEADER);
 	<!-- Blog listing -->
 	<div class="column small-12 medium-9 large-8">
 		<?php foreach($posts as $post) { ?>
-			<div class="post__card">
-				<div class="card__header">
-					<span class="card__title">
-						<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
+			<div class="post-card">
+				<div class="post-card__header">
+					<span class="post-card__title">
+						<a href="<?=URL_BLOG ?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
 					</span>
-					<span class="card__info clearfix">
+					<span class="post-card__info clearfix">
+						<span class="post-card__actions">
+							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>" class="post-card__actions--edit" ><i class="fi-pencil"></i></a>
+							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>" class="post-card__actions--delete" ><i class="fi-trash"></i></a>
+						</span>
 						<?=$post->author ?> | <?=date_format(date_create($post->dateCreated), "Y-M-d") ?>
 					</span>
 				</div>
-				<div class="card__body">
+				<div class="post-card__body">
 					<?=$post->description ?>
 				</div>
 			</div>
@@ -54,7 +58,9 @@ require_once(FRAGMENT_HEADER);
 						<?php foreach($posts as $post) { ?>
 						<tr>
 							<td>
-								<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
+								<a href="<?=URL_BLOG?>/<?=$post->id ?>/<?=$post->title ?>">
+									<?=$post->title ?>
+								</a>
 							</td>
 						</tr>
 						<?php } ?>

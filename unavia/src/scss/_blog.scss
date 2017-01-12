@@ -1,22 +1,37 @@
-.post__card {
+//Post card that shows a brief preview of the post
+.post-card {
 	margin-bottom: 1rem;
 	background-color: rgb(250, 250, 250);
 	border: 1px solid rgb(225, 225, 225);
 
-	.card__header {
+	//Post card header
+	.post-card__header {
 		padding: 0.75rem;
 		border-bottom: 1px solid rgb(225, 225, 225);
-
-		a {
-			color: default;
-		}
 	}
 
-	.card__info {
+	//Post card header info section
+	.post-card__info {
 		float: right;
 	}
 
-	.card__body {
+	//Post card actions
+	.post-card__actions {
+		margin-right: 0.5rem;
+
+		a {
+			display: inline-block;
+			padding: 0 0.25rem;
+			color: $medium-light-grey;
+		}
+	}
+
+	//Individual post card actions
+	.post-card__actions--edit:hover { color: dodgerblue; }
+	.post-card__actions--delete:hover { color: indianred; }
+
+	//Post card bodyj
+	.post-card__body {
 		padding: 0.75rem;
 	}
 }
