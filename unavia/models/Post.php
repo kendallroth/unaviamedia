@@ -102,6 +102,9 @@ class Post {
 			return new DatabaseResponse(1, "Adding post failed ('{$post->title}')", $conn->error);
 		}
 
+		//Get the id of the new post
+		$post->id = $conn->insert_id;
+
 		//Return database response with the created post
 		return new DatabaseResponse(0, "Added post ('{$post->title}')", $post);
 	}
