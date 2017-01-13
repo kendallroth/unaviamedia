@@ -20,7 +20,9 @@ CREATE TABLE IF NOT EXISTS users (
 		PRIMARY KEY (username)
 );
 
--- Blog Specific Tables
+--------------------------------------------------
+-- Tables - Blog
+--------------------------------------------------
 
 -- Create posts table
 CREATE TABLE IF NOT EXISTS posts (
@@ -73,3 +75,20 @@ CREATE TABLE IF NOT EXISTS posts_tags (
 	CONSTRAINT fk_posts_tags_tags
 		FOREIGN KEY (tag) REFERENCES tags(name)
 );
+
+--------------------------------------------------
+-- Views - Blog
+--------------------------------------------------
+
+-- Create view for posts
+CREATE OR REPLACE VIEW v_posts AS
+	SELECT
+		id,
+		title,
+		LEFT(description, 50) AS description,
+		LEFT(content, 50) AS content,
+		author,
+		date_format(date_created, '%Y-%m-%d %H:%i') AS date_created,
+		date_format(date_modified, '%Y-%m-%d %H:%i') AS date_modified,
+		published
+	FROM posts;
