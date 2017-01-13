@@ -27,6 +27,18 @@ class Response {
 }
 
 /**
+ * @brief	Class to handle miscellaneous messages
+ */
+class MessageResponse extends Response {
+
+	function __construct($status, $message, $data = "") {
+		$this->responseType = "Message";
+
+		parent::__construct($status, $message, $data);
+	}
+}
+
+/**
  * @brief	Class to handle routing response status
  */
 class RouteResponse extends Response {
