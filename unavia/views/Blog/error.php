@@ -6,14 +6,16 @@ require_once(FRAGMENT_HEADER);
 <section class="content__header--offset">
 	<div class="row">
 		<div class="column text-center">
-			<h1>Post Does Not Exist</h1>
+			<h1>Blog Error</h1>
 		</div>
 	</div>
 </section>
 
 <section class="row align-center">
 	<div class="column medium-10 large-8">
-		<p>No post exists that matches the given ID</p>
+		<p>
+			<?=$result->message?>
+		</p>
 	</div>
 </section>
 
