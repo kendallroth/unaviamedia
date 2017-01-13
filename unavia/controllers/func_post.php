@@ -61,38 +61,16 @@ function updatePost($id, $title, $description, $content, $author, $dateCreated, 
 }
 
 /**
- * @brief	Update a continent and validate it before updating database
- * @param	$id		Id of continent to update
- * @param	$name	Updated continent name
- * @return	DatabaseResponse object with updated continent
+ * @brief	Delete a post
+ * @param	$id	Id of post to delete
+ * @return	DatabaseResponse object with deleted post
  */
-/*function updateContinent($id, $name) {
-	//Create and validate the updated continent
-	$continent = new Continent($id, $name);
-	$result = $continent->validate();
-
-	//Return the ValidationResponse object
-	if ( $result->status != 0 ) {
-		//Update validation message
-		$result->message = "Updated continent is not valid";
-		return $result;
-	}
-
-	//Update the continent in the database
-	return Continent::update($continent);
-}*/
-
-/**
- * @brief	Delete a continent
- * @param	$id	Id of continent to delete
- * @return	DatabaseResponse object with deleted continent
- */
-/*function deleteContinent($id) {
+function deletePost($id) {
 	//Handle empty/invalid ids
 	if ( !isPositiveInt($id) ) {
 		return new ValidationResponse(1, "Valid ID is required for deletion");
 	}
 
 	//Delete the specified continent
-	return Continent::delete($id);
-}*/
+	return Post::delete($id);
+}

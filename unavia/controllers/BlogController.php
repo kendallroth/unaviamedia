@@ -149,4 +149,58 @@ class BlogController {
 		require_once(VIEWS . "/Blog/{$page}.php");
 		return;
 	}
+
+	//Display the post delete page
+	public function delete() {
+		//Create a post if the form was submitted
+		if ( isset($_REQUEST["deletePost"]) ) {
+			$this->deletePost();
+			return;
+		}
+
+		$postId = null;
+
+		//Get the id of the requested post to delete
+		if ( $this->request->args ) {
+			$postId = $this->request->args[0];
+		}
+
+		//Get the requested post for delete confirmation viewing
+		$result = readPost($postId);
+
+		//Handle requested posts that don't exist
+		if ( $result->status == 0 ) {
+			$post = $result->data;
+			$page = "delete";
+		} else {
+			$page = "error";
+		}
+
+		require_once(VIEWS . "/Blog/{$page}.php");
+		return;
+	}
+
+	public function deletePost() {
+		//Get post to delete from request
+		$id = $_POST["id"] ?? "";
+
+		//Delete post
+		$result = deletePost($id);
+
+		//TODO: Remove/update categories/flags association if post deletion was successful
+
+		//Handle post deletion failures
+		if ( $result->status == 0 ) {
+			//Create a success message and attach it to the request
+			$message = new MessageResponse(1, "Post successfully deleted: $post->title", $result);
+			$this->request->message = $message;
+			$page = "index";
+		} else {
+			$page = "error";
+		}
+
+		//Display the archive page
+		require_once(VIEWS . "/Blog/{$page}.php");
+		return;
+	}
 }
