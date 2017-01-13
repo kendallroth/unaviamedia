@@ -25,7 +25,7 @@ require_once(FRAGMENT_HEADER);
 							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>/<?=$post->title ?>" class="post-card__actions--edit" >
 								<i class="fi-pencil"></i>
 							</a>
-							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>" class="post-card__actions--delete" >
+							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>/<?=$post->title ?>" class="post-card__actions--delete" >
 								<i class="fi-trash"></i>
 							</a>
 						</span>
