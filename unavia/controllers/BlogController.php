@@ -128,7 +128,7 @@ class BlogController {
 		$published = $_POST["published"] ?? 0;
 
 		//Create necessary metadata
-		$dateCreated = $_POST["date_created"] ? date($_POST["date_created"]) : "";
+		$dateCreated = $_POST["date_created"] ?? "";
 		$dateModified = date("Y-m-d H:i:s");
 
 		//Update post
