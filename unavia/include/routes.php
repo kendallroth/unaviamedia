@@ -19,8 +19,6 @@ class Route {
 	//Any additional URI components after the controller and action have been removed, in our case, an integer ID for the resource.
 	//	eg: /<controller>/<action>/<arg0>/<arg1> or /<controller>/<arg0>
 	public $args = Array();
-	//Optional message for route (MessageResponse object)
-	public $message;
 
 	function __construct($request) {
 		//Get the request arguments (remove leading/trailing slashes first to avoid empty array elements)
@@ -137,14 +135,5 @@ class Route {
 
 		//Call the specified action (function in controller class)
 		$this->controller->{$this->action}();
-	}
-
-	//Get the request message and reset it
-	public function getMessage() {
-		//Get the current message and reset the variable
-		$message = $this->message;
-		$this->message = null;
-
-		return $message;
 	}
 }

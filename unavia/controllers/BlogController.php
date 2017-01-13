@@ -1,12 +1,12 @@
 <?php
 require_once("/var/www/constants.php");
+require_once(CONTROLLER);
 require_once(CONTROLLERS . "/func_post.php");
 
-class BlogController {
-	public $request;
-
+class BlogController extends Controller {
+	//Constructor
 	function __construct($request) {
-		$this->request = $request;
+		parent::__construct($request);
 	}
 
 	//Display a listing of posts
@@ -51,6 +51,7 @@ class BlogController {
 			return;
 		}
 
+		//Otherwise, display the post create page
 		require_once(VIEWS . "/Blog/create.php");
 		return;
 	}
@@ -73,17 +74,15 @@ class BlogController {
 
 		//TODO: Create categories/flags association if post was successful
 
-		//Handle post create failures
+		//Route to the newly created post
 		if ( $result->status == 0 ) {
 			$post = $result->data;
-			$this->request->args[0] = $post->id;
-			$page = "read";
-		} else {
-			$page = "error";
+			$this->read($post->id);
+			return;
 		}
 
-		//Display the newly created post
-		require_once(VIEWS . "/Blog/{$page}.php");
+		//Handle post create failures
+		require_once(VIEWS . "/Blog/error.php");
 		return;
 	}
 
@@ -136,17 +135,15 @@ class BlogController {
 
 		//TODO: Update categories/flags association if post was successful
 
-		//Handle post update failures
+		//Route to the newly created post
 		if ( $result->status == 0 ) {
 			$post = $result->data;
-			$this->request->args[0] = $post->id;
-			$page = "read";
-		} else {
-			$page = "error";
+			$this->read($post->id);
+			return;
 		}
 
-		//Display the newly updated post
-		require_once(VIEWS . "/Blog/{$page}.php");
+		//Handle post update failures
+		require_once(VIEWS . "/Blog/error.php");
 		return;
 	}
 
@@ -186,21 +183,24 @@ class BlogController {
 
 		//Delete post
 		$result = deletePost($id);
+		//var_dump($result);
 
 		//TODO: Remove/update categories/flags association if post deletion was successful
 
 		//Handle post deletion failures
 		if ( $result->status == 0 ) {
+			$post = $result->data;
+
 			//Create a success message and attach it to the request
-			$message = new MessageResponse(1, "Post successfully deleted: $post->title", $result);
+			$message = new MessageResponse(1, "Post successfully deleted: $post->title", $post);
 			$this->request->message = $message;
-			$page = "index";
-		} else {
-			$page = "error";
+
+			//Route to the blog index page
+			$this->index();
+			return;
 		}
 
-		//Display the archive page
-		require_once(VIEWS . "/Blog/{$page}.php");
+		require_once(VIEWS . "/Blog/error.php");
 		return;
 	}
 }
