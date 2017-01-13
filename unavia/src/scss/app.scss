@@ -20,7 +20,7 @@
 // @include foundation-badge;
 //@include foundation-breadcrumbs;
 //@include foundation-button-group;
-//@include foundation-callout;
+@include foundation-callout;
 @include foundation-close-button;
 @include foundation-menu;
 //@include foundation-menu-icon;
@@ -47,7 +47,7 @@
 @include foundation-tooltip;
 //@include foundation-top-bar;
 @include foundation-visibility-classes;
-//@include foundation-float-classes;
+@include foundation-float-classes;
 @include foundation-flex-classes;
 
 //@include motion-ui-transitions;
@@ -105,6 +105,10 @@ body {
 .g-recaptcha { display: inline-block; }
 
 .form__row { margin-bottom: 1.5rem; }
+
+.hr--double {
+	border-bottom: 5px double indianred;
+}
 
 
 //Flexbox wrapper to enable sticky footer (if not enough content is displayed)
@@ -189,4 +193,18 @@ body {
 .timer__circle-animation {
 	//stroke-dasharray & stroke-dashoffset are added in the JS
 	transition: all 1s linear;
+}
+
+
+
+/* Callout styles */
+
+.callout__header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.callout__body {
+	text-align: center;
 }
