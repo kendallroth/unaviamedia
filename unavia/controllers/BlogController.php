@@ -51,8 +51,11 @@ class BlogController extends Controller {
 			return;
 		}
 
+		//Create an empty post object
+		$post = Post::construct();
+
 		//Otherwise, display the post create page
-		require_once(VIEWS . "/Blog/create.php");
+		require_once(VIEWS . "/Blog/create_update.php");
 		return;
 	}
 
@@ -107,7 +110,7 @@ class BlogController extends Controller {
 		//Handle requested posts that don't exist
 		if ( $result->status == 0 ) {
 			$post = $result->data;
-			$page = "update";
+			$page = "create_update";
 		} else {
 			$page = "error";
 		}

@@ -28,6 +28,14 @@ class Post {
 	}
 
 	/**
+	 * @brief	Empty constructor "override"
+	 */
+	static function construct() {
+		$instance = new self("", "", "", "", "", "", "", "");
+		return $instance;
+	}
+
+	/**
 	 * @brief	Validate the Post model
 	 */
 	public function validate() {
