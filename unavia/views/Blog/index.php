@@ -12,6 +12,12 @@ require_once(FRAGMENT_HEADER);
 </section>
 
 <section class="row align-center">
+	<div class="column medium-10 large-8">
+		<?=$this->displayMessage(); ?>
+	</div>
+</section>
+
+<section class="row align-center">
 	<!-- Blog listing -->
 	<div class="column small-12 medium-9 large-8">
 		<?php foreach($posts as $post) { ?>

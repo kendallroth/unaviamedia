@@ -33,13 +33,18 @@ class BlogController extends Controller {
 		//Handle requested posts that don't exist
 		if ( $result->status == 0 ) {
 			$post = $result->data;
-			$page = "read.php";
 		} else {
-			$page = "error.php";
+			$message = new MessageResponse(1, "No Post Found", "No post was found with this ID");
+			$this->setMessage($message);
+
+			//Route to the blog index page
+			//TODO: This currently routes in a continous loop, as there will always be an ID in the URL
+			$this->index();
+			return;
 		}
 
-		//Require the correct page
-		require_once(VIEWS . "/Blog/$page");
+		//Include the read post page
+		require_once(VIEWS . "/Blog/read.php");
 		return;
 	}
 
