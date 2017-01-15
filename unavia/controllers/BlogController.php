@@ -37,8 +37,8 @@ class BlogController extends Controller {
 			$message = new MessageResponse(1, "No Post Found", "No post was found with this ID");
 			$this->setMessage($message);
 
-			//Route to the blog index page
-			//TODO: This currently routes in a continous loop, as there will always be an ID in the URL
+			//Route to the blog index page as a redirect
+			//TODO: This will currently cause a loop (because post id has been set [arg0])
 			$this->index();
 			return;
 		}
@@ -56,11 +56,11 @@ class BlogController extends Controller {
 			return;
 		}
 
-		//Create an empty post object
+		//Create an empty post object if necessary (because of same page for create/update)
 		$post = Post::construct();
 
 		//Otherwise, display the post create page
-		require_once(VIEWS . "/Blog/create_update.php");
+		require_once(VIEWS . "/Blog/error.php");
 		return;
 	}
 
@@ -90,7 +90,7 @@ class BlogController extends Controller {
 		}
 
 		//Handle post create failures
-		require_once(VIEWS . "/Blog/error.php");
+		require_once(VIEWS . "/Blog/create_update.php");
 		return;
 	}
 

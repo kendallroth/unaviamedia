@@ -13,7 +13,7 @@ require_once(FRAGMENT_HEADER);
 
 <section class="row align-center">
 	<div class="column medium-10 large-8">
-		<?=$this->displayMessage(); ?>
+		<?php $this->displayMessage(); ?>
 	</div>
 </section>
 
