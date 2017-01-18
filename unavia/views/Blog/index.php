@@ -21,17 +21,22 @@ require_once(FRAGMENT_HEADER);
 	<!-- Blog listing -->
 	<div class="column small-12 medium-9 large-8">
 		<?php foreach($posts as $post) { ?>
+			<?php
+			//Indicate posts that aren't published
+			$publishedHTML = !$post->published ? "<i class='draft-indicator fi-clipboard-pencil'></i>" : "";
+			?>
+			
 			<div class="post-card">
 				<div class="post-card__header">
 					<span class="post-card__title">
-						<a href="<?=URL_BLOG ?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a>
+						<a href="<?=URL_BLOG ?>/<?=$post->id ?>/<?=$post->title ?>"><?=$post->title ?></a><?=$publishedHTML ?>
 					</span>
 					<span class="post-card__info clearfix">
 						<span class="post-card__actions">
-							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>/<?=$post->title ?>" class="post-card__actions--edit" >
+							<a href="<?=URL_BLOG ?>/Edit/<?=$post->id ?>/<?=$post->title ?>" class="post-card__action post-card__actions--edit" >
 								<i class="fi-pencil"></i>
 							</a>
-							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>/<?=$post->title ?>" class="post-card__actions--delete" >
+							<a href="<?=URL_BLOG ?>/Delete/<?=$post->id ?>/<?=$post->title ?>" class="post-card__action post-card__actions--delete" >
 								<i class="fi-trash"></i>
 							</a>
 						</span>
