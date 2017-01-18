@@ -61,6 +61,60 @@ class Route {
 		return false;
 	}
 
+	//TODO: Write redirect function
+	public static function redirect($url) {
+		//Set the header and exit script execution (fail-safe)
+		header("Location: $url");
+		exit();
+	}
+
+	public static function setViewBag($key, $value) {
+		$_SESSION[$key] = $value;
+	}
+
+	public static function getViewBag($key) {
+		$value = $_SESSION[$key];
+		unset($_SESSION[$key]);
+		return $value;
+	}
+
+	//Perform the route actions
+	public function processRoute() {
+		//DEBUG: Display controller and action
+		//echo "<pre>C => $this->controller\nA => $this->action\n</pre>";
+		$result = $this->validate($this->controller, $this->action);
+
+		//Get controller and action after validation
+		$this->controller = $result->data["controller"];
+		$this->action = $result->data["action"];
+
+		//Set the HTTP response code to 404 if the page is not found
+		//TODO: Find if this will conflict with 505 and other errors
+		if ( $this->controller == "home" && $this->action == "error" ) {
+			header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
+		}
+
+		//TODO: Handle routing validation with $result->status
+
+		//Require the matching controller file
+		require_once(CONTROLLERS . "/" . ucfirst($this->controller) . "Controller.php");
+
+		//Create the necessary controller
+		switch($this->controller) {
+			case "home":
+				$this->controller = new HomeController($this);
+				break;
+			case "blog":
+				$this->controller = new BlogController($this);
+				break;
+			default:
+				break;
+		}
+
+		//Call the specified action (function in controller class)
+		$this->controller->{$this->action}();
+	}
+
 	//Validate a route and return a response with the controller and action
 	public function validate() {
 		//Return the default controller/action if no controller (and consequently no action) was specified
@@ -98,42 +152,5 @@ class Route {
 		else {
 			return new RouteResponse(1, "No controller '{$this->controller}'", array("controller" => "home", "action" => "error"));
 		}
-	}
-
-	//Perform the route actions
-	public function processRoute() {
-		//DEBUG: Display controller and action
-		//echo "<pre>C => $this->controller\nA => $this->action\n</pre>";
-		$result = $this->validate($this->controller, $this->action);
-
-		//Get controller and action after validation
-		$this->controller = $result->data["controller"];
-		$this->action = $result->data["action"];
-
-		//Set the HTTP response code to 404 if the page is not found
-		//TODO: Find if this will conflict with 505 and other errors
-		if ( $this->controller == "home" && $this->action == "error" ) {
-			header($_SERVER["SERVER_PROTOCOL"]." 404 Not Found");
-		}
-
-		//TODO: Handle routing validation with $result->status
-
-		//Require the matching controller file
-		require_once(CONTROLLERS . "/" . ucfirst($this->controller) . "Controller.php");
-
-		//Create the necessary controller
-		switch($this->controller) {
-			case "home":
-				$this->controller = new HomeController();
-				break;
-			case "blog":
-				$this->controller = new BlogController($this);
-				break;
-			default:
-				break;
-		}
-
-		//Call the specified action (function in controller class)
-		$this->controller->{$this->action}();
 	}
 }

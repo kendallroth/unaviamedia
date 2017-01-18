@@ -1,6 +1,5 @@
 <?php
 require_once("/var/www/constants.php");
-require_once(UTILITIES);
 require_once(MODELS . "/Post.php");
 
 /**

@@ -1,6 +1,5 @@
 <?php
 require_once("/var/www/constants.php");
-require_once(UTILITIES);
 
 /**
  * @brief	Base class for different response types that handles the status and response data
@@ -33,6 +32,7 @@ class MessageResponse extends Response {
 	public $title;
 
 	function __construct($status, $title, $message, $data = "") {
+		$this->title = $title;
 		$this->responseType = "Message";
 
 		parent::__construct($status, $message, $data);
@@ -55,9 +55,11 @@ class RouteResponse extends Response {
  * @brief	Class to handle validation response status
  */
 class ValidationResponse extends Response {
+	public $errors;
 
-	function __construct($status, $message, $data = "") {
+	function __construct($status, $message, $data, $errors = "") {
 		$this->responseType = "Validation";
+		$this->errors = $errors;
 
 		parent::__construct($status, $message, $data);
 	}

@@ -1,7 +1,7 @@
 <?php
 require_once("/var/www/constants.php");
 
-class HomeController {
+class HomeController extends Controller {
 	public function index() {
 		//Get the index page
 		require_once(VIEWS . "/Home/index.php");

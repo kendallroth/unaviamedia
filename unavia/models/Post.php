@@ -1,6 +1,5 @@
 <?php
 require_once("/var/www/constants.php");
-require_once(UTILITIES);
 require_once(DATABASE);
 
 /**
@@ -44,7 +43,8 @@ class Post {
 		//TODO: Validate the author
 		if ( $this->author != "admin" ) {
 			$errors[] = new ValidationError("author", "Post author must be a valid user allowed to post");
-			return new ValidationResponse(1, "Post author is invalid", $errors);
+			//TODO: Enable in production
+			//return new ValidationResponse(1, "Post author is invalid", $this, $errors);
 		}
 
 		//Validation
@@ -82,7 +82,7 @@ class Post {
 
 		//Handle any validation errors
 		if ( count($errors) > 0 ) {
-			return new ValidationResponse(1, "Post is invalid", $errors);
+			return new ValidationResponse(1, "Post is invalid", $this, $errors);
 		}
 
 		//Return the validated continent

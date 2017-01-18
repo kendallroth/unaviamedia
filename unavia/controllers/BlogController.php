@@ -1,6 +1,5 @@
 <?php
 require_once("/var/www/constants.php");
-require_once(CONTROLLER);
 require_once(CONTROLLERS . "/func_post.php");
 
 class BlogController extends Controller {
@@ -34,16 +33,14 @@ class BlogController extends Controller {
 		if ( $result->status == 0 ) {
 			$post = $result->data;
 		} else {
-			$message = new MessageResponse(1, "No Post Found", "No post was found with this ID");
+			$message = new MessageResponse(2, "No Post Found", "No post was found with this ID");
 			$this->setMessage($message);
 
-			//Route to the blog index page as a redirect
-			//TODO: This will currently cause a loop (because post id has been set [arg0])
-			$this->index();
+			//Redirect to the blog index page
+			Route::redirect("/Blog");
 			return;
 		}
 
-		//Include the read post page
 		require_once(VIEWS . "/Blog/read.php");
 		return;
 	}
@@ -51,20 +48,22 @@ class BlogController extends Controller {
 	//Display the post create page
 	public function create() {
 		//Create a post if the form was submitted
+		//TODO: Change to use POST or GET methods
 		if ( isset($_REQUEST["submitPost"]) ) {
 			$this->createPost();
 			return;
 		}
 
-		//Create an empty post object if necessary (because of same page for create/update)
-		$post = Post::construct();
+		//If a Post object exists in the request (validation errors), use it to fill in the information for the Create page
+		//	Otherwise, create a new Post object for the Create page
+		$post = $this->getRequestData("blogPost") ?? Post::construct();
 
-		//Otherwise, display the post create page
-		require_once(VIEWS . "/Blog/error.php");
+		//Include the Create page
+		require_once(VIEWS . "/Blog/create_update.php");
 		return;
 	}
 
-	//Create the post and display the appropriate page depending on the result
+	//Create the post
 	public function createPost() {
 		//Get data from request
 		$title = $_POST["title"] ?? "";
@@ -79,18 +78,29 @@ class BlogController extends Controller {
 
 		//Create post
 		$result = createPost("", $title, $description, $content, $author, $dateCreated, $dateModified, $published);
+		$post = $result->data;
+
+		//Add post to request data
+		$this->setRequestData("blogPost", $post);
 
 		//TODO: Create categories/flags association if post was successful
 
-		//Route to the newly created post
+		//Determine where to redirect based on operation status
 		if ( $result->status == 0 ) {
-			$post = $result->data;
-			$this->read($post->id);
-			return;
+			$message = new MessageResponse(0, "Post Creation Successful", "Post was created successfully");
+			$redirectURL = "/Blog/$post->id";
+		} else {
+			$message = new MessageResponse(1, "Post Creation Failed", "Post was not created because of several errors");
+			$redirectURL = "/Blog/Create";
+
+			//Add validation errors to request data
+			$this->setRequestData("validationErrors", $result->errors);
 		}
 
-		//Handle post create failures
-		require_once(VIEWS . "/Blog/create_update.php");
+		$this->setMessage($message);
+
+		//Redirect to the necessary page
+		Route::redirect($redirectURL);
 		return;
 	}
 
@@ -102,29 +112,45 @@ class BlogController extends Controller {
 			return;
 		}
 
-		$postId = null;
-
-		//Get the id of the requested post to update
-		if ( $this->request->args ) {
-			$postId = $this->request->args[0];
-		}
-
-		//Get the requested post for editing
-		$result = readPost($postId);
-
-		//Handle requested posts that don't exist
-		if ( $result->status == 0 ) {
-			$post = $result->data;
-			$page = "create_update";
+		//If a Post object exists in the request (validation errors), use it to fill in the information for the Edit page
+		//	Otherwise, retrieve the requested Post object for the Edit page
+		if ( $this->hasRequestData("blogPost") ) {
+			$post = $this->getRequestData("blogPost");
 		} else {
-			$page = "error";
+			if ( $this->request->args ) {
+				//Get the requested post for editing
+				$postId = $this->request->args[0];
+				$result = readPost($postId);
+
+				//Display the post for editing if it was found successfully
+				if ( $result->status == 0 ) {
+					$post = $result->data;
+				} else {
+					//Create an error message and redirect to the Blog page
+					$message = new MessageResponse(1, "Requested Post Not Found", "The Post you requested to edit does not exist");
+					$this->setMessage($message);
+
+					//Redirect to the blog home page
+					Route::redirect("/Blog");
+					return;
+				}
+			} else {
+				//Create an error message and redirect to the Blog page
+				$message = new MessageResponse(1, "No Post Specified", "No Post was chosen for editing");
+				$this->setMessage($message);
+
+				//Redirect to the blog home page
+				Route::redirect("/Blog");
+				return;
+			}
 		}
 
-		require_once(VIEWS . "/Blog/{$page}.php");
+		//Include the Update page
+		require_once(VIEWS . "/Blog/create_update.php");
 		return;
 	}
 
-	//Update the post and display the appropriate page depending on the result
+	//Update the post
 	public function editPost() {
 		//Get data from request
 		$id = $_POST["id"] ?? "";
@@ -140,18 +166,29 @@ class BlogController extends Controller {
 
 		//Update post
 		$result = updatePost($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published);
+		$post = $result->data;
+
+		//Add post to request data
+		$this->setRequestData("blogPost", $post);
 
 		//TODO: Update categories/flags association if post was successful
 
-		//Route to the newly created post
+		//Determine where to redirect based on operation status
 		if ( $result->status == 0 ) {
-			$post = $result->data;
-			$this->read($post->id);
-			return;
+			$message = new MessageResponse(0, "Post Update Successful", "Post was updated successfully");
+			$redirectURL = "/Blog/$post->id";
+		} else {
+			$message = new MessageResponse(1, "Post Update Failed", "Post was not updated because of several errors");
+			$redirectURL = "/Blog/Edit/$post->id";
+
+			//Add validation errors to request data
+			$this->setRequestData("validationErrors", $result->errors);
 		}
 
-		//Handle post update failures
-		require_once(VIEWS . "/Blog/error.php");
+		$this->setMessage($message);
+
+		//Redirect to the necessary page
+		Route::redirect($redirectURL);
 		return;
 	}
 
@@ -163,52 +200,61 @@ class BlogController extends Controller {
 			return;
 		}
 
-		$postId = null;
-
-		//Get the id of the requested post to delete
 		if ( $this->request->args ) {
+			//Get the requested post for editing
 			$postId = $this->request->args[0];
-		}
+			$result = readPost($postId);
 
-		//Get the requested post for delete confirmation viewing
-		$result = readPost($postId);
+			//Display the post for deletion if it was found successfully
+			if ( $result->status == 0 ) {
+				$post = $result->data;
 
-		//Handle requested posts that don't exist
-		if ( $result->status == 0 ) {
-			$post = $result->data;
-			$page = "delete";
+				//Include the Delete page
+				require_once(VIEWS . "/Blog/delete.php");
+				return;
+			} else {
+				//Create an error message and redirect to the Blog page
+				$message = new MessageResponse(1, "Requested Post Not Found", "The Post you requested to delete does not exist");
+			}
 		} else {
-			$page = "error";
+			//Create an error message and redirect to the Blog page
+			$message = new MessageResponse(1, "No Post Specified", "No Post was chosen for deletion");
 		}
 
-		require_once(VIEWS . "/Blog/{$page}.php");
+		$this->setMessage($message);
+
+		//Redirect to the blog home page
+		Route::redirect("/Blog");
 		return;
 	}
 
+	//Delete the post
 	public function deletePost() {
 		//Get post to delete from request
 		$id = $_POST["id"] ?? "";
 
 		//Delete post
 		$result = deletePost($id);
-		//var_dump($result);
+		$post = $result->data;
+
+		//Add deleted post to request data
+		$this->setRequestData("blogPost", $post);
 
 		//TODO: Remove/update categories/flags association if post deletion was successful
 
-		//Handle post deletion failures
+		//Determine where to redirect based on operation status
 		if ( $result->status == 0 ) {
-			$post = $result->data;
-
-			//Create a success message and attach it to the request
-			$message = new MessageResponse(1, "Post successfully deleted: $post->title", $post);
-			$this->request->message = $message;
-
-			//Route to the blog index page
-			$this->index();
-			return;
+			$message = new MessageResponse(0, "Post Delete Successful", "Post was deleted successfully: $post->title");
+			$redirectURL = "/Blog";
+		} else {
+			$message = new MessageResponse(1, "Post Delete Failed", "Post was not able to be deleted");
+			$redirectURL = "/Blog/Delete/$post->id";
 		}
 
-		require_once(VIEWS . "/Blog/error.php");
+		$this->setMessage($message);
+
+		//Redirect to the necessary page
+		Route::redirect($redirectURL);
 		return;
 	}
 }

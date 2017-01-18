@@ -14,6 +14,12 @@ require_once(FRAGMENT_HEADER);
 	</div>
 </section>
 
+<section class="row align-center">
+	<div class="column medium-10 large-8">
+		<?php $this->displayMessage(false); ?>
+	</div>
+</section>
+
 <?php
 //Determine if post has been published or not
 $publishedChecked = $post->published == "1" ? "checked" : "";
@@ -23,7 +29,7 @@ $publishedChecked = $post->published == "1" ? "checked" : "";
 	<div class="column medium-10 large-8">
 		<form action="<?=URL_BLOG ?>/<?=$pageAction ?>" method="POST">
 			<input type="hidden" name="id" value="<?=$post->id ?>" />
-			<input type="hidden" name="date_created" value="<?=$post->dateCreated ?>" / />
+			<input type="hidden" name="date_created" value="<?=$post->dateCreated ?>" />
 			<div class="row">
 				<div class="column">
 					<label>Title
