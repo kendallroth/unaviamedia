@@ -18,12 +18,18 @@
 	//Post card actions
 	.post-card__actions {
 		margin-right: 0.5rem;
+	}
 
-		a {
-			display: inline-block;
-			padding: 0 0.25rem;
-			color: $medium-light-grey;
-		}
+	//Post card header actions
+	.post-card__action {
+		opacity: 0.25;
+		display: inline-block;
+		padding: 0 0.25rem;
+		color: $medium-light-grey;
+	}
+
+	&:hover .post-card__action {
+		opacity: 1;
 	}
 
 	//Individual post card actions
@@ -36,7 +42,7 @@
 	}
 }
 
-$blogControlBorders: rgb(225, 225, 225);
+$blogControlBorders: rgb(225, 225, 225);		//Blog control border colours
 
 .blog__control {
 	margin-bottom: 1rem;
