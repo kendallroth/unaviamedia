@@ -1,8 +1,12 @@
 <?php
-require_once("/var/www/constants.php");
-require_once(RESPONSE_CLASSES);
+namespace Application\MVC;
 
-class Route {
+use Application\MVC\Controllers as Controllers;
+use Application\Responses\RouteResponse;
+
+require_once("/var/www/constants.php");
+
+final class Route {
 	//List of valid routes for router
 	public static $VALID_ROUTES = array(
 		"home" => array("index", "about", "error"),
@@ -96,16 +100,13 @@ class Route {
 
 		//TODO: Handle routing validation with $result->status
 
-		//Require the matching controller file
-		require_once(CONTROLLERS . "/" . ucfirst($this->controller) . "Controller.php");
-
 		//Create the necessary controller
 		switch($this->controller) {
 			case "home":
-				$this->controller = new HomeController($this);
+				$this->controller = new Controllers\HomeController($this);
 				break;
 			case "blog":
-				$this->controller = new BlogController($this);
+				$this->controller = new Controllers\BlogController($this);
 				break;
 			default:
 				break;

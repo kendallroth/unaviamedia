@@ -36,20 +36,6 @@ function isEmpty($input) {
     return empty($var);
 }
 
-
-/**
- * @brief	Class to handle model validation errors
- */
-class ValidationError {
-	public $fieldName;
-	public $message;
-	
-	function __construct($fieldName, $message) {
-		$this->fieldName = $fieldName;
-		$this->message = $message;
-	}
-}
-
 /**
  * Class for displaying messages to the user
  */
@@ -171,4 +157,3 @@ function getReCAPTCHA($reCaptchaResponse) {
 	$verifyReCAPTCHA = file_get_contents($apiURL);
 	return json_decode($verifyReCAPTCHA);
 }
-

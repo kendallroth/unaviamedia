@@ -1,4 +1,8 @@
 <?php
+namespace Application\MVC\Controllers;
+
+use Application\Responses\MessageResponse;
+
 require_once("/var/www/constants.php");
 
 abstract class Controller {
@@ -65,7 +69,7 @@ abstract class Controller {
 		$message = $this->message;
 
 		//Only show message if it is a MessageResponse object
-		if ( !is_a($message, "MessageResponse") ) {
+		if ( !$message instanceof MessageResponse ) {
 			return;
 		}
 

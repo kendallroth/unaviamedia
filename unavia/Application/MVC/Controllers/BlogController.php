@@ -1,6 +1,13 @@
 <?php
+namespace Application\MVC\Controllers;
+
+use Application\MVC\Route;
+use Application\MVC\Controllers\Controller;
+use Application\MVC\Models\Post;
+use Application\Responses\MessageResponse;
+
 require_once("/var/www/constants.php");
-require_once(CONTROLLERS . "/func_post.php");
+require_once(CONTROLLER_FUNCTIONS . "/func_post.php");
 
 class BlogController extends Controller {
 	//Constructor

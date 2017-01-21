@@ -1,4 +1,8 @@
 <?php
+namespace Application\MVC\Controllers;
+
+use Application\MVC\Controllers\Controller;
+
 require_once("/var/www/constants.php");
 
 class HomeController extends Controller {

@@ -10,13 +10,12 @@ require_once("/var/www/custom_constants.php");
 define("HTML_ROOT",		"/var/www/html");
 define("INCLUDES",		HTML_ROOT . "/include");
 define("FRAGMENTS",		HTML_ROOT . "/fragments");
+define("APPLICATION",	HTML_ROOT . "/Application");
+define("MVC",			APPLICATION . "/MVC");
 
 //Common utilities
 define("UTILITIES",			INCLUDES . "/utilities.php");
-define("DATABASE",			"/var/www/database.php");
 define("AUTOLOADER",		HTML_ROOT . "/vendor/autoload.php");
-define("RESPONSE_CLASSES",	INCLUDES . "/responses.php");
-define("CONTROLLER",		INCLUDES . "/Controller.php");
 
 //HTML Paths
 define("STYLES",	"/dist/css");
@@ -29,22 +28,27 @@ define("FRAGMENT_HEADER",	FRAGMENTS . "/header.php");
 define("FRAGMENT_FOOTER",	FRAGMENTS . "/footer.php");
 
 //MVC Constants
-define("ROUTES",		INCLUDES . "/routes.php");
-define("CONTROLLERS",	HTML_ROOT . "/controllers");
-define("MODELS",		HTML_ROOT . "/models");
-define("VIEWS",			HTML_ROOT . "/views");
+define("ROUTES",				MVC . "/Route.php");
+define("CONTROLLERS",			MVC . "/Controllers");
+define("MODELS",				MVC . "/Models");
+define("VIEWS",					HTML_ROOT . "/views");
+define("CONTROLLER_FUNCTIONS",	HTML_ROOT . "/controller_functions");
+
 
 //Static Page Title
 define("PAGE_TITLE",	"&ensp;|&ensp;UnaviaMedia");
 //Dynamic Page Title
 $PAGE_TITLE = "";
 
-
 //Common links
 define("URL_HOME",	"/");
 define("URL_ABOUT",	"/About");
 define("URL_BLOG",	"/Blog");
 
+/**
+ * Dump contents of a variable to screen
+ * @param  object $var Variable to debug
+ */
 function debug($var) {
 	echo "<pre>";
 	print_r($var);

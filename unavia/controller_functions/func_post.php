@@ -1,6 +1,7 @@
 <?php
+use Application\MVC\Models\Post;
+
 require_once("/var/www/constants.php");
-require_once(MODELS . "/Post.php");
 
 /**
  * @brief	Create a post and validate it before adding to database
@@ -66,9 +67,10 @@ function updatePost($id, $title, $description, $content, $author, $dateCreated, 
  */
 function deletePost($id) {
 	//Handle empty/invalid ids
-	if ( !isPositiveInt($id) ) {
+	//DELETE: This is likely unnecessary
+	/*if ( !isPositiveInt($id) ) {
 		return new ValidationResponse(1, "Valid ID is required for deletion");
-	}
+	}*/
 
 	//Delete the specified continent
 	return Post::delete($id);

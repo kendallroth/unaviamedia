@@ -1,11 +1,18 @@
 <?php
+namespace Application\MVC\Models;
+
+use Application\MVC\Models\Model;
+use Application\Responses\ValidationResponse;
+use Application\Responses\DatabaseResponse;
+use Application\Utilities\ValidationError;
+use Application\Database as DB;
+
 require_once("/var/www/constants.php");
-require_once(DATABASE);
 
 /**
  * @brief	Model class for Posts
  */
-class Post {
+class Post extends Model {
 	public $id;
 	public $title;
 	public $description;
