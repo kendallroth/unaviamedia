@@ -89,7 +89,7 @@ require_once(FRAGMENT_HEADER);
 	</div>
 </section>
 
-<?php require_once(HTML_ROOT . "/controller_functions/func_contact.php"); ?>
+<?php //require_once(HTML_ROOT . "/controller_functions/func_contact.php"); ?>
 
 <section id="contact" class="contact__wrapper">
 	<div class="row">
@@ -99,30 +99,35 @@ require_once(FRAGMENT_HEADER);
 		</div>
 	</div>
 	<div class="row align-center">
+		<div class="column small-10 medium-8 large-6">
+			<?php $this->displayMessage(false); ?>
+		</div>
+	</div>
+	<div class="row align-center">
 		<div class="column medium-6 large-5">
 			<form action="<?=URL_ABOUT?>#contact" method="POST">
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactName" class="hide">Name</label>
-						<input type="text" id="contactName" name="contactName" placeholder="Name" value="<?= $contactName ?>" />
+						<input type="text" id="contactName" name="contactName" placeholder="Name" value="<?=$contactSubmission->name ?>" />
 					</div>
 				</div>
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactEmail" class="hide">Email</label>
-						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" value="<?= $contactEmail ?>" />
+						<input type="text" id="contactEmail" name="contactEmail" placeholder="Email" value="<?=$contactSubmission->email ?>" />
 					</div>
 				</div>
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactSubject" class="hide">Subject</label>
-						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" value="<?= $contactSubject ?>" />
+						<input type="text" id="contactSubject" name="contactSubject" placeholder="Subject" value="<?=$contactSubmission->subject ?>" />
 					</div>
 				</div>
 				<div class="row form__row">
 					<div class="column">
 						<label for="contactComments" class="hide">Comments</label>
-						<textarea  id="contactComments" name="contactComments" placeholder="Comments"><?= $contactComments ?></textarea>
+						<textarea  id="contactComments" name="contactComments" placeholder="Comments"><?=$contactSubmission->comments ?></textarea>
 					</div>
 				</div>
 				<div class="row form__row">
@@ -130,14 +135,9 @@ require_once(FRAGMENT_HEADER);
 						<div class="g-recaptcha" data-sitekey="<?=RECAPTCHA_PUBLIC?>"></div>
 					</div>
 				</div>
-				<?php //Output the status of the form submission
-				if (isEmpty($messageHTML) == false) {
-					echo "<div class='row form__row' data-closable><div class='column'>$messageHTML</div></div>";
-				}
-				?>
 				<div class="row">
 					<div class="column text-center">
-						<input type="submit" id="contactSubmit" name="contactSubmit" value="Send Message" />
+						<input type="submit" id="submitContact" name="submitContact" value="Send Message" />
 					</div>
 				</div>
 			</form>

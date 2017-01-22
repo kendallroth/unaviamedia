@@ -10,7 +10,7 @@ use Application\Database as DB;
 require_once("/var/www/constants.php");
 
 /**
- * @brief	Model class for Posts
+ * Model class for Posts
  */
 class Post extends Model {
 	public $id;
@@ -22,6 +22,17 @@ class Post extends Model {
 	public $dateModified;
 	public $published;
 
+	/**
+	 * Constructor for Post model
+	 * @param int		$id				Post id
+	 * @param string	$title			Post title
+	 * @param string	$description	Short description of post
+	 * @param string	$content		Post content markup
+	 * @param string	$author			Author of post
+	 * @param date		$dateCreated	Date that the post was created
+	 * @param date		$dateModified	Date that the post was last modified
+	 * @param bool		$published		Whether post has been published
+	 */
 	function __construct($id, $title, $description, $content, $author, $dateCreated, $dateModified, $published) {
 		$this->id = $id;
 		$this->title = $title;
@@ -34,15 +45,17 @@ class Post extends Model {
 	}
 
 	/**
-	 * @brief	Empty constructor "override"
+	 * Empty constructor override
+	 * @return Post	Empty Post model
 	 */
-	static function construct() {
+	public static function construct() {
 		$instance = new self("", "", "", "", "", "", "", "");
 		return $instance;
 	}
 
 	/**
-	 * @brief	Validate the Post model
+	 * Validate the Post model
+	 * @return ValidationResponse	ValidationResult object indicating status of validation
 	 */
 	public function validate() {
 		$errors = array();
