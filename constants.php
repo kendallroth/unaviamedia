@@ -31,7 +31,7 @@ define("FRAGMENT_FOOTER",	FRAGMENTS . "/footer.php");
 define("ROUTES",				MVC . "/Route.php");
 define("CONTROLLERS",			MVC . "/Controllers");
 define("MODELS",				MVC . "/Models");
-define("VIEWS",					HTML_ROOT . "/views");
+define("VIEWS",					MVC . "/Views");
 define("CONTROLLER_FUNCTIONS",	HTML_ROOT . "/controller_functions");
 
 
