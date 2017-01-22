@@ -1,7 +1,7 @@
 <?php
 namespace Application\MVC;
 
-use Application\MVC\Controllers as Controllers;
+use Application\MVC\Controllers;
 use Application\Responses\RouteResponse;
 
 require_once("/var/www/constants.php");
