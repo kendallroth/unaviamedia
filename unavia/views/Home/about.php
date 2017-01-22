@@ -89,7 +89,7 @@ require_once(FRAGMENT_HEADER);
 	</div>
 </section>
 
-<?php require_once(HTML_ROOT . "/controllers/contact_controller.php"); ?>
+<?php require_once(HTML_ROOT . "/controller_functions/func_contact.php"); ?>
 
 <section id="contact" class="contact__wrapper">
 	<div class="row">
