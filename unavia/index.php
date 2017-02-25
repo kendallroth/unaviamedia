@@ -140,14 +140,87 @@ require_once(HEADER_FRAGMENT);
 					<li>Project Planning</li>
 				</ul>
 			</div><br class="show-for-medium" />
-			<div id="frameworks-card" class="card--skill">
-				<h3>Frameworks</h3>
+			<div id="miscellaneous-card" class="card--skill">
+				<h3>Miscellaneous</h3>
 				<ul>
 					<li>GitHub&ensp;<small><em>Project Management</em></small></li>
 					<li>BugZilla&ensp;<small><em>Issue Tracking</em></small></li>
 					<li>Cloud 9&ensp;<small><em>Online IDE</em></small></li>
 				</ul>
 			</div>
+		</div>
+	</div>
+</section>
+
+<section id="employment" class="section--employment content__wrapper">
+	<div class="row">
+		<div class="column text-center">
+			<h2>Employment</h2>
+		</div>
+	</div>
+	<div class="row align-center">
+		<div class="column small-10 medium-8">
+			<ul class="employment-cards">
+				<li class="employment__card">
+					<div class="employment__header">
+						<h3>SAP Labs</h3>
+						<span class="employment__type">(Co-op)</span>
+						<span class="employment__date">2017</span>
+					</div>
+					<div class="employment__description">
+						<p>SAP is a market leader in enterprise application software, with applications and services enabling organizations to operate profitably while continuously adapting to helpful analytics. The Emerging Technologies department is a dedicated team focused on innovating how businesses can collect these data insights and act upon them. From IoT to edge computing and distributed data to mobile solutions, the team deals with a wide variety of technologies on a daily basis.</p>
+						<p>The team spent most of the term developing a custom edge processing solution designed for IoT data analysis simplification. I was able to spend some time and gain experience in each aspect of the project, from planning and architecture to development and deployment strategies. The scope of the project and the small size of the team meant that each day brought a new challenge and responsibility; in fact, I'm still doing new things on a daily basis!</p>
+					</div>
+					<div class="employment__summary">
+						<ul>
+							<li>Create and maintain database schemas and procedures for data management and maintenance</li>
+							<li>Work closely with local and remote team to develop new features/fixes in an Agile environment</li>
+							<li>Update web interface for new features and streaming configuration options</li>
+							<li>Utilize regression and performance testing to verify continual system integrity</li>
+							<li>Modify existing data streaming engine to handle additional use cases</li>
+						</ul>
+					</div>
+				</li>
+				<li class="employment__card">
+					<div class="employment__header">
+						<h3>Netsweeper</h3>
+						<span class="employment__type">(Co-op)</span>
+						<span class="employment__date">2016</span>
+					</div>
+					<div class="employment__description">
+						<p>Netsweeper Inc. is a world leader in web filtering and management, best known for their real-time web content categorization technology. Netsweeper offers a highly specialized product in a competitive field, which causes their customer feedback to be quickly analyzed and integrated into the development cycle.</p>
+						<p>I worked primarily as a member of the Web Development Team during my eight month co-op term at Netsweeper, responsible for applying bug fixes as well as implementing new features within the web portal. Part of my time was also spent in a Quality Assurance role, ensuring that the web interface remained stable when testing new features and fixes. I also worked briefly with the UI/UX designer to update several small portions of the web interface for increased consistency and user experience.</p>
+					</div>
+					<div class="employment__summary">
+						<ul>
+							<li>Analyze and apply fixes to bugs while working in a sprint-based development cycle</li>
+							<li>Develop, integrate, and document new features as specified by team supervisor</li>
+							<li>Assist with quality assurance testing involving regression testing and manual test cases</li>
+							<li>Collaborate with other team members on projects and changes using source control</li>
+							<li>Work with UI/UX designer to enhance user experience in the web interface</li>
+						</ul>
+					</div>
+				</li>
+				<li class="employment__card">
+					<div class="employment__header">
+						<h3>Conestoga College</h3>
+						<span class="employment__type">(Work Study)</span>
+						<span class="employment__date">2015&ndash;2016</span>
+					</div>
+					<div class="employment__description">
+						<p>The Conestoga College Web Development Team is the main development team for the corporate Conestoga site as well as most related internal and external sites. The team is primarily responsible for content updates, architecting site structure, maintaining various databases, and performing other miscellaneous tasks to keep the sites up and running smoothly.	</p>
+						<p>I spent the summer months of 2015 as a full-time member of the Web Development Team, performing maintenance and page updates, before moving into a part-time position for the following two semesters. Part of this time was spent as lead developer on another site being developed for an outside organization, where I designed and prototyped several requested features before submitting them for client approval.</p>
+					</div>
+					<div class="employment__summary">
+						<ul>
+							<li>Responsible for creating and maintaining web pages and content provided by project manager</li>
+							<li>Interface with clients to ensure finished product meets their expectations</li>
+							<li>Ensure design and content of web pages meet usability and AODA accessibility standards</li>
+							<li>Design and implement several features for an external project managed by Conestoga College</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 </section>
