@@ -225,6 +225,27 @@
 	#technologies-card { height: 100%; }
 }
 
+//Employment section
+.section--employment {
+	padding-bottom: 2rem;
+
+	.employment-cards {
+		margin: 0;
+		list-style-type: none;
+
+		> li {
+			margin-bottom: 0.5rem;
+			padding: 0.75rem;
+			background-color: rgba(255, 255, 255, 0.95);
+		}
+
+		.employment__header {
+			margin-bottom: 0.5rem;
+			border-bottom: 2px solid rgb(217, 67, 83);
+		}
+	}
+}
+
 //Contact section
 .section--quick-contact {
 	padding: 2.5rem;
