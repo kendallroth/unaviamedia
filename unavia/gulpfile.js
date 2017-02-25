@@ -2,28 +2,29 @@ var gulp	= require("gulp");
 var del		= require("del");
 var $    	= require("gulp-load-plugins")();
 
-gulp.task("sass", function() {
-	//Delete old files
-	//del.sync('dist/css');
+gulp.task("clean-css", function() {
+	return del([
+		"dist/css/app.css"
+	]);
+});
 
-	//setTimeout(function() {
-		return gulp.src("src/scss/app.scss")
-			//Compile the SCSS to CSS
-			.pipe($.sass({
-				includePaths: [
-					"bower_components/foundation-sites/scss",
-					"bower_components/motion_ui/src",
-					"bower_components/foundation-icon-fonts"
-				]
-			}))
-			//Add vendor prefixes to CSS
-			.pipe($.autoprefixer({
-				browsers: ["last 2 version"],
-				cascade: false
-			}))
-			//Output the CSS
-			.pipe(gulp.dest("dist/css"));
-	//}, 10);
+gulp.task("sass", ["clean-css"], function() {
+	return gulp.src("src/scss/app.scss")
+		//Compile the SCSS to CSS
+		.pipe($.sass({
+			includePaths: [
+				"bower_components/foundation-sites/scss",
+				"bower_components/motion_ui/src",
+				"bower_components/foundation-icon-fonts"
+			]
+		}))
+		//Add vendor prefixes to CSS
+		.pipe($.autoprefixer({
+			browsers: ["last 2 version"],
+			cascade: false
+		}))
+		//Output the CSS
+		.pipe(gulp.dest("dist/css"));
 });
 
 //Copy fonts to the output directory
