@@ -240,8 +240,41 @@
 		}
 
 		.employment__header {
-			margin-bottom: 0.5rem;
+			margin-bottom: 0.75rem;
 			border-bottom: 2px solid rgb(217, 67, 83);
+		}
+
+		.employment__summary {
+			counter-reset: employment_counter;
+
+			ol {
+				margin-left: 0;
+				padding-left: 0;
+			}
+
+			li {
+				position: relative;
+				list-style: none;
+
+				&:not(:last-of-type) {
+					margin-bottom: 0.5rem;
+				}
+
+				&::before {
+					margin-right: 0.5rem;
+					counter-increment: employment_counter;
+					content: counter(employment_counter);
+					width: 25px;
+					height: 25px;
+					display: inline-flex;
+					justify-content: center;
+					align-items: center;
+					font-family: Verdana;
+					color: rgb(217, 67, 83);
+					border: 2px solid rgb(217, 67, 83);
+					border-radius: 100%;
+				}
+			}
 		}
 	}
 }

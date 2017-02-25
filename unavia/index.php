@@ -172,13 +172,13 @@ require_once(HEADER_FRAGMENT);
 						<p>The team spent most of the term developing a custom edge processing solution designed for IoT data analysis simplification. I was able to spend some time and gain experience in each aspect of the project, from planning and architecture to development and deployment strategies. The scope of the project and the small size of the team meant that each day brought a new challenge and responsibility; in fact, I'm still doing new things on a daily basis!</p>
 					</div>
 					<div class="employment__summary">
-						<ul>
+						<ol>
 							<li>Create and maintain database schemas and procedures for data management and maintenance</li>
 							<li>Work closely with local and remote team to develop new features/fixes in an Agile environment</li>
 							<li>Update web interface for new features and streaming configuration options</li>
 							<li>Utilize regression and performance testing to verify continual system integrity</li>
 							<li>Modify existing data streaming engine to handle additional use cases</li>
-						</ul>
+						</ol>
 					</div>
 				</li>
 				<li class="employment__card">
@@ -192,13 +192,13 @@ require_once(HEADER_FRAGMENT);
 						<p>I worked primarily as a member of the Web Development Team during my eight month co-op term at Netsweeper, responsible for applying bug fixes as well as implementing new features within the web portal. Part of my time was also spent in a Quality Assurance role, ensuring that the web interface remained stable when testing new features and fixes. I also worked briefly with the UI/UX designer to update several small portions of the web interface for increased consistency and user experience.</p>
 					</div>
 					<div class="employment__summary">
-						<ul>
+						<ol>
 							<li>Analyze and apply fixes to bugs while working in a sprint-based development cycle</li>
 							<li>Develop, integrate, and document new features as specified by team supervisor</li>
 							<li>Assist with quality assurance testing involving regression testing and manual test cases</li>
 							<li>Collaborate with other team members on projects and changes using source control</li>
 							<li>Work with UI/UX designer to enhance user experience in the web interface</li>
-						</ul>
+						</ol>
 					</div>
 				</li>
 				<li class="employment__card">
@@ -212,12 +212,12 @@ require_once(HEADER_FRAGMENT);
 						<p>I spent the summer months of 2015 as a full-time member of the Web Development Team, performing maintenance and page updates, before moving into a part-time position for the following two semesters. Part of this time was spent as lead developer on another site being developed for an outside organization, where I designed and prototyped several requested features before submitting them for client approval.</p>
 					</div>
 					<div class="employment__summary">
-						<ul>
+						<ol>
 							<li>Responsible for creating and maintaining web pages and content provided by project manager</li>
 							<li>Interface with clients to ensure finished product meets their expectations</li>
 							<li>Ensure design and content of web pages meet usability and AODA accessibility standards</li>
 							<li>Design and implement several features for an external project managed by Conestoga College</li>
-						</ul>
+						</ol>
 					</div>
 				</li>
 			</ul>
