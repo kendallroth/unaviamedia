@@ -41,7 +41,7 @@ require_once(HEADER_FRAGMENT);
 					<h2>Education</h2>
 					<h3>
 						<a href="//www.conestogac.on.ca/fulltime/computer-programmer-analyst-optional-co-op" target="_blank">Computer Programmer/Analyst</a>
-						<span class="date--right">2014&mdash;present</span>
+						<span class="employment__date">2014&mdash;present</span>
 					</h3>
 					<p>Conestoga College, Kitchener, ON</p>
 					<ul>
@@ -61,39 +61,39 @@ require_once(HEADER_FRAGMENT);
 			<div class="row about__subsection about__employment">
 				<div class="column">
 					<h2>Employment</h2>
-					<h3>
-						<a href="//www.sap.com/" target="_blank">Developer</a>
-						<span class="employment-type">(Coop)</span>
-						<span class="date--right">2017&mdash;Present</span>
+					<h3 class="employment">
+						<a href="//www.sap.com/" target="_blank">Emerging Technologies Developer</a>
+						<span class="employment__type">(Coop)</span>
+						<span class="employment__date">2017&mdash;Present</span>
 					</h3>
 					<p><em>SAP, Waterloo, ON</em></p>
 					<ul>
-						<li>Create and maintain database schemas and procedures for a wide assortment of use cases.</li>
-						<li>Collaborate with team members on tasks in a Scrum development cycle using Git source control.</li>
-						<li>Develop plugins and functionality to enable Dynamic Edge Processing in an IoT environment.</li>
-						<li>Implement web interfaces using SAPUI5 to support IoT Simplification operations.</li>
+						<li>Collaborate with team members to create clean and maintainable features for emerging products</li>
+						<li>Develop and extend the core functionality of a custom IoT edge processing solution</li>
+						<li>Ensure product exceeds quality standards through careful testing, analysis, and performance metrics</li>
+						<li>Create and maintain database procedures and interactions for a wide assortment of use cases</li>
 					</ul>
-					<h3>
+					<h3 class="employment">
 						<a href="//www.netsweeper.com/" target="_blank">Web Developer</a>
-						<span class="employment-type">(Coop)</span>
-						<span class="date--right">2016</span>
+						<span class="employment__type">(Coop)</span>
+						<span class="employment__date">2016</span>
 					</h3>
 					<p><em>Netsweeper Inc, Kitchener, ON</em></p>
 					<ul>
-						<li>Analyze and apply fixes to bugs within a sprint-based development cycle under source control.</li>
-						<li>Responsible for developing, integrating and documenting new features as specified by supervisor.</li>
-						<li>Assist with quality assurance testing on product involving writing unit tests and running manual tests.</li>
+						<li>Analyze and apply fixes to bugs within a sprint-based development cycle</li>
+						<li>Responsible for developing, integrating and documenting new features as specified by supervisor</li>
+						<li>Assist with quality assurance testing on product involving writing unit tests and running manual tests</li>
 					</ul>
-					<h3>
+					<h3 class="employment">
 						<a href="//www.conestogac.on.ca" target="_blank">Web Developer</a>
-						<span class="employment-type">(Work Study)</span>
-						<span class="date--right">2015&mdash;2016</span>
+						<span class="employment__type">(Work Study)</span>
+						<span class="employment__date">2015&mdash;2016</span>
 					</h3>
 					<p><em>Conestoga College, Kitchener, ON</em></p>
 					<ul>
-						<li>Responsible for creating, updating and maintaining web pages based on content provided by Project Manager and clients.</li>
-						<li>Ensure design and content of web pages meet usability and accessibility standards.</li>
-						<li>Interface with clients through email and face-to-face to ensure finished product meets their expectations.</li>
+						<li>Responsible for creating and maintaining web pages based on content provided by Project Manager</li>
+						<li>Ensure design and content of web pages meet usability and accessibility standards</li>
+						<li>Interface with clients to ensure finished product meets their expectations</li>
 					</ul>
 				</div>
 			</div>
