@@ -5,7 +5,7 @@
 			<a href="//twitter.com/UnaviaMedia">
 				<img src="/icons/Twitter-Icon.png" />
 			</a>
-			<a href="//github.com/UnaviaMedia">
+			<a href="//github.com/KendallRoth">
 				<img src="/icons/Github-Icon.png" />
 			</a>
 			<a href="//ca.linkedin.com/in/kendallroth">
