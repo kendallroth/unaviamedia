@@ -70,13 +70,13 @@ require_once(HEADER_FRAGMENT);
 		</div>
 		<div class="row align-center small-collapse medium-uncollapse">
 			<div class="column small-12 medium-5">
-				<a href="https://github.com/UnaviaMedia/UnaviaMedia" class="card--project" target="_blank">
+				<a href="https://github.com/Unavia/UnaviaMedia" class="card--project" target="_blank">
 					<img src="/images/projects/UnaviaMedia_WebSite.png" />
 					<p><strong>UnaviaMedia Site</strong><span>2016</span></p>
 				</a>
 			</div>
 			<div class="column small-12 medium-5">
-				<a href="https://github.com/UnaviaMedia/CaptainCPA" class="card--project" target="_blank">
+				<a href="https://github.com/KendallRoth/CaptainCPA" class="card--project" target="_blank">
 					<img src="/images/projects/Captain_CPA.png" />
 					<p><strong>CaptainCPA</strong><span>2015</span></p>
 				</a>
@@ -93,7 +93,7 @@ require_once(HEADER_FRAGMENT);
 		</div>
 		<div class="row align-center small-collapse medium-uncollapse">
 			<div class="column small-12 medium-5">
-				<a href="https://github.com/UnaviaMedia/CommitteeHelp" class="card--project" target="_blank">
+				<a href="https://github.com/Unavia/CommitteeHelp" class="card--project" target="_blank">
 					<img src="/images/projects/CommitteeHelp.png" />
 					<p><strong>CommitteeHelp</strong><span>coming soon</span></p>
 				</a>
