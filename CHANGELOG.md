@@ -2,6 +2,15 @@
 
 This will eventually be used to track changes made to live site, but is currently used in place of blog.
 
+## March 17, 2017
+- Switch HTTPS certificates to match new domain
+
+## March 16, 2017
+- Change domain to `unavia.ca` from `unaviamedia.ca`
+
+## January 22, 2017
+- Add SAP details to site
+
 ## November 8, 2016
 - Add SSL certificate to site
 - Update server packages
