@@ -155,7 +155,7 @@ require_once(HEADER_FRAGMENT);
 <section id="quick-contact" class="section--quick-contact">
 	<div id="quick-contact-bar" class="row">
 		<div class="column text-center">
-			<a href="mailto:kroth@unaviamedia.ca">Contact Me</a>
+			<a href="mailto:kroth@unavia.ca">Contact Me</a>
 		</div>
 	</div>
 </section>
