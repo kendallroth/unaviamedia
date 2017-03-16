@@ -1,27 +1,61 @@
+# OLD unaviamedia.ca server (HTTP)
 server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+	listen 80;
+	#listen 443 ssl;
+
+	# Server name (and aliases)
+	server_name unaviamedia.ca www.unaviamedia.ca;
+
+	# Rewrite to new domain (302 - permanent)
+	#return 301 $scheme://www.unavia.ca$request_uri;
+	return 301 http://unavia.ca$request_uri;
+	#rewrite ^/(.*)$ http://unavia.ca/$1 permanent;
+}
+
+# NEW unavia.ca server (HTTP)
+# Redirect HTTP traffic to HTTPS
+server {
+    listen 80;
+    listen [::]:80;
+	server_name unavia.ca www.unavia.ca;
+	return 301 https://$server_name$request_uri;
+}
+
+# NEW unavia.ca server (HTTPS)
+server {
+	# SSL Configuration
+	listen 443 ssl http2 default_server;
+	listen [::]:443 ssl http2 default_server;
+	#listen 80 default_server;
+	#listen [::]:80 default_server;
+
+	include snippets/ssl-unavia.ca.conf;
+	include snippets/ssl-params.conf;
 
 	# Web root
-        root /var/www/html;
+	root /var/www/html;
 
-        # List of index files to serve by default
-        index index.php index.html index.htm;
+	# List of index files to serve by default
+	index index.php index.html index.htm;
 
-        server_name unaviamedia.ca;
+	# Server name (and aliases)
+	server_name unavia.ca www.unavia.ca;
 
-        location / {
-                # First attempt to serve request as file, then
-                # as directory, then fall back to displaying a 404.
-                try_files $uri $uri/ =404;
-        }
-		
-		location ~ \.php$ {
-        	include snippets/fastcgi-php.conf;
-        	fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    	}
+	location / {
+		# First attempt to serve request as file, then as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+	
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+	}
 
-    	location ~ /\.ht {
-        	deny all;
-    	}
+	location ~ /\.ht {
+		deny all;
+	}
+
+	location ~ /.well-known {
+		allow all;
+	}
 }
