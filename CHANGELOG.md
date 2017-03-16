@@ -4,6 +4,7 @@ This will eventually be used to track changes made to live site, but is currentl
 
 ## March 17, 2017
 - Switch HTTPS certificates to match new domain
+- Update Contact form to match new email address
 
 ## March 16, 2017
 - Change domain to `unavia.ca` from `unaviamedia.ca`
