@@ -5,7 +5,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="/icons/favicon_plant.png" />
-	<title><?=$PAGE_TITLE?> | UnaviaMedia</title>
+	<title><?=$PAGE_TITLE?> | Unavia</title>
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
 	<!-- Scripts -->
@@ -25,7 +25,7 @@
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
 				<li><a href="/">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="UnaviaMedia" /></a></li>
+				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="Unavia" /></a></li>
 				<li><a href="/about.php">About</a></li>
 			</ul>
 		</nav>
