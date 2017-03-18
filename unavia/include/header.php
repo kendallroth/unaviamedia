@@ -4,8 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Unavia personal portfolio web site" />
+
+	<meta property="og:title" content="Unavia" />
+	<meta property="og:description" content="Unavia personal portfolio web site" />
+	<meta property="og:image" content="/icons/favicon_plant.png" />
+
 	<link rel="icon" href="/icons/favicon_plant.png" />
 	<title><?=$PAGE_TITLE?> | Unavia</title>
+
 	<!-- Styles -->
 	<link rel="stylesheet" href="/dist/css/app.css" />
 	<!-- Scripts -->
