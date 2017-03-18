@@ -7,9 +7,7 @@ server {
 	server_name unaviamedia.ca www.unaviamedia.ca;
 
 	# Rewrite to new domain (302 - permanent)
-	#return 301 $scheme://www.unavia.ca$request_uri;
-	return 301 http://unavia.ca$request_uri;
-	#rewrite ^/(.*)$ http://unavia.ca/$1 permanent;
+	return 301 https://unavia.ca$request_uri;
 }
 
 # NEW unavia.ca server (HTTP)
