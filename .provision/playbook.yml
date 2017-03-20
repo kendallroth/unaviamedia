@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  vars:
+  tasks:
+    - name: Create development user
+      user:
+        name=development
+        password=$6$Al5BkSlpAZHBP4DY$yacoRMs8hbtUw6pa/bac4dSQtLTuMjDdFX3/9aUx5KZ.tph/z7sfvwSroh2jixcS7/RpBt8q.23fhiSFbfJL91
+        group=development
+        groups=sudo
+        append=yes
+        createhome=yes
+        state=present
+        update_password=always
+
+    - name: Update package caches
+      apt: update_cache=yes
