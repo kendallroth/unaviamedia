@@ -7,13 +7,13 @@ For the current display of updates, please view the [CHANGELOG](CHANGELOG.md).
 ## Features
 The site displays several of the skills I have learned/am learning, including the following:
 - Front-End
-	- HTML5, SASS, JavaScript
+	- HTML5, [SASS](http://sass-lang.com), JavaScript
 - Back-End
 	- PHP, MySQL
 - Frameworks
-	- [Foundation 6](www.foundation.zurb.com)
+	- [Foundation 6](//foundation.zurb.com)
 - Project Management
-	- Git, Gulp, Ansible
+	- [Git](//git-scm.com), [Gulp](//gulpjs.com), [Ansible](//ansible.com)
 
 ## Setup
 Clone project onto a **Ubuntu 16.04** server and manually run the `.provision/bootstrap.sh` script to setup.
