@@ -9,8 +9,7 @@ require_once("/var/www/constants.php");
 final class Route {
 	//List of valid routes for router
 	public static $VALID_ROUTES = array(
-		"home" => array("index", "about", "error"),
-		"blog" => array("index", "create", "edit", "delete")
+		"home" => array("index", "about", "error")
 	);
 
 	//The HTTP method this request was made in, either GET, POST, PUT or DELETE
@@ -104,9 +103,6 @@ final class Route {
 		switch($this->controller) {
 			case "home":
 				$this->controller = new Controllers\HomeController($this);
-				break;
-			case "blog":
-				$this->controller = new Controllers\BlogController($this);
 				break;
 			default:
 				break;
