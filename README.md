@@ -1,6 +1,6 @@
-# UnaviaMedia Website
+# Unavia Website
 
-This repository is the home for the source code of my portfolio website, _unaviamedia.ca_. It is a personal project that I will keep iterating upon as I learn new skills and tricks as a web developer. Currently it is on the fourth iteration; each iteration progressively becoming *more* modern and responsive.
+This repository is the home for the source code of my portfolio website, _unavia.ca_. It is a personal project that I will keep iterating upon as I learn new skills and tricks as a web developer. Currently it is on the fourth iteration; each iteration progressively becoming *more* modern and responsive.
 
 For the current display of updates, please view the [CHANGELOG](CHANGELOG.md).
 
@@ -10,10 +10,10 @@ The site displays several of the skills I have learned/am learning, including th
 	- HTML5, SASS, JavaScript
 - Back-End
 	- PHP, MySQL
-- Responsive Design
-	- Utilizing [Foundation 6](www.foundation.zurb.com)
+- Frameworks
+	- [Foundation 6](www.foundation.zurb.com)
 - Project Management
-	- Git, Gulp
+	- Git, Gulp, Ansible
 
 ## Setup
 Clone project onto a **Ubuntu 16.04** server and manually run the `.provision/bootstrap.sh` script to setup.
