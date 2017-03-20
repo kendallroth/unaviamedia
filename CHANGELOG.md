@@ -2,12 +2,20 @@
 
 This will eventually be used to track changes made to live site, but is currently used in place of blog.
 
+## March 20, 2017
+- Enable `gzip` compression on non-default files
+
+## March 18, 2017
+- Add meta tags for site
+
 ## March 17, 2017
-- Switch HTTPS certificates to match new domain
-- Update Contact form to match new email address
+- Remove additional references to "UnaviaMedia"
 
 ## March 16, 2017
 - Change domain to `unavia.ca` from `unaviamedia.ca`
+- Switch to using TLS for mail authentication
+- Switch HTTPS certificates to match new domain
+- Update Contact form to match new email address
 
 ## January 22, 2017
 - Add SAP details to site
