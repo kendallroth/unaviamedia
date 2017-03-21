@@ -12,6 +12,11 @@ require_once(FRAGMENT_HEADER);
 					<h1>Error Page</h1>
 				</div>
 			</div>
+			<div class="row">
+				<div class="column small-12 text-center">
+					<p>It appears the the page you requested is not available. If this problem persists, please send me an email with the link and a description, and I'll try to get right on it. Thanks!</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
