@@ -1,8 +1,21 @@
 var gulp	= require("gulp");
+var del		= require("del");
 var gutil	= require("gulp-util");
 var $    	= require("gulp-load-plugins")();
 
-gulp.task("sass", function() {
+gulp.task("clean-css", function() {
+	return del([
+		"dist/css/app.css"
+	]);
+});
+
+gulp.task("clean-js", function() {
+	return del([
+		"dist/js/app.js"
+	]);
+});
+
+gulp.task("sass", ["clean-css"], function() {
 	return gulp.src("src/scss/app.scss")
 		//Compile the SCSS to CSS
 		.pipe($.sass({
@@ -28,8 +41,8 @@ gulp.task("fonts", function() {
 		.pipe(gulp.dest("dist/css"));
 });
 
-//TODO: Add script concatenation and minification
-gulp.task("scripts", function() {
+//TODO: Add script minification
+gulp.task("scripts", ["clean-js"], function() {
 	return gulp.src(["src/js/app.js", "src/js/utilities.js"])
 		//Output the JS
 		.pipe(gulp.dest("dist/js"));

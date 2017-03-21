@@ -129,6 +129,30 @@ body {
 	h1 { margin: 0; }
 }
 
+/* Employment styles */
+.employment__header {
+	h3 {
+		display: inline-block;
+		margin: 0;
+		font-size: 1rem;
+		font-weight: bold;
+	}
+}
+
+.employment__type {
+	margin-left: 0.4rem;
+	font-size: 0.8rem;
+	color: $medium-dark-grey;
+}
+
+.employment__date {
+	display: block;
+	float: right;
+	color: $medium-dark-grey;
+	font-weight: normal;
+	font-size: 0.9rem;
+}
+
 
 /* Message styles */
 .message {
