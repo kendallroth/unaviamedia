@@ -8,6 +8,12 @@ gulp.task("clean-css", function() {
 	]);
 });
 
+gulp.task("clean-js", function() {
+	return del([
+		"dist/js/app.js"
+	]);
+});
+
 gulp.task("sass", ["clean-css"], function() {
 	return gulp.src("src/scss/app.scss")
 		//Compile the SCSS to CSS
@@ -35,7 +41,7 @@ gulp.task("fonts", function() {
 });
 
 //TODO: Add script minification
-gulp.task("scripts", function() {
+gulp.task("scripts", ["clean-js"], function() {
 	return gulp.src(["src/js/app.js", "src/js/utilities.js"])
 		//Output the JS
 		.pipe(gulp.dest("dist/js"));

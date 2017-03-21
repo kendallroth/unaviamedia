@@ -160,16 +160,17 @@ require_once(HEADER_FRAGMENT);
 	</div>
 	<div class="row align-center">
 		<div class="column small-10 medium-8">
-			<ul class="employment-cards">
-				<li class="employment__card">
-					<div class="employment__header">
+			<ul class="employment-cards summary-list">
+				<li class="employment__card summary__item">
+					<div class="employment__header summary__header">
 						<h3>SAP Labs</h3>
 						<span class="employment__type">(Co-op)</span>
 						<span class="employment__date">2017</span>
 					</div>
-					<div class="employment__description">
+					<div class="employment__description summary__description">
 						<p>SAP is a market leader in enterprise application software, with applications and services enabling organizations to operate profitably while continuously adapting to helpful analytics. The Emerging Technologies department is a dedicated team focused on innovating how businesses can collect these data insights and act upon them. From IoT to edge computing and distributed data to mobile solutions, the team deals with a wide variety of technologies on a daily basis.</p>
 						<p>The team spent most of the term developing a custom edge processing solution designed for IoT data analysis simplification. I was able to spend some time and gain experience in each aspect of the project, from planning and architecture to development and deployment strategies. The scope of the project and the small size of the team meant that each day brought a new challenge and responsibility; in fact, I'm still doing new things on a daily basis!</p>
+						<hr />
 					</div>
 					<div class="employment__summary">
 						<ol>
@@ -181,15 +182,16 @@ require_once(HEADER_FRAGMENT);
 						</ol>
 					</div>
 				</li>
-				<li class="employment__card">
-					<div class="employment__header">
+				<li class="employment__card summary__item">
+					<div class="employment__header summary__header">
 						<h3>Netsweeper</h3>
 						<span class="employment__type">(Co-op)</span>
 						<span class="employment__date">2016</span>
 					</div>
-					<div class="employment__description">
+					<div class="employment__description summary__description">
 						<p>Netsweeper Inc. is a world leader in web filtering and management, best known for their real-time web content categorization technology. Netsweeper offers a highly specialized product in a competitive field, which causes their customer feedback to be quickly analyzed and integrated into the development cycle.</p>
 						<p>I worked primarily as a member of the Web Development Team during my eight month co-op term at Netsweeper, responsible for applying bug fixes as well as implementing new features within the web portal. Part of my time was also spent in a Quality Assurance role, ensuring that the web interface remained stable when testing new features and fixes. I also worked briefly with the UI/UX designer to update several small portions of the web interface for increased consistency and user experience.</p>
+						<hr />
 					</div>
 					<div class="employment__summary">
 						<ol>
@@ -201,15 +203,16 @@ require_once(HEADER_FRAGMENT);
 						</ol>
 					</div>
 				</li>
-				<li class="employment__card">
-					<div class="employment__header">
+				<li class="employment__card summary__item">
+					<div class="employment__header summary__header">
 						<h3>Conestoga College</h3>
 						<span class="employment__type">(Work Study)</span>
 						<span class="employment__date">2015&ndash;2016</span>
 					</div>
-					<div class="employment__description">
+					<div class="employment__description summary__description">
 						<p>The Conestoga College Web Development Team is the main development team for the corporate Conestoga site as well as most related internal and external sites. The team is primarily responsible for content updates, architecting site structure, maintaining various databases, and performing other miscellaneous tasks to keep the sites up and running smoothly.	</p>
 						<p>I spent the summer months of 2015 as a full-time member of the Web Development Team, performing maintenance and page updates, before moving into a part-time position for the following two semesters. Part of this time was spent as lead developer on another site being developed for an outside organization, where I designed and prototyped several requested features before submitting them for client approval.</p>
+						<hr />
 					</div>
 					<div class="employment__summary">
 						<ol>
@@ -223,6 +226,11 @@ require_once(HEADER_FRAGMENT);
 			</ul>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function() {
+			initializeSummaryList(".employment-cards");
+		});
+	</script>
 </section>
 
 <section id="quick-contact" class="section--quick-contact">
