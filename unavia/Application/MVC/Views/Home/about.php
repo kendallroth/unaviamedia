@@ -101,8 +101,6 @@ require_once(FRAGMENT_HEADER);
 	</div>
 </section>
 
-<?php //require_once(HTML_ROOT . "/controller_functions/func_contact.php"); ?>
-
 <section id="contact" class="contact__wrapper">
 	<div class="row">
 		<div class="column text-center">

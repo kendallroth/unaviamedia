@@ -76,7 +76,7 @@ abstract class Controller {
 		//Handle message colouring
 		switch($message->status) {
 			case 1:
-				$calloutClass = "alert";
+				$calloutClass = "error";
 				break;
 			case 2:
 				$calloutClass = "warning";
@@ -112,7 +112,7 @@ HTML_CLOSE_BUTTON;
 		}
 
 		echo <<< HTML
-			<div class="content_message callout $calloutClass" data-closable>
+			<div class="content_message callout message--{$calloutClass}" data-closable>
 				$titleHtml
 				<div class="callout__body">
 					$message->message

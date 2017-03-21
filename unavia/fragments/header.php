@@ -31,9 +31,9 @@
 	<header>
 		<nav class="header-bar row">
 			<ul class="menu align-center column">
-				<li><a href="/">Home</a></li>
-				<li class="menu-logo"><a href="/"><img class="header-logo" src="/images/profile.jpeg" width="75" alt="Unavia" /></a></li>
-				<li><a href="/about.php">About</a></li>
+				<li><a href="<?=URL_HOME ?>">Home</a></li>
+				<li class="menu__logo"><a href="/"><img src="/images/profile.jpeg" width="75" alt="Unavia" /></a></li>
+				<li><a href="<?=URL_ABOUT ?>">About</a></li>
 			</ul>
 		</nav>
 	</header>
