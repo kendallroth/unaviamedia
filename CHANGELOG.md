@@ -5,6 +5,9 @@ This will eventually be used to track changes made to live site, but is currentl
 ## March 20, 2017
 - Enable `gzip` compression on non-default files
 - Finish and push new changes (Experience section) live
+- Merge MVC and Namespace changes from Blog work
+	- This enables pretty URLs and easier PHP class manipulation
+	- Spent a bit of time fixing merge conflicts
 
 ## March 18, 2017
 - Add meta tags for site
