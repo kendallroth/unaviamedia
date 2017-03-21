@@ -68,7 +68,7 @@ if (isset($_POST["contactSubmit"])) {
 		$mail->SMTPAuth = true;
 		$mail->Username = SMTP_USERNAME;
 		$mail->Password = SMTP_PASSWORD;
-		$mail->SMTPSecure = "ssl";
+		$mail->SMTPSecure = "tls";
 		$mail->Port = SMTP_PORT;
 
 		//Set email headers

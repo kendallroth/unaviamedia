@@ -27,7 +27,7 @@ require_once(HEADER_FRAGMENT);
 				<div class="column paragraph-block">
 					<h2>Interests</h2>
 					<p>In my spare time I enjoy playing around with various technologies or simply experiment with my current knowledge by trying to apply it in new ways. This site is a primary example, as I update it frequently with interesting (to me) discoveries/ideas that I come across in my daily work or side experimentation.</p>
-					<p>Aside from my inner "geek zone", my interests also include unwinding through reading and choral music. Reading (along with colouring) plays a very active role in my life, and I can often be found curled up on a couch with a book. Choral music offers another form of relaxation and I was recently privileged to sing with the Faith Builders Chorale on their British Isles Tour in 2015, as well as several other local choirs (<a href="//villagevoicescchoir.weebly.com/" target="_blank">Village Voices</a>, Menno Mass Singers, youth choirs, etc).</p>
+					<p>Aside from my inner "geek zone", my interests also include unwinding through reading and choral music. Reading (along with colouring) plays a very active role in my life, and I can often be found curled up on a couch with a book. Choral music offers another form of relaxation and I was recently privileged to sing with the Faith Builders Chorale on their British Isles Tour in 2015, as well as several other local choirs (<a href="//villagevoicescchoir.weebly.com/" target="_blank">Village Voices</a>, Menno Mass Singers, <a href="//www.grandrivervoices.ca/">Grand River Voices</a>, youth choirs, etc).</p>
 				</div>
 			</div>
 			<div class="row about__subsection about__objective">
@@ -41,7 +41,7 @@ require_once(HEADER_FRAGMENT);
 					<h2>Education</h2>
 					<h3>
 						<a href="//www.conestogac.on.ca/fulltime/computer-programmer-analyst-optional-co-op" target="_blank">Computer Programmer/Analyst</a>
-						<span class="date--right">2014&mdash;present</span>
+						<span class="employment__date">2014&mdash;present</span>
 					</h3>
 					<p>Conestoga College, Kitchener, ON</p>
 					<ul>
@@ -60,28 +60,40 @@ require_once(HEADER_FRAGMENT);
 			</div>
 			<div class="row about__subsection about__employment">
 				<div class="column">
-				<h2>Employment</h2>
-					<h3>
+					<h2>Employment</h2>
+					<h3 class="employment">
+						<a href="//www.sap.com/" target="_blank">Emerging Technologies Developer</a>
+						<span class="employment__type">(Coop)</span>
+						<span class="employment__date">2017&mdash;Present</span>
+					</h3>
+					<p><em>SAP, Waterloo, ON</em></p>
+					<ul>
+						<li>Collaborate with team members to create clean and maintainable features for emerging products</li>
+						<li>Develop and extend the core functionality of a custom IoT edge processing solution</li>
+						<li>Ensure product exceeds quality standards through careful testing, analysis, and performance metrics</li>
+						<li>Create and maintain database procedures and interactions for a wide assortment of use cases</li>
+					</ul>
+					<h3 class="employment">
 						<a href="//www.netsweeper.com/" target="_blank">Web Developer</a>
-						<span class="employment-type">(Coop)</span>
-						<span class="date--right">2016&mdash;Present</span>
+						<span class="employment__type">(Coop)</span>
+						<span class="employment__date">2016</span>
 					</h3>
 					<p><em>Netsweeper Inc, Kitchener, ON</em></p>
 					<ul>
-						<li>Analyze and apply fixes to bugs while working in a sprint-based development cycle under source control.</li>
-						<li>Responsible for developing, integrating and documenting new features as specified by team supervisor.</li>
-						<li>Assist with quality assurance testing on product involving writing unit tests and running manual tests.</li>
+						<li>Analyze and apply fixes to bugs within a sprint-based development cycle</li>
+						<li>Responsible for developing, integrating and documenting new features as specified by supervisor</li>
+						<li>Assist with quality assurance testing on product involving writing unit tests and running manual tests</li>
 					</ul>
-					<h3>
+					<h3 class="employment">
 						<a href="//www.conestogac.on.ca" target="_blank">Web Developer</a>
-						<span class="employment-type">(Work Study)</span>
-						<span class="date--right">2015&mdash;2016</span>
+						<span class="employment__type">(Work Study)</span>
+						<span class="employment__date">2015&mdash;2016</span>
 					</h3>
 					<p><em>Conestoga College, Kitchener, ON</em></p>
 					<ul>
-						<li>Responsible for creating, updating and maintaining web pages based on content provided by Project Manager and clients.</li>
-						<li>Ensure design and content of web pages meet usability and accessibility standards.</li>
-						<li>Interfac with clients through email and face-to-face to ensure finished product meets their expectations.</li>
+						<li>Responsible for creating and maintaining web pages based on content provided by Project Manager</li>
+						<li>Ensure design and content of web pages meet usability and accessibility standards</li>
+						<li>Interface with clients to ensure finished product meets their expectations</li>
 					</ul>
 				</div>
 			</div>
