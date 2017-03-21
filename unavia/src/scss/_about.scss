@@ -24,7 +24,7 @@
 		color: rgb(32, 38, 110);
 
 		&:hover {
-			border-bottom: 2px dotted $site-blue;
+			border-bottom: 2px dotted #0288d1;
 		}
 	}
 
@@ -34,7 +34,8 @@
 
 .contact__wrapper {
 	padding: 2rem 0;
-	background-color: $site-blue;
+	//background-color: $site-blue;
+	background-color: #0288d1;
 	color: white;
 
 	@include breakpoint(small only) {

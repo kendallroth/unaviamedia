@@ -1,3 +1,7 @@
+//Local variables
+$page-red: rgb(217, 67, 83);
+
+
 //Wrapper for content cards
 .content__wrapper {
 	h2 {
@@ -136,7 +140,8 @@
 
 //Projects section
 .section--projects {
-	$project-background: rgb(78, 146, 202);
+	//$project-background: rgb(78, 146, 202);
+	$project-background: #0288d1;
 	background-color: $project-background;
 	color: white;
 
@@ -193,7 +198,7 @@
 		// margin-bottom: 1.5rem;
 		padding: 1rem;
 		background-color: rgba(255, 255, 255, 1);
-		border-bottom: 3px solid rgb(217, 67, 83);
+		border-bottom: 3px solid $page-red;
 
 		h3 {
 			font-weight: bold;
@@ -204,8 +209,8 @@
 				margin: 0 auto 0.75rem auto;
 				font-size: 1.25rem;
 				text-align: center;
-				border-top: 2px solid rgb(217, 67, 83);
-				border-bottom: 2px solid rgb(217, 67, 83);
+				border-top: 2px solid $page-red;
+				border-bottom: 2px solid $page-red;
 			}
 		}
 
@@ -227,21 +232,44 @@
 
 //Employment section
 .section--employment {
-	padding-bottom: 2rem;
+	padding: 2rem 0;
+
+	//Include background shear options
+	@include background-shear(1.5, true);
+
+	//Handle shear at different sizes
+	@include breakpoint(medium) { margin-top: 1rem; }
+	@include breakpoint(large) { margin-top: 2rem; }
+	@include breakpoint(xxlarge) { margin-top: 2.5rem; }
+
+	//background-color: lightseagreen;
+	background-color: #26a69a;
+
+	h2 { color: white; }
 
 	.employment-cards {
 		margin: 0;
 		list-style-type: none;
 
-		> li {
-			margin-bottom: 0.5rem;
+		.employment__card {
+			margin-bottom: 1rem;
 			padding: 0.75rem;
 			background-color: rgba(255, 255, 255, 0.95);
+
+			&:hover {
+				.employment__header {
+					border-color: dodgerblue;
+				}
+			}
 		}
+
+		p { margin-bottom: 0.5rem; }
+		hr { margin: 1rem auto; }
 
 		.employment__header {
 			margin-bottom: 0.75rem;
-			border-bottom: 2px solid rgb(217, 67, 83);
+			border-bottom: 2px solid $page-red;
+			cursor: pointer;
 		}
 
 		.employment__summary {
@@ -255,6 +283,9 @@
 			li {
 				position: relative;
 				list-style: none;
+				//Fix for hanging indent with customized counters
+				padding-left: 2rem;
+				text-indent: -2rem;
 
 				&:not(:last-of-type) {
 					margin-bottom: 0.5rem;
@@ -270,9 +301,11 @@
 					justify-content: center;
 					align-items: center;
 					font-family: Verdana;
-					color: rgb(217, 67, 83);
-					border: 2px solid rgb(217, 67, 83);
+					color: $page-red;
+					border: 2px solid $page-red;
 					border-radius: 100%;
+					//Fix for hanging indent
+					text-indent: 0rem;
 				}
 			}
 		}
